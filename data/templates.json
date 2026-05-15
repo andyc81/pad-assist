@@ -3,9 +3,14 @@
     "id": "frieren-3loop",
     "name": "3x Frieren Loop",
     "leader_id": 13412,
-    "friend_id": 13412,
+    "friend_id": 13409,
     "description": "3-card skill loop anchored by Frieren (Collab). High damage output with consistent board generation. Strong against most endgame content requiring blind resist and damage cap unlock.",
-    "required_mechanics": ["blind_resist", "sdr", "absorb_void", "board_unlock"],
+    "required_mechanics": [
+      "blind_resist",
+      "sdr",
+      "absorb_void",
+      "board_unlock"
+    ],
     "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/541333",
     "slots": [
       {
@@ -13,54 +18,130 @@
         "recommended_card_id": 13412,
         "role": "leader",
         "slot_name": "Frieren (Leader)",
-        "recommended_latents": ["leader_swap_resist", "leader_swap_resist", "leader_swap_resist", "leader_swap_resist", "sdr", "sdr"],
-        "assist_priority": ["sdr", "team_hp", "leader_swap", "absorb_void"],
-        "notes": "Keep 4x leader swap resist. This is the main leader — survivability first."
+        "recommended_latents": [
+          "leader_swap_resist",
+          "leader_swap_resist",
+          "leader_swap_resist",
+          "leader_swap_resist",
+          "sdr",
+          "sdr"
+        ],
+        "assist_priority": [
+          "sdr",
+          "team_hp",
+          "leader_swap",
+          "absorb_void"
+        ],
+        "notes": "Keep 4x leader swap resist. This is the main leader — survivability first.",
+        "recommended_assist_id": 13350
       },
       {
         "position": 2,
         "recommended_card_id": 13426,
         "role": "shield",
         "slot_name": "Frieren (Battle Attire)",
-        "recommended_latents": ["limit_break", "limit_break", "limit_break", "limit_break", "sdr", "sdr"],
-        "assist_priority": ["shield", "absorb_void", "team_hp", "blind_resist"],
-        "notes": "Damage cap unlock slot. Stack limit break latents for max damage."
+        "recommended_latents": [
+          "limit_break",
+          "limit_break",
+          "limit_break",
+          "limit_break",
+          "sdr",
+          "sdr"
+        ],
+        "assist_priority": [
+          "shield",
+          "absorb_void",
+          "team_hp",
+          "blind_resist"
+        ],
+        "notes": "Damage cap unlock slot. Stack limit break latents for max damage.",
+        "recommended_assist_id": 11458
       },
       {
         "position": 3,
         "recommended_card_id": 13424,
         "role": "healer",
         "slot_name": "Heiter",
-        "recommended_latents": ["assist_null_recovery", "assist_null_recovery", "assist_null_recovery", "assist_null_recovery", "sdr", "sdr"],
-        "assist_priority": ["bind_clear", "team_rcv", "shield", "sdr"],
-        "notes": "Must have assist disabled recovery. Keeps the team alive with healing and bind clear."
+        "recommended_latents": [
+          "assist_null_recovery",
+          "assist_null_recovery",
+          "assist_null_recovery",
+          "assist_null_recovery",
+          "sdr",
+          "sdr"
+        ],
+        "assist_priority": [
+          "bind_clear",
+          "team_rcv",
+          "shield",
+          "sdr"
+        ],
+        "notes": "Must have assist disabled recovery. Keeps the team alive with healing and bind clear.",
+        "recommended_assist_id": 13425
       },
       {
         "position": 4,
         "recommended_card_id": 13409,
         "role": "looper",
         "slot_name": "Frieren (Loop A)",
-        "recommended_latents": ["sdr", "sdr", "sdr", "sdr"],
-        "assist_priority": ["sdr", "team_hp", "blind_resist", "board_change"],
-        "notes": "Core loop card A. Prioritize SDR above all else for rotation stability."
+        "recommended_latents": [
+          "sdr",
+          "sdr",
+          "sdr",
+          "sdr"
+        ],
+        "assist_priority": [
+          "sdr",
+          "team_hp",
+          "blind_resist",
+          "board_change"
+        ],
+        "notes": "Core loop card A. Prioritize SDR above all else for rotation stability.",
+        "recommended_assist_id": 12918
       },
       {
         "position": 5,
         "recommended_card_id": 13409,
         "role": "looper",
         "slot_name": "Frieren (Loop B)",
-        "recommended_latents": ["absorb_void", "absorb_void", "absorb_void", "absorb_void", "sdr", "sdr"],
-        "assist_priority": ["absorb_void", "sdr", "team_hp", "board_change"],
-        "notes": "Slot for damage absorb void penetration. Absorption pierce equip strongly recommended."
+        "recommended_latents": [
+          "absorb_void",
+          "absorb_void",
+          "absorb_void",
+          "absorb_void",
+          "sdr",
+          "sdr"
+        ],
+        "assist_priority": [
+          "absorb_void",
+          "sdr",
+          "team_hp",
+          "board_change"
+        ],
+        "notes": "Slot for damage absorb void penetration. Absorption pierce equip strongly recommended.",
+        "recommended_assist_id": 10207
       },
       {
         "position": 6,
         "recommended_card_id": 13409,
         "role": "friend",
         "slot_name": "Frieren (Friend Leader)",
-        "recommended_latents": ["sdr", "sdr", "sdr", "sdr", "hp_plus", "hp_plus"],
-        "assist_priority": ["sdr", "board_change", "team_hp", "blind_resist"],
-        "notes": "Friend leader slot. Frieren Equip (13306) is ideal here for board unlock + SDR."
+        "recommended_latents": [
+          "sdr",
+          "sdr",
+          "sdr",
+          "sdr",
+          "hp_plus",
+          "hp_plus"
+        ],
+        "assist_priority": [
+          "sdr",
+          "board_change",
+          "team_hp",
+          "blind_resist"
+        ],
+        "notes": "Friend leader slot. Frieren Equip (13306) is ideal here for board unlock + SDR.",
+        "recommended_assist_id": 13306
       }
     ]
   },
@@ -68,9 +149,13 @@
     "id": "gintoki-suou-loop",
     "name": "Gintoki Suou Loop",
     "leader_id": 13692,
-    "friend_id": 13692,
+    "friend_id": 13681,
     "description": "High-speed attacker team led by Gintoki (Soukyu). Relies on dark/water board synergy and strong attacker damage. Flexible sub slots allow adaptation to dungeon mechanics.",
-    "required_mechanics": ["sdr", "shield", "blind_resist"],
+    "required_mechanics": [
+      "sdr",
+      "shield",
+      "blind_resist"
+    ],
     "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/541334",
     "slots": [
       {
@@ -78,8 +163,20 @@
         "recommended_card_id": 13692,
         "role": "leader",
         "slot_name": "Gintoki Suou (Leader)",
-        "recommended_latents": ["leader_swap_resist", "leader_swap_resist", "leader_swap_resist", "leader_swap_resist", "sdr", "sdr"],
-        "assist_priority": ["shield", "sdr", "absorb_void", "team_hp"],
+        "recommended_latents": [
+          "leader_swap_resist",
+          "leader_swap_resist",
+          "leader_swap_resist",
+          "leader_swap_resist",
+          "sdr",
+          "sdr"
+        ],
+        "assist_priority": [
+          "shield",
+          "sdr",
+          "absorb_void",
+          "team_hp"
+        ],
         "notes": "Keep 4x leader swap resist. Main leader — protect with a shield assist."
       },
       {
@@ -87,8 +184,16 @@
         "recommended_card_id": 13341,
         "role": "shield",
         "slot_name": "Aizawa (Shield)",
-        "recommended_latents": ["sdr", "sdr"],
-        "assist_priority": ["shield", "team_hp", "sdr", "blind_resist"],
+        "recommended_latents": [
+          "sdr",
+          "sdr"
+        ],
+        "assist_priority": [
+          "shield",
+          "team_hp",
+          "sdr",
+          "blind_resist"
+        ],
         "notes": "Shield sub for damage reduction. SDR latents to protect the skill rotation."
       },
       {
@@ -96,8 +201,20 @@
         "recommended_card_id": 13426,
         "role": "attacker",
         "slot_name": "Frieren (Battle Attire)",
-        "recommended_latents": ["limit_break", "limit_break", "limit_break", "limit_break", "sdr", "sdr"],
-        "assist_priority": ["shield", "absorb_void", "team_hp", "limit_break"],
+        "recommended_latents": [
+          "limit_break",
+          "limit_break",
+          "limit_break",
+          "limit_break",
+          "sdr",
+          "sdr"
+        ],
+        "assist_priority": [
+          "shield",
+          "absorb_void",
+          "team_hp",
+          "limit_break"
+        ],
         "notes": "Damage cap unlock. Stack limit break latents."
       },
       {
@@ -105,8 +222,16 @@
         "recommended_card_id": 13405,
         "role": "flex",
         "slot_name": "Frieren Base (Awaken Null)",
-        "recommended_latents": ["sdr", "sdr"],
-        "assist_priority": ["bind_clear", "sdr", "team_hp", "board_change"],
+        "recommended_latents": [
+          "sdr",
+          "sdr"
+        ],
+        "assist_priority": [
+          "bind_clear",
+          "sdr",
+          "team_hp",
+          "board_change"
+        ],
         "notes": "Awoken bind nullification. Can swap out if dungeon doesn't use awoken bind."
       },
       {
@@ -114,8 +239,20 @@
         "recommended_card_id": 13681,
         "role": "attacker",
         "slot_name": "Fujiwara (Bocchi)",
-        "recommended_latents": ["sdr", "sdr", "hp_plus", "hp_plus", "hp_plus", "hp_plus"],
-        "assist_priority": ["team_hp", "sdr", "killer", "board_change"],
+        "recommended_latents": [
+          "sdr",
+          "sdr",
+          "hp_plus",
+          "hp_plus",
+          "hp_plus",
+          "hp_plus"
+        ],
+        "assist_priority": [
+          "team_hp",
+          "sdr",
+          "killer",
+          "board_change"
+        ],
         "notes": "HP support sub. Stack HP latents to meet HP threshold checks."
       },
       {
@@ -123,8 +260,20 @@
         "recommended_card_id": 13681,
         "role": "friend",
         "slot_name": "Gintoki Suou (Friend)",
-        "recommended_latents": ["sdr", "sdr", "limit_break", "limit_break", "limit_break", "limit_break"],
-        "assist_priority": ["sdr", "team_hp", "limit_break", "shield"],
+        "recommended_latents": [
+          "sdr",
+          "sdr",
+          "limit_break",
+          "limit_break",
+          "limit_break",
+          "limit_break"
+        ],
+        "assist_priority": [
+          "sdr",
+          "team_hp",
+          "limit_break",
+          "shield"
+        ],
         "notes": "Friend leader. Limit break latents for max damage cap synergy."
       }
     ]

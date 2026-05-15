@@ -1,149 +1,807 @@
 [
   {
-    "id": 13412,
-    "name_jp": "フリーレン（コラボ）",
-    "name_en": "Frieren (Collab)",
-    "attribute": "wood",
-    "sub_attribute": "light",
-    "types": [
-      "attacker",
-      "god"
-    ],
-    "awakenings": [
-      "skill_boost",
-      "time_extend",
-      "combo_orb",
-      "blind_resist",
-      "sdr"
-    ],
-    "active_skill_name": "Zoltraak",
-    "active_skill_desc": "Board change to wood/light + fixed move time",
-    "role_tags": [
-      "leader",
-      "looper",
-      "board_change",
-      "damage",
-      "fixed_time"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13412",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13412.png"
-  },
-  {
-    "id": 13426,
-    "name_jp": "フリーレン（戦闘衣）",
-    "name_en": "Frieren (Battle Attire)",
-    "attribute": "wood",
-    "sub_attribute": "dark",
-    "types": [
-      "attacker",
-      "god"
-    ],
-    "awakenings": [
-      "skill_boost",
-      "combo_orb",
-      "blind_resist",
-      "sdr",
-      "sdr"
-    ],
-    "active_skill_name": "Hochzeitsnacht",
-    "active_skill_desc": "Board change + damage cap unlock",
-    "role_tags": [
-      "looper",
-      "board_change",
-      "damage",
-      "shield"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13426",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13426.png"
-  },
-  {
-    "id": 13424,
-    "name_jp": "ハイター",
-    "name_en": "Heiter",
-    "attribute": "water",
-    "sub_attribute": "light",
-    "types": [
-      "healer",
-      "god"
-    ],
-    "awakenings": [
-      "skill_boost",
-      "team_hp",
-      "bind_resist",
-      "bind_resist",
-      "sdr"
-    ],
-    "active_skill_name": "Frieren Heal",
-    "active_skill_desc": "HP recovery + bind clear + assist disabled recovery",
-    "role_tags": [
-      "healer",
-      "bind_clear",
-      "shield"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13424",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13424.png"
-  },
-  {
-    "id": 13409,
-    "name_jp": "フリーレン",
-    "name_en": "Frieren",
-    "attribute": "wood",
-    "sub_attribute": "dark",
-    "types": [
-      "attacker",
-      "god"
-    ],
-    "awakenings": [
-      "skill_boost",
-      "time_extend",
-      "combo_orb",
-      "sdr",
-      "sdr"
-    ],
-    "active_skill_name": "Ancient Zoltraak",
-    "active_skill_desc": "Orb generation + loop skill",
-    "role_tags": [
-      "looper",
-      "board_change",
-      "damage",
-      "fixed_time"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13409",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13409.png"
-  },
-  {
-    "id": 13692,
-    "name_jp": "銀時（蒼龍）",
-    "name_en": "Gintoki (Soukyu)",
-    "attribute": "water",
+    "id": 4206,
+    "name": "Sweet Dianthus, Kushinadahime",
+    "name_jp": "甘味の撫子・クシナダヒメ",
+    "attribute": "light",
     "sub_attribute": "wood",
     "types": [
+      "god",
+      "healer"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "awk_115",
+      "awk_53",
+      "awk_53",
+      "awk_82",
+      "awk_104",
+      "awk_104",
+      "skill_boost"
+    ],
+    "active_skill_name": "Loving Perception",
+    "active_skill_desc": "For 2 turns, reduce damage taken by 75%; For 2 turns, increase combo count by 8; For 3 turns, bypass att. absorb and damage absorb shield effects",
+    "role_tags": [
+      "absorb_void",
+      "combo_orb",
+      "shield",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/04206.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/4206"
+  },
+  {
+    "id": 4751,
+    "name": "Toushirou Hijikata",
+    "name_jp": "土方十四郎",
+    "attribute": "wood",
+    "sub_attribute": "dark",
+    "types": [
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "awk_53",
+      "awk_53",
+      "awk_82",
+      "awk_82",
+      "skill_boost",
+      "skill_boost"
+    ],
+    "active_skill_name": "We've run out of mayonnaise!!",
+    "active_skill_desc": "For 1 turn, no skyfall; For 1 turn, 3x HP; Unlock all orbs; Change all orbs to Wood and Dark orbs; Charge all allies' skills by 1 turn",
+    "role_tags": [
+      "board_change",
+      "board_unlock",
+      "haste",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/04751.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/4751"
+  },
+  {
+    "id": 4757,
+    "name": "Shinsuke Takasugi",
+    "name_jp": "高杉晋助",
+    "attribute": "dark",
+    "sub_attribute": "fire",
+    "types": [
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "awk_53",
+      "awk_107",
+      "awk_113",
+      "awk_113",
+      "awk_51",
+      "awk_32"
+    ],
+    "active_skill_name": "I will destroy this rotten world.",
+    "active_skill_desc": "For 6 turns, bypass att. absorb shield effects; For 6 turns, reduce enemies' defense by 100%; Unlock all orbs; Change all orbs to Fire, Water, Wood, Light, and Dark orbs; Remove 1 enemy's barrier",
+    "role_tags": [
+      "absorb_void",
+      "board_change",
+      "board_unlock",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/04757.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/4757"
+  },
+  {
+    "id": 4763,
+    "name": "Shinpachi Shimura",
+    "name_jp": "志村新八",
+    "attribute": "wood",
+    "sub_attribute": "light",
+    "types": [],
+    "awakenings": [
+      "awk_118",
+      "awk_118",
+      "sdr",
+      "sdr",
+      "time_extend",
+      "awk_54",
+      "awk_69",
+      "blind_resist",
+      "awk_62"
+    ],
+    "active_skill_name": "Heeeey!!",
+    "active_skill_desc": "Change the 2nd row from the bottom to Wood orbs and change the bottom row to Light orbs; Lock all Wood and Light orbs; Reduce unable to match orbs effect by 9,999 turns; Remove all awoken skill binds",
+    "role_tags": [
+      "blind_resist",
+      "sdr",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/04763.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/4763"
+  },
+  {
+    "id": 4765,
+    "name": "Kagura",
+    "name_jp": "神楽",
+    "attribute": "fire",
+    "sub_attribute": "light",
+    "types": [
+      "attacker"
+    ],
+    "awakenings": [
+      "time_extend",
+      "awk_53",
+      "awk_37",
+      "awk_37",
+      "awk_109",
+      "awk_109",
+      "awk_109",
+      "time_extend",
+      "awk_129"
+    ],
+    "active_skill_name": "That's my pickled seaweed!",
+    "active_skill_desc": "Unlock all orbs; Change Dark, Poison, and Mortal Poison orbs to Fire orbs; For 6 turns, bypass damage absorb shield effects; For 6 turns, Fire orbs are more likely to appear by 15%",
+    "role_tags": [
+      "absorb_void",
+      "board_unlock",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/04765.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/4765"
+  },
+  {
+    "id": 4767,
+    "name": "Tae Shimura",
+    "name_jp": "志村妙",
+    "attribute": "light",
+    "sub_attribute": "light",
+    "types": [],
+    "awakenings": [
+      "sdr",
+      "awk_53",
+      "awk_32",
+      "awk_33",
+      "awk_58",
+      "awk_58",
+      "awk_58",
+      "awk_137",
+      "awk_137"
+    ],
+    "active_skill_name": "Omelet.",
+    "active_skill_desc": "Reduce HP by 50%; Deal 500x Light damage to an enemy; Unlock all orbs; Change all orbs to Wood, Light, and Jammer orbs; Remove 1 enemy's barrier",
+    "role_tags": [
+      "board_change",
+      "board_unlock",
+      "sdr"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/04767.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/4767"
+  },
+  {
+    "id": 4769,
+    "name": "Isao Kondou",
+    "name_jp": "近藤勲",
+    "attribute": "light",
+    "sub_attribute": "dark",
+    "types": [
+      "physical"
+    ],
+    "awakenings": [
+      "time_extend",
+      "time_extend",
+      "skill_boost",
+      "skill_boost",
+      "skill_boost",
+      "awk_69",
+      "awk_111",
+      "awk_111",
+      "awk_108"
+    ],
+    "active_skill_name": "I'm a hunter...of love.",
+    "active_skill_desc": "Recover 50% of max HP; Unlock all orbs; Create 6 Light orbs; For 2 turns, bypass att. absorb shield effects",
+    "role_tags": [
+      "absorb_void",
+      "board_unlock",
+      "heal",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/04769.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/4769"
+  },
+  {
+    "id": 4771,
+    "name": "Kotarou Katsura",
+    "name_jp": "桂小太郎",
+    "attribute": "water",
+    "sub_attribute": "wood",
+    "types": [],
+    "awakenings": [
+      "awk_53",
+      "awk_53",
+      "sdr",
+      "awk_106",
+      "awk_134",
+      "awk_108",
+      "awk_108",
+      "awk_54",
+      "blind_resist"
+    ],
+    "active_skill_name": "It's not Zura. It's Katsura! ",
+    "active_skill_desc": "Unlock all orbs; Change the far left column to Bomb orbs and change the far right column to Water orbs and change the 2nd column from the left to Wood orbs",
+    "role_tags": [
+      "blind_resist",
+      "board_unlock",
+      "sdr"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/04771.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/4771"
+  },
+  {
+    "id": 4773,
+    "name": "Tatsuma Sakamoto",
+    "name_jp": "坂本辰馬",
+    "attribute": "water",
+    "sub_attribute": "wood",
+    "types": [],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "awk_53",
+      "awk_134",
+      "awk_107",
+      "awk_109",
+      "jammer_resist",
+      "jammer_resist",
+      "jammer_resist"
+    ],
+    "active_skill_name": "We're Kai-rates!",
+    "active_skill_desc": "For 6 turns, recover 30% of max HP; For 6 turns, increase combo count by 2; Reduce unable to match orbs effect by 9,999 turns; Remove all binds and awoken skill binds",
+    "role_tags": [
+      "combo_orb",
+      "heal",
+      "jammer_resist",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/04773.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/4773"
+  },
+  {
+    "id": 4775,
+    "name": "Kyube Yagyu",
+    "name_jp": "柳生九兵衛",
+    "attribute": "dark",
+    "sub_attribute": "light",
+    "types": [],
+    "awakenings": [
+      "time_extend",
+      "awk_47",
+      "awk_47",
+      "awk_47",
+      "awk_31",
+      "awk_31",
+      "awk_111",
+      "awk_111",
+      "blind_resist"
+    ],
+    "active_skill_name": "I'll protect you, I promise.",
+    "active_skill_desc": "For 10 turns, reduce damage taken by 40%; Replace all orbs",
+    "role_tags": [
+      "blind_resist",
+      "shield",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/04775.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/4775"
+  },
+  {
+    "id": 4780,
+    "name": "PAD Squadron in Elizabeth Costume",
+    "name_jp": "パズドラ隊＆エリザベス衣装",
+    "attribute": "light",
+    "sub_attribute": "dark",
+    "types": [],
+    "awakenings": [
+      "skill_boost",
+      "awk_108",
+      "time_extend",
+      "awk_44",
+      "awk_4",
+      "awk_5",
+      "awk_6",
+      "awk_7",
+      "awk_8"
+    ],
+    "active_skill_name": "Renho Army PAD Squadron",
+    "active_skill_desc": "Deal 10,000,000 damage to an enemy 5 times; Unlock all orbs; Change all orbs to Fire, Water, Wood, Light, and Dark orbs",
+    "role_tags": [
+      "board_change",
+      "board_unlock",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/04780.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/4780"
+  },
+  {
+    "id": 6065,
+    "name": "Shigeshige Tokugawa",
+    "name_jp": "徳川茂茂",
+    "attribute": "wood",
+    "sub_attribute": "wood",
+    "types": [],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "awk_53",
+      "awk_109",
+      "awk_107",
+      "awk_64",
+      "awk_64",
+      "awk_64"
+    ],
+    "active_skill_name": "The Shogun family traditionally wears manly briefs.",
+    "active_skill_desc": "Deal 30,000,000 fixed damage to all enemies; Unlock all orbs; Change all orbs to Wood, Light, and Heal orbs",
+    "role_tags": [
+      "board_change",
+      "board_unlock",
+      "damage",
+      "heal",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/06065.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/6065"
+  },
+  {
+    "id": 6068,
+    "name": "Kintoki Sakata",
+    "name_jp": "坂田金時",
+    "attribute": "light",
+    "sub_attribute": "water",
+    "types": [
+      "machine"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "awk_53",
+      "awk_53",
+      "awk_109",
+      "awk_58",
+      "awk_58",
+      "awk_111"
+    ],
+    "active_skill_name": "Gold will have to pick up the slack.",
+    "active_skill_desc": "For 9 turns, reduce damage taken by 40%; For 4 turns, bypass att. absorb shield effects",
+    "role_tags": [
+      "absorb_void",
+      "sdr",
+      "shield",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/06068.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/6068"
+  },
+  {
+    "id": 6071,
+    "name": "Tsukuyo",
+    "name_jp": "月詠",
+    "attribute": "dark",
+    "sub_attribute": "light",
+    "types": [
       "attacker",
+      "healer"
+    ],
+    "awakenings": [
+      "time_extend",
+      "sdr",
+      "skill_boost",
+      "skill_boost",
+      "skill_boost",
+      "awk_107",
+      "awk_107",
+      "awk_107",
+      "awk_108"
+    ],
+    "active_skill_name": "This moon will never fall.",
+    "active_skill_desc": "Unlock all orbs; Change all orbs to Light, Dark, and Heal orbs; For 1 turn, reduce damage taken by 60%; For 1 turn, increase combo count by 5",
+    "role_tags": [
+      "board_change",
+      "board_unlock",
+      "combo_orb",
+      "heal",
+      "sdr",
+      "shield",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/06071.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/6071"
+  },
+  {
+    "id": 6419,
+    "name": "Egg of Pride",
+    "name_jp": "傲慢の汰魔悟",
+    "attribute": "light",
+    "sub_attribute": "none",
+    "types": [
+      "devil"
+    ],
+    "awakenings": [
+      "time_extend",
+      "awk_62",
+      "awk_54",
+      "awk_124",
+      "awk_104",
+      "awk_1",
+      "awk_1"
+    ],
+    "active_skill_name": "Qualia Ego",
+    "active_skill_desc": "Unlock all orbs; Create 15 Light and Heal orbs over any orbs",
+    "role_tags": [
+      "board_unlock",
+      "heal",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/06419.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/6419"
+  },
+  {
+    "id": 7781,
+    "name": "Accountant of the Ministry of Mystics, Kugane",
+    "name_jp": "陰陽省の勘定方・クガネ",
+    "attribute": "water",
+    "sub_attribute": "none",
+    "types": [
+      "devil"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "time_extend",
+      "blind_resist",
+      "awk_53",
+      "awk_61",
+      "awk_109",
+      "sdr",
+      "awk_128"
+    ],
+    "active_skill_name": "Cloud Cat Transformation",
+    "active_skill_desc": "Charge all allies' skills by 3 turns; Change to [7782] for the duration of the dungeon",
+    "role_tags": [
+      "blind_resist",
+      "haste",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/07781.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/7781"
+  },
+  {
+    "id": 9620,
+    "name": "New Year's Butterfly Goddess, Priscilla",
+    "name_jp": "新春の蝶女神・プリシラ",
+    "attribute": "fire",
+    "sub_attribute": "light",
+    "types": [
       "god"
     ],
     "awakenings": [
       "skill_boost",
-      "combo_orb",
-      "blind_resist",
-      "sdr",
-      "sdr"
+      "time_extend",
+      "time_extend",
+      "awk_53",
+      "awk_128",
+      "awk_111",
+      "awk_111",
+      "awk_110",
+      "awk_108"
     ],
-    "active_skill_name": "Soukyu Strike",
-    "active_skill_desc": "Board change + leader skill boost",
+    "active_skill_name": "Floral Loveliness",
+    "active_skill_desc": "A 2×2 square of clouds appears for 2 turns at a random location; For 2 turns, increase combo count by 3; Reduce unable to match orbs effect by 9,999 turns; Remove all binds and awoken skill binds",
     "role_tags": [
-      "leader",
-      "damage",
-      "board_change"
+      "combo_orb",
+      "skill_boost",
+      "time_extend"
     ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13692",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13692.png"
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/09620.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/9620"
   },
   {
-    "id": 13341,
-    "name_jp": "相沢（ウマ娘）",
-    "name_en": "Aizawa (Uma Musume)",
+    "id": 9705,
+    "name": "Chocolatier Daunting Dragonbound, Li",
+    "name_jp": "お菓子作りの恐龍契士・リィ",
+    "attribute": "light",
+    "sub_attribute": "fire",
+    "types": [
+      "dragon"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "sdr",
+      "time_extend",
+      "time_extend"
+    ],
+    "active_skill_name": "Sweets of Innocence",
+    "active_skill_desc": "For 5 turns, 5x ATK for Dragon type; Change to [9706] for the duration of the dungeon",
+    "role_tags": [
+      "damage",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/09705.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/9705"
+  },
+  {
+    "id": 10045,
+    "name": "Ministry of Mystics' Apothecary, Izuna",
+    "name_jp": "陰陽省の薬師・イズナ",
+    "attribute": "wood",
+    "sub_attribute": "wood",
+    "types": [
+      "devil",
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "time_extend",
+      "sdr",
+      "awk_69",
+      "blind_resist"
+    ],
+    "active_skill_name": "Wind-Borne Weasel Transformation",
+    "active_skill_desc": "Charge all allies' skills by 2 turns; Enhance all Wood orbs; Change to [10046] for the duration of the dungeon",
+    "role_tags": [
+      "blind_resist",
+      "haste",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/10045.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/10045"
+  },
+  {
+    "id": 10048,
+    "name": "Enenra Girl, Yura",
+    "name_jp": "煙々羅の妖人・ユラ",
+    "attribute": "fire",
+    "sub_attribute": "water",
+    "types": [
+      "devil",
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "time_extend",
+      "awk_54",
+      "awk_109",
+      "awk_129"
+    ],
+    "active_skill_name": "Wisping Smoke Transformation",
+    "active_skill_desc": "For 20 turns, Fire and Water orbs appear locked; For 1 turn, reduce damage taken by 100%; Change to [10049] for the duration of the dungeon",
+    "role_tags": [
+      "shield",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/10048.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/10048"
+  },
+  {
+    "id": 10207,
+    "name": "Flordia's Flower Rod",
+    "name_jp": "フローディアのフラワーロッド",
+    "attribute": "light",
+    "sub_attribute": "none",
+    "types": [],
+    "awakenings": [
+      "time_extend",
+      "awk_94",
+      "time_extend",
+      "skill_boost",
+      "skill_boost",
+      "skill_boost",
+      "awk_79",
+      "awk_44"
+    ],
+    "active_skill_name": "Blooming Garden",
+    "active_skill_desc": "For 1 turn, reduce damage taken by 100%; For 2 turns, bypass att. absorb and damage absorb shield effects; For 2 turns, increase combo count by 3",
+    "role_tags": [
+      "absorb_void",
+      "combo_orb",
+      "shield",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/10207.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/10207"
+  },
+  {
+    "id": 12097,
+    "name": "New Year's Greetings King of the Fairies, Albrecht",
+    "name_jp": "迎春の妖精王・アルバート",
+    "attribute": "wood",
+    "sub_attribute": "light",
+    "types": [
+      "physical",
+      "healer"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "time_extend",
+      "awk_59",
+      "awk_53",
+      "awk_53",
+      "awk_106",
+      "awk_111",
+      "awk_111"
+    ],
+    "active_skill_name": "New Year's Sprout",
+    "active_skill_desc": "After each skill, evolve to the next: 1) For 1 turn, reduce damage taken by 100%; Unlock all orbs; Change all orbs to Wood and Light orbs 2) Unlock all orbs; Create 9 Wood orbs over non Light and Heal orbs, and create 4 Light orbs over non Wood and Heal orbs; For 1 turn, reduce damage taken by 40%; For 1 turn, set damage cap of self to 38,000,000,000",
+    "role_tags": [
+      "board_change",
+      "board_unlock",
+      "heal",
+      "shield",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/12097.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/12097"
+  },
+  {
+    "id": 12156,
+    "name": "Guardian of Confectionary, Athena",
+    "name_jp": "製菓の守護神・アテナ",
+    "attribute": "fire",
+    "sub_attribute": "light",
+    "types": [
+      "god",
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "awk_59",
+      "awk_111",
+      "awk_111",
+      "blind_resist",
+      "blind_resist",
+      "time_extend"
+    ],
+    "active_skill_name": "Passionate Sweet Aegis",
+    "active_skill_desc": "After each skill, evolve to the next: 1) Unlock all orbs; Change all orbs to Fire, Light, and Heal orbs; Enhance all orbs; Charge all allies' skills by 2 turns 2) For 6 turns, set damage cap of Fire allies to 16,000,000,000; For 6 turns, recover 50% of max HP; Charge all allies' skills by 1 turn",
+    "role_tags": [
+      "blind_resist",
+      "board_change",
+      "board_unlock",
+      "haste",
+      "heal",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/12156.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/12156"
+  },
+  {
+    "id": 12437,
+    "name": "Black Rose Dark Sprout",
+    "name_jp": "黒薔薇の邪萌芽",
+    "attribute": "dark",
+    "sub_attribute": "wood",
+    "types": [
+      "devil"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "sdr",
+      "time_extend",
+      "time_extend"
+    ],
+    "active_skill_name": "Twinkling Blossom - Black Rose",
+    "active_skill_desc": "For 5 turns, 10% chance for barbed Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison, and Bomb skyfall; Charge all allies' skills by 2 turns; Change to [12438] for the duration of the dungeon",
+    "role_tags": [
+      "haste",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/12437.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/12437"
+  },
+  {
+    "id": 12446,
+    "name": "Loving Tulip Starfairy, Liana",
+    "name_jp": "チューリップの慈星霊・リアナ",
     "attribute": "fire",
     "sub_attribute": "wood",
+    "types": [
+      "physical",
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "awk_59",
+      "awk_111",
+      "awk_111",
+      "awk_109",
+      "awk_121",
+      "time_extend"
+    ],
+    "active_skill_name": "Garden of Thoughts",
+    "active_skill_desc": "If 6 or more Fire are on the board: For 7 turns, set damage cap of Fire allies to 17,000,000,000; For 7 turns, reduce damage taken by 40%",
+    "role_tags": [
+      "sdr",
+      "shield",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/12446.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/12446"
+  },
+  {
+    "id": 12609,
+    "name": "Mixologist, Saline",
+    "name_jp": "バーテンダー・サレーネ",
+    "attribute": "light",
+    "sub_attribute": "light",
+    "types": [
+      "devil"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "awk_82",
+      "awk_111",
+      "awk_111",
+      "awk_109",
+      "awk_129",
+      "awk_63"
+    ],
+    "active_skill_name": "Tropical Light Stirring",
+    "active_skill_desc": "Reduce unable to match orbs effect by 9,999 turns; Remove all binds and awoken skill binds; Unlock all orbs; Change all orbs to Light and Heal orbs; Charge all allies' skills by 2 turns",
+    "role_tags": [
+      "board_change",
+      "board_unlock",
+      "haste",
+      "heal",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/12609.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/12609"
+  },
+  {
+    "id": 12623,
+    "name": "Tequila Gimlet",
+    "name_jp": "テキーラギムレット",
+    "attribute": "fire",
+    "sub_attribute": "water",
     "types": [
       "attacker",
       "physical"
@@ -151,641 +809,92 @@
     "awakenings": [
       "skill_boost",
       "sdr",
-      "sdr",
-      "blind_resist"
+      "time_extend",
+      "time_extend",
+      "time_extend",
+      "time_extend",
+      "time_extend",
+      "awk_63"
     ],
-    "active_skill_name": "Shield Strike",
-    "active_skill_desc": "Damage reduction shield for 1 turn",
+    "active_skill_name": "Blasting Shake",
+    "active_skill_desc": "For 5 turns, enhanced orbs are more likely to appear by 100%; Charge all allies' skills by 3 turns; Change to [12624] for the duration of the dungeon",
     "role_tags": [
-      "shield",
-      "damage"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13341",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13341.png"
-  },
-  {
-    "id": 13405,
-    "name_jp": "フリーレン（初期）",
-    "name_en": "Frieren (Base)",
-    "attribute": "wood",
-    "sub_attribute": "light",
-    "types": [
-      "attacker",
-      "god"
-    ],
-    "awakenings": [
+      "haste",
+      "orb_enhance",
+      "sdr",
       "skill_boost",
-      "combo_orb",
-      "sdr",
-      "sdr",
-      "blind_resist"
+      "time_extend"
     ],
-    "active_skill_name": "Awaken Nullification",
-    "active_skill_desc": "Awoken bind clear for all team members",
-    "role_tags": [
-      "flex",
-      "bind_clear",
-      "damage"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13405",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13405.png"
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/12623.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/12623"
   },
   {
-    "id": 13681,
-    "name_jp": "藤原（ぼっち・ざ・ろっく！）",
-    "name_en": "Fujiwara (Bocchi the Rock!)",
+    "id": 12635,
+    "name": "Dry Negroni",
+    "name_jp": "ドライネグローニ",
     "attribute": "dark",
     "sub_attribute": "fire",
     "types": [
-      "attacker",
-      "devil"
-    ],
-    "awakenings": [
-      "skill_boost",
-      "sdr",
-      "sdr",
-      "team_hp",
-      "team_hp"
-    ],
-    "active_skill_name": "Rock Beat",
-    "active_skill_desc": "HP boost + dark orb change",
-    "role_tags": [
-      "damage",
-      "flex"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13681",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13681.png"
-  },
-  {
-    "id": 9807,
-    "name_jp": "ヒンメル",
-    "name_en": "Himmel",
-    "attribute": "light",
-    "sub_attribute": "wood",
-    "types": [
-      "attacker",
-      "god"
-    ],
-    "awakenings": [
-      "skill_boost",
-      "time_extend",
-      "combo_orb",
-      "blind_resist"
-    ],
-    "active_skill_name": "Sacred Light",
-    "active_skill_desc": "Fixed move time + omni-pierce for 1 turn",
-    "role_tags": [
-      "leader",
-      "damage",
-      "fixed_time"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/9807",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/9807.png"
-  },
-  {
-    "id": 13306,
-    "name_jp": "フリーレン装備",
-    "name_en": "Frieren (Collab) Base",
-    "attribute": "wood",
-    "sub_attribute": null,
-    "types": [
-      "attacker",
-      "god"
-    ],
-    "awakenings": [
-      "skill_boost",
-      "combo_orb",
-      "sdr",
-      "board_change"
-    ],
-    "active_skill_name": "Frieren Loop",
-    "active_skill_desc": "Unlock + board change to water/wood",
-    "role_tags": [
-      "looper",
-      "board_change",
-      "damage"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13306",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13306.png"
-  },
-  {
-    "id": 13307,
-    "name_jp": "フリーレンB",
-    "name_en": "Frieren B",
-    "attribute": "wood",
-    "sub_attribute": null,
-    "types": [
-      "attacker",
-      "god"
-    ],
-    "awakenings": [
-      "skill_boost",
-      "combo_orb",
-      "sdr",
-      "sdr"
-    ],
-    "active_skill_name": "Frieren B Loop",
-    "active_skill_desc": "Board change to wood/dark",
-    "role_tags": [
-      "looper",
-      "board_change",
-      "damage"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13307",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13307.png"
-  },
-  {
-    "id": 13308,
-    "name_jp": "フリーレンC",
-    "name_en": "Frieren C",
-    "attribute": "wood",
-    "sub_attribute": null,
-    "types": [
-      "attacker",
-      "god"
-    ],
-    "awakenings": [
-      "skill_boost",
-      "combo_orb",
-      "sdr",
-      "killer"
-    ],
-    "active_skill_name": "Frieren C Loop",
-    "active_skill_desc": "Board change to wood/light",
-    "role_tags": [
-      "looper",
-      "board_change",
-      "damage",
-      "flex"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13308",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13308.png"
-  },
-  {
-    "id": 13427,
-    "name_jp": "アイゼン",
-    "name_en": "Eisen",
-    "attribute": "wood",
-    "sub_attribute": "fire",
-    "types": [
-      "physical",
       "attacker"
     ],
     "awakenings": [
       "skill_boost",
-      "team_hp",
-      "killer",
-      "limit_break",
-      "sdr"
+      "sdr",
+      "awk_54",
+      "time_extend",
+      "time_extend",
+      "time_extend",
+      "time_extend",
+      "awk_63"
     ],
-    "active_skill_name": "Axe Strike",
-    "active_skill_desc": "Massive damage + shield",
+    "active_skill_name": "Building a Richly Bitter Mix",
+    "active_skill_desc": "Charge all allies' skills by 3 turns; Change to [12636] for the duration of the dungeon",
     "role_tags": [
-      "damage",
-      "shield"
+      "haste",
+      "sdr",
+      "skill_boost",
+      "time_extend"
     ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13427",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13427.png"
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/12635.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/12635"
   },
   {
-    "id": 8901,
-    "name_jp": "レム＆ラム",
-    "name_en": "Rem & Ram",
-    "attribute": "water",
+    "id": 12644,
+    "name": "Margarita",
+    "name_jp": "マルガリータ",
+    "attribute": "wood",
     "sub_attribute": "light",
     "types": [
       "attacker",
-      "god"
-    ],
-    "awakenings": [
-      "skill_boost",
-      "combo_orb",
-      "sdr",
-      "sdr"
-    ],
-    "active_skill_name": "Twin Strike",
-    "active_skill_desc": "Board change to water/light",
-    "role_tags": [
-      "looper",
-      "board_change"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/8901",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/8901.png"
-  },
-  {
-    "id": 8902,
-    "name_jp": "レム＆ラムB",
-    "name_en": "Rem & Ram B",
-    "attribute": "water",
-    "sub_attribute": "dark",
-    "types": [
-      "attacker",
-      "god"
-    ],
-    "awakenings": [
-      "skill_boost",
-      "combo_orb",
-      "sdr",
-      "blind_resist"
-    ],
-    "active_skill_name": "Twin Strike B",
-    "active_skill_desc": "Board change to water/dark",
-    "role_tags": [
-      "looper",
-      "board_change"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/8902",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/8902.png"
-  },
-  {
-    "id": 3260,
-    "name_jp": "オット",
-    "name_en": "Otto",
-    "attribute": "water",
-    "sub_attribute": "dark",
-    "types": [
-      "attacker",
-      "god"
-    ],
-    "awakenings": [
-      "skill_boost",
-      "sdr",
-      "sdr",
-      "haste"
-    ],
-    "active_skill_name": "Haste Charge",
-    "active_skill_desc": "Charges skills of all team members",
-    "role_tags": [
-      "looper",
-      "haste"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/3260",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/3260.png"
-  },
-  {
-    "id": 3261,
-    "name_jp": "オットB",
-    "name_en": "Otto B",
-    "attribute": "water",
-    "sub_attribute": "fire",
-    "types": [
-      "attacker",
-      "god"
-    ],
-    "awakenings": [
-      "skill_boost",
-      "sdr",
-      "sdr",
-      "haste",
-      "team_hp"
-    ],
-    "active_skill_name": "Haste Charge B",
-    "active_skill_desc": "Charges skills + HP boost",
-    "role_tags": [
-      "looper",
-      "haste"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/3261",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/3261.png"
-  },
-  {
-    "id": 13337,
-    "name_jp": "万事屋銀時",
-    "name_en": "Yorozuya Gintoki",
-    "attribute": "dark",
-    "sub_attribute": "wood",
-    "types": [
-      "attacker",
-      "god"
-    ],
-    "awakenings": [
-      "skill_boost",
-      "combo_orb",
-      "sdr",
-      "sdr",
-      "blind_resist"
-    ],
-    "active_skill_name": "Bokuto Slash",
-    "active_skill_desc": "Dark orb change + combo boost",
-    "role_tags": [
-      "looper",
-      "board_change",
-      "damage"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13337",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13337.png"
-  },
-  {
-    "id": 13357,
-    "name_jp": "神楽",
-    "name_en": "Kagura",
-    "attribute": "fire",
-    "sub_attribute": "dark",
-    "types": [
-      "attacker",
-      "devil"
-    ],
-    "awakenings": [
-      "skill_boost",
-      "sdr",
-      "sdr",
-      "team_hp"
-    ],
-    "active_skill_name": "Parasol Strike",
-    "active_skill_desc": "Fire board change",
-    "role_tags": [
-      "damage",
-      "board_change"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13357",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13357.png"
-  },
-  {
-    "id": 13319,
-    "name_jp": "土方十四郎",
-    "name_en": "Hijikata",
-    "attribute": "dark",
-    "sub_attribute": "water",
-    "types": [
-      "attacker",
-      "god"
-    ],
-    "awakenings": [
-      "skill_boost",
-      "combo_orb",
-      "sdr",
-      "blind_resist"
-    ],
-    "active_skill_name": "Demon Vice Commander",
-    "active_skill_desc": "Dark orb enhance + damage boost",
-    "role_tags": [
-      "damage",
-      "flex"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13319",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13319.png"
-  },
-  {
-    "id": 13331,
-    "name_jp": "近藤勲",
-    "name_en": "Kondo",
-    "attribute": "light",
-    "sub_attribute": "fire",
-    "types": [
-      "physical",
-      "god"
-    ],
-    "awakenings": [
-      "skill_boost",
-      "team_hp",
-      "sdr",
-      "sdr"
-    ],
-    "active_skill_name": "Gorilla Defense",
-    "active_skill_desc": "Shield + HP recovery",
-    "role_tags": [
-      "healer",
-      "shield"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13331",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13331.png"
-  },
-  {
-    "id": 13311,
-    "name_jp": "坂田銀時（桃）",
-    "name_en": "Sakata Gintoki (Pink)",
-    "attribute": "light",
-    "sub_attribute": "dark",
-    "types": [
-      "attacker",
-      "god"
-    ],
-    "awakenings": [
-      "skill_boost",
-      "combo_orb",
-      "sdr"
-    ],
-    "active_skill_name": "Bokuto Beam",
-    "active_skill_desc": "Light board change + pierce",
-    "role_tags": [
-      "looper",
-      "damage",
-      "fixed_time"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13311",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13311.png"
-  },
-  {
-    "id": 13328,
-    "name_jp": "沖田総司",
-    "name_en": "Okita Souji",
-    "attribute": "fire",
-    "sub_attribute": "wood",
-    "types": [
-      "attacker",
-      "god"
-    ],
-    "awakenings": [
-      "skill_boost",
-      "combo_orb",
-      "sdr",
-      "killer"
-    ],
-    "active_skill_name": "Mitsuba Style",
-    "active_skill_desc": "Fire orb change + killer boost",
-    "role_tags": [
-      "damage",
-      "flex"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13328",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13328.png"
-  },
-  {
-    "id": 13322,
-    "name_jp": "服部全蔵",
-    "name_en": "Hattori Zenzou",
-    "attribute": "dark",
-    "sub_attribute": "wood",
-    "types": [
-      "attacker",
-      "god"
-    ],
-    "awakenings": [
-      "skill_boost",
-      "sdr",
-      "sdr",
-      "combo_orb"
-    ],
-    "active_skill_name": "Shadow Slash",
-    "active_skill_desc": "Dark orb enhance + evasion",
-    "role_tags": [
-      "looper",
-      "damage"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13322",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13322.png"
-  },
-  {
-    "id": 13452,
-    "name_jp": "ゴン（HxH）",
-    "name_en": "Gon (HxH)",
-    "attribute": "wood",
-    "sub_attribute": "fire",
-    "types": [
-      "attacker",
-      "god"
-    ],
-    "awakenings": [
-      "skill_boost",
-      "combo_orb",
-      "sdr",
-      "sdr",
-      "blind_resist"
-    ],
-    "active_skill_name": "Jajanken Rock",
-    "active_skill_desc": "Wood board change + damage boost",
-    "role_tags": [
-      "looper",
-      "board_change",
-      "damage"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13452",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13452.png"
-  },
-  {
-    "id": 13454,
-    "name_jp": "キルア（HxH）",
-    "name_en": "Killua (HxH)",
-    "attribute": "dark",
-    "sub_attribute": "wood",
-    "types": [
-      "attacker",
-      "devil"
-    ],
-    "awakenings": [
-      "skill_boost",
-      "sdr",
-      "sdr",
-      "killer",
-      "combo_orb"
-    ],
-    "active_skill_name": "Godspeed",
-    "active_skill_desc": "Dark board change + fixed time",
-    "role_tags": [
-      "looper",
-      "board_change",
-      "damage",
-      "fixed_time"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13454",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13454.png"
-  },
-  {
-    "id": 13444,
-    "name_jp": "クラピカ（HxH）",
-    "name_en": "Kurapika (HxH)",
-    "attribute": "light",
-    "sub_attribute": "water",
-    "types": [
-      "attacker",
-      "god"
+      "physical"
     ],
     "awakenings": [
       "skill_boost",
       "sdr",
       "blind_resist",
-      "bind_resist"
+      "time_extend",
+      "time_extend",
+      "time_extend",
+      "time_extend",
+      "awk_63"
     ],
-    "active_skill_name": "Emperor Time",
-    "active_skill_desc": "Bind clear + light board change",
+    "active_skill_name": "Refreshing Fruity Shake",
+    "active_skill_desc": "Swap team leader with the sub in the 4th position; Unlock all orbs; Create 15 Wood and Heal orbs over any orbs; Change to [12645] for the duration of the dungeon",
     "role_tags": [
-      "healer",
-      "bind_clear",
-      "flex"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13444",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13444.png"
-  },
-  {
-    "id": 13442,
-    "name_jp": "レオリオ（HxH）",
-    "name_en": "Leorio (HxH)",
-    "attribute": "water",
-    "sub_attribute": "light",
-    "types": [
-      "healer",
-      "god"
-    ],
-    "awakenings": [
+      "blind_resist",
+      "board_unlock",
+      "heal",
+      "sdr",
       "skill_boost",
-      "team_rcv",
-      "sdr",
-      "sdr"
+      "time_extend"
     ],
-    "active_skill_name": "Medical Heal",
-    "active_skill_desc": "HP recovery + water orb change",
-    "role_tags": [
-      "healer",
-      "flex"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13442",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13442.png"
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/12644.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/12644"
   },
   {
-    "id": 13421,
-    "name_jp": "ヒソカ（HxH）",
-    "name_en": "Hisoka (HxH)",
-    "attribute": "fire",
-    "sub_attribute": "dark",
-    "types": [
-      "attacker",
-      "devil"
-    ],
-    "awakenings": [
-      "skill_boost",
-      "combo_orb",
-      "sdr",
-      "killer"
-    ],
-    "active_skill_name": "Bungee Gum",
-    "active_skill_desc": "Fire orb change + killer boost",
-    "role_tags": [
-      "damage",
-      "flex"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13421",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13421.png"
-  },
-  {
-    "id": 13448,
-    "name_jp": "ネテロ（HxH）",
-    "name_en": "Netero (HxH)",
-    "attribute": "light",
-    "sub_attribute": "fire",
-    "types": [
-      "attacker",
-      "god"
-    ],
-    "awakenings": [
-      "skill_boost",
-      "sdr",
-      "sdr",
-      "team_hp",
-      "combo_orb"
-    ],
-    "active_skill_name": "100-Type Guanyin Bodhisattva",
-    "active_skill_desc": "Massive light damage + shield",
-    "role_tags": [
-      "damage",
-      "shield"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13448",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13448.png"
-  },
-  {
-    "id": 12437,
-    "name_jp": "ウォーキング・デッド",
-    "name_en": "Walking Dead (Collab)",
+    "id": 12650,
+    "name": "Yanagi-kage",
+    "name_jp": "柳蔭",
     "attribute": "dark",
     "sub_attribute": "wood",
     "types": [
@@ -794,196 +903,1355 @@
     ],
     "awakenings": [
       "skill_boost",
-      "sdr",
-      "sdr"
+      "blind_resist",
+      "awk_55",
+      "time_extend",
+      "time_extend",
+      "time_extend",
+      "awk_108",
+      "awk_63"
     ],
-    "active_skill_name": "Zombie Horde",
-    "active_skill_desc": "Dark orb gen",
+    "active_skill_name": "Cooling Sweetness' Diluted Droplet",
+    "active_skill_desc": "Charge all allies' skills by 3 turns; Change to [12651] for the duration of the dungeon",
     "role_tags": [
-      "damage",
-      "flex"
+      "blind_resist",
+      "haste",
+      "skill_boost",
+      "time_extend"
     ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/12437",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/12437.png"
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/12650.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/12650"
   },
   {
-    "id": 13683,
-    "name_jp": "ぼっち（ぼっち・ざ・ろっく！）",
-    "name_en": "Bocchi (Bocchi the Rock!)",
-    "attribute": "fire",
+    "id": 12656,
+    "name": "Violet Fizz",
+    "name_jp": "バイオレットフィズ",
+    "attribute": "dark",
     "sub_attribute": "light",
     "types": [
-      "attacker",
-      "god"
-    ],
-    "awakenings": [
-      "skill_boost",
-      "combo_orb",
-      "sdr",
-      "sdr",
-      "blind_resist"
-    ],
-    "active_skill_name": "Bocchi Rock",
-    "active_skill_desc": "Fire board change + damage boost",
-    "role_tags": [
-      "looper",
-      "board_change",
-      "damage"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13683",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13683.png"
-  },
-  {
-    "id": 4763,
-    "name_jp": "フウジン",
-    "name_en": "Fujin",
-    "attribute": "wood",
-    "sub_attribute": "dark",
-    "types": [
-      "god",
-      "attacker"
+      "devil",
+      "physical"
     ],
     "awakenings": [
       "skill_boost",
       "sdr",
-      "absorb_void"
+      "time_extend",
+      "time_extend",
+      "time_extend",
+      "time_extend",
+      "awk_63"
     ],
-    "active_skill_name": "Fujin Storm",
-    "active_skill_desc": "Attribute absorb void",
+    "active_skill_name": "Perfumed Shake",
+    "active_skill_desc": "Charge all allies' skills by 2 turns; Change to [12657] for the duration of the dungeon",
     "role_tags": [
-      "flex",
-      "absorb_void"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/4763",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/4763.png"
-  },
-  {
-    "id": 13674,
-    "name_jp": "木ノ葉の先生",
-    "name_en": "Konohagakure Sensei",
-    "attribute": "water",
-    "sub_attribute": "wood",
-    "types": [
-      "attacker",
-      "god"
-    ],
-    "awakenings": [
-      "skill_boost",
+      "haste",
       "sdr",
-      "sdr"
-    ],
-    "active_skill_name": "Unknown",
-    "active_skill_desc": "TBD",
-    "role_tags": [
-      "flex",
-      "board_change"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13674",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13674.png"
-  },
-  {
-    "id": 13694,
-    "name_jp": "蒼龍（別）",
-    "name_en": "Suou Alternate",
-    "attribute": "fire",
-    "sub_attribute": "light",
-    "types": [
-      "attacker",
-      "devil"
-    ],
-    "awakenings": [
       "skill_boost",
-      "sdr",
-      "combo_orb"
+      "time_extend"
     ],
-    "active_skill_name": "Unknown",
-    "active_skill_desc": "TBD",
-    "role_tags": [
-      "damage",
-      "looper"
-    ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13694",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13694.png"
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/12656.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/12656"
   },
   {
-    "id": 13722,
-    "name_jp": "光ヒーラー進化",
-    "name_en": "Light Healer Evo",
+    "id": 12668,
+    "name": "Bunched Fruit Spirits, Nanna Sisters",
+    "name_jp": "蕉果精・ナンナシスターズ",
     "attribute": "light",
     "sub_attribute": "wood",
     "types": [
-      "healer",
-      "god"
+      "physical"
     ],
     "awakenings": [
       "skill_boost",
-      "team_hp",
-      "sdr"
+      "sdr",
+      "awk_82",
+      "time_extend",
+      "time_extend",
+      "time_extend",
+      "time_extend",
+      "time_extend",
+      "awk_63"
     ],
-    "active_skill_name": "Unknown",
-    "active_skill_desc": "TBD",
+    "active_skill_name": "Banana Blend",
+    "active_skill_desc": "For 2 turns, bypass void damage shield effects; For 2 turns, recover 100% of max HP; Charge all allies' skills by 2 turns; Change to [12669] for the duration of the dungeon",
     "role_tags": [
-      "healer",
-      "shield"
+      "haste",
+      "heal",
+      "sdr",
+      "skill_boost",
+      "time_extend"
     ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13722",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13722.png"
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/12668.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/12668"
+  },
+  {
+    "id": 12671,
+    "name": "Cinnamon Spirit, Cassian",
+    "name_jp": "桂皮精・カシアン",
+    "attribute": "dark",
+    "sub_attribute": "light",
+    "types": [],
+    "awakenings": [
+      "skill_boost",
+      "sdr",
+      "awk_120",
+      "awk_119",
+      "time_extend",
+      "time_extend",
+      "time_extend",
+      "awk_63"
+    ],
+    "active_skill_name": "Building a Mild Spice Mix",
+    "active_skill_desc": "Charge all allies' skills by 2 turns; Delay enemies' next attack by 2 turns; Change to [12672] for the duration of the dungeon",
+    "role_tags": [
+      "haste",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/12671.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/12671"
   },
   {
     "id": 13305,
-    "name_jp": "ヒンメルB",
-    "name_en": "Himmel B",
+    "name": "Subaru Natsuki & Emilia",
+    "name_jp": "ナツキ・スバル＆エミリア",
+    "attribute": "dark",
+    "sub_attribute": "water",
+    "types": [
+      "devil"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "time_extend",
+      "time_extend",
+      "awk_140",
+      "awk_111",
+      "awk_111",
+      "awk_108",
+      "awk_63"
+    ],
+    "active_skill_name": "Come forth, Unseen Hand!!",
+    "active_skill_desc": "After each skill, evolve to the next looping around if the end is reached: 1) Reduce unable to match orbs effect by 9,999 turns; Remove all binds and awoken skill binds; Reduce HP by 50%;  2) Remove all awoken skill binds; For 1 turn, the board becomes 7x6; For 1 turn, set damage cap of self to 50,000,000,000; Unlock all orbs; Change all orbs to Water, Dark, and Heal orbs; ",
+    "role_tags": [
+      "board_change",
+      "board_unlock",
+      "heal",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13305.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13305"
+  },
+  {
+    "id": 13306,
+    "name": "Puck",
+    "name_jp": "パック",
+    "attribute": "fire",
+    "sub_attribute": "water",
+    "types": [
+      "devil"
+    ],
+    "awakenings": [
+      "time_extend",
+      "time_extend",
+      "awk_61",
+      "awk_104",
+      "skill_boost",
+      "awk_54",
+      "time_extend",
+      "awk_1"
+    ],
+    "active_skill_name": "The Fire-Presiding Great Spirit",
+    "active_skill_desc": "For 99 turns, enhanced orbs are more likely to appear by 10%; For 99 turns, Fire and Water orbs are more likely to appear by 10%; Remove all awoken skill binds; Charge all allies' skills by 2 turns",
+    "role_tags": [
+      "haste",
+      "orb_enhance",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13306.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13306"
+  },
+  {
+    "id": 13307,
+    "name": "Rem & Ram",
+    "name_jp": "レム＆ラム",
+    "attribute": "water",
+    "sub_attribute": "wood",
+    "types": [
+      "devil"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "awk_59",
+      "awk_134",
+      "awk_134",
+      "blind_resist",
+      "awk_132",
+      "awk_63"
+    ],
+    "active_skill_name": "Yes, sir. As you command.",
+    "active_skill_desc": "After each skill, evolve to the next looping around if the end is reached: 1) For 2 turns, bypass att. absorb shield effects; For 2 turns, reduce damage taken by 40%; Unlock all orbs; Change all orbs to Water, Wood, and Heal orbs;  2) For 2 turns, bypass damage absorb shield effects; For 2 turns, 2x ATK for this monster; For 2 turns, set damage cap of self to 75,000,000,000; ",
+    "role_tags": [
+      "absorb_void",
+      "blind_resist",
+      "board_change",
+      "board_unlock",
+      "damage",
+      "heal",
+      "sdr",
+      "shield",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13307.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13307"
+  },
+  {
+    "id": 13309,
+    "name": "Beatrice & Subaru Natsuki",
+    "name_jp": "ベアトリス＆ナツキ・スバル",
+    "attribute": "dark",
+    "sub_attribute": "dark",
+    "types": [
+      "devil"
+    ],
+    "awakenings": [
+      "time_extend",
+      "time_extend",
+      "time_extend",
+      "time_extend",
+      "blind_resist",
+      "awk_111",
+      "awk_111",
+      "awk_106",
+      "awk_63"
+    ],
+    "active_skill_name": "Shamak",
+    "active_skill_desc": "After each skill, evolve to the next: 1) Unlock all orbs; Change the outermost positions of the board to Dark orbs; Delay enemies' next attack by 3 turns;  2) Usable only 1 time: For 1 turn, reduce damage taken by 100%; ",
+    "role_tags": [
+      "blind_resist",
+      "board_unlock",
+      "shield",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13309.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13309"
+  },
+  {
+    "id": 13311,
+    "name": "Julius Euclius & Subaru Natsuki",
+    "name_jp": "ユリウス・ユークリウス＆ナツキ・スバル",
+    "attribute": "light",
+    "sub_attribute": "dark",
+    "types": [
+      "devil"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "time_extend",
+      "sdr",
+      "awk_53",
+      "awk_111",
+      "awk_111",
+      "awk_110",
+      "awk_63"
+    ],
+    "active_skill_name": "Shared Senses",
+    "active_skill_desc": "After each skill, evolve to the next: 1) For 2 turns, the board becomes 7x6; For 2 turns, 3x ATK for all monsters; Charge all allies' skills by 2 turns;  2) Unlock all orbs; Change all orbs to Fire, Water, Wood, Light, Dark, and Heal orbs; For 2 turns, set damage cap of self to 28,000,000,000; For 2 turns, bypass void damage shield effects; ",
+    "role_tags": [
+      "board_change",
+      "board_unlock",
+      "damage",
+      "haste",
+      "heal",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13311.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13311"
+  },
+  {
+    "id": 13313,
+    "name": "Subaru Natsuki",
+    "name_jp": "ナツキ・スバル",
+    "attribute": "dark",
+    "sub_attribute": "light",
+    "types": [
+      "devil"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "sdr",
+      "sdr",
+      "awk_125",
+      "combo_orb",
+      "awk_63"
+    ],
+    "active_skill_name": "Return by Death",
+    "active_skill_desc": "Change to [13314] for the duration of the dungeon; Reduce unable to match orbs effect by 9,999 turns; Recover all HP; Remove all binds and awoken skill binds",
+    "role_tags": [
+      "combo_orb",
+      "heal",
+      "sdr",
+      "skill_boost"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13313.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13313"
+  },
+  {
+    "id": 13316,
+    "name": "Emilia",
+    "name_jp": "エミリア",
+    "attribute": "water",
+    "sub_attribute": "water",
+    "types": [
+      "attacker",
+      "devil"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "sdr",
+      "sdr",
+      "time_extend",
+      "awk_63"
+    ],
+    "active_skill_name": "Don't underestimate a user of spirit arts.",
+    "active_skill_desc": "For 5 turns, 2x RCV; For 5 turns, 2x ATK for all monsters; Change to [13317] for the duration of the dungeon",
+    "role_tags": [
+      "damage",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13316.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13316"
+  },
+  {
+    "id": 13319,
+    "name": "Rem",
+    "name_jp": "レム",
+    "attribute": "water",
+    "sub_attribute": "dark",
+    "types": [
+      "attacker",
+      "devil"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "sdr",
+      "time_extend",
+      "time_extend",
+      "awk_63"
+    ],
+    "active_skill_name": "All-Purpose, Ever-Useful Maid",
+    "active_skill_desc": "Reduce unable to match orbs effect by 9,999 turns; Remove all binds and awoken skill binds; Charge all allies' skills by 2 turns; Change to [13320] for the duration of the dungeon",
+    "role_tags": [
+      "haste",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13319.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13319"
+  },
+  {
+    "id": 13322,
+    "name": "Beatrice",
+    "name_jp": "ベアトリス",
+    "attribute": "dark",
+    "sub_attribute": "dark",
+    "types": [
+      "devil"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "sdr",
+      "awk_132",
+      "awk_63"
+    ],
+    "active_skill_name": "Door Crossing",
+    "active_skill_desc": "For 99 turns, Dark orbs are more likely to appear by 15%; For 1 turn, reduce damage taken by 100%; Change to [13323] for the duration of the dungeon",
+    "role_tags": [
+      "sdr",
+      "shield",
+      "skill_boost"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13322.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13322"
+  },
+  {
+    "id": 13328,
+    "name": "Garfiel Tinzel",
+    "name_jp": "ガーフィール・ティンゼル",
+    "attribute": "wood",
+    "sub_attribute": "light",
+    "types": [
+      "physical",
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "sdr",
+      "sdr",
+      "awk_139",
+      "awk_63"
+    ],
+    "active_skill_name": "Beastification",
+    "active_skill_desc": "For 2 turns, the board becomes 7x6; For 2 turns, 5x ATK for this monster; Change to [13329] for the duration of the dungeon",
+    "role_tags": [
+      "damage",
+      "sdr",
+      "skill_boost"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13328.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13328"
+  },
+  {
+    "id": 13331,
+    "name": "Ram",
+    "name_jp": "ラム",
+    "attribute": "wood",
+    "sub_attribute": "dark",
+    "types": [
+      "devil"
+    ],
+    "awakenings": [
+      "time_extend",
+      "time_extend",
+      "time_extend",
+      "sdr",
+      "sdr",
+      "awk_109",
+      "awk_109",
+      "awk_109",
+      "awk_63"
+    ],
+    "active_skill_name": "El Fura",
+    "active_skill_desc": "For 6 turns, bypass damage absorb shield effects; Create 1 spinner that changes every 1.0s for 6 turns; For 6 turns, Wood orbs are more likely to appear by 15%; Remove 2 enemy's barriers",
+    "role_tags": [
+      "absorb_void",
+      "sdr",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13331.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13331"
+  },
+  {
+    "id": 13333,
+    "name": "Otto Suwen",
+    "name_jp": "オットー・スーウェン",
+    "attribute": "wood",
+    "sub_attribute": "water",
+    "types": [],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "time_extend",
+      "sdr",
+      "awk_59",
+      "blind_resist",
+      "awk_134",
+      "awk_134",
+      "awk_63"
+    ],
+    "active_skill_name": "When bargaining with a merchant, listen till the end.",
+    "active_skill_desc": "Unlock all orbs; Change all orbs to Water, Wood, and Heal orbs; Create 8 combo orbs; For 2 turns, bypass void damage shield effects; For 2 turns, 3x ATK for all monsters",
+    "role_tags": [
+      "blind_resist",
+      "board_change",
+      "board_unlock",
+      "damage",
+      "heal",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13333.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13333"
+  },
+  {
+    "id": 13334,
+    "name": "Zodda Bug",
+    "name_jp": "ゾッダ虫",
+    "attribute": "wood",
+    "sub_attribute": "water",
+    "types": [],
+    "awakenings": [
+      "time_extend",
+      "awk_87",
+      "time_extend",
+      "awk_106",
+      "skill_boost",
+      "skill_boost",
+      "sdr",
+      "awk_101"
+    ],
+    "active_skill_name": "Mutual Understanding with Living Creatures",
+    "active_skill_desc": "Charge all allies' skills by 2 turns; For 4 turns, bypass void damage shield effects; For 4 turns, 2x ATK for all monsters",
+    "role_tags": [
+      "damage",
+      "haste",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13334.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13334"
+  },
+  {
+    "id": 13335,
+    "name": "Crusch Karsten",
+    "name_jp": "クルシュ・カルステン",
+    "attribute": "wood",
+    "sub_attribute": "light",
+    "types": [],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "time_extend",
+      "sdr",
+      "awk_109",
+      "awk_109",
+      "awk_109",
+      "time_extend",
+      "awk_63"
+    ],
+    "active_skill_name": "One Blow, A Hundred Felled",
+    "active_skill_desc": "For 6 turns, bypass att. absorb shield effects; For 6 turns, 2x ATK for all subs; For 6 turns, set damage cap of all subs to 15,000,000,000; Reduce an enemy's remaining HP by 25%",
+    "role_tags": [
+      "absorb_void",
+      "damage",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13335.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13335"
+  },
+  {
+    "id": 13337,
+    "name": "Ferris",
+    "name_jp": "フェリス",
+    "attribute": "water",
+    "sub_attribute": "wood",
+    "types": [
+      "healer"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "awk_104",
+      "awk_104",
+      "awk_134",
+      "awk_134",
+      "awk_108",
+      "awk_108",
+      "awk_63"
+    ],
+    "active_skill_name": "Blue's Healing Magic",
+    "active_skill_desc": "Reduce unable to match orbs effect by 9,999 turns; Remove all binds and awoken skill binds; For 1 turn, 3x HP; For 1 turn, 3x RCV; Enhance all orbs",
+    "role_tags": [
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13337.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13337"
+  },
+  {
+    "id": 13339,
+    "name": "Wilhelm van Astrea",
+    "name_jp": "ヴィルヘルム・ヴァン・アストレア",
+    "attribute": "light",
+    "sub_attribute": "wood",
+    "types": [
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "awk_55",
+      "awk_119",
+      "awk_111",
+      "awk_111",
+      "awk_139",
+      "awk_63"
+    ],
+    "active_skill_name": "Sleep for all eternity.",
+    "active_skill_desc": "Create 1 spinner that changes every 1.0s for 1 turn; For 1 turn, 2x orb move time; For 1 turn, 2x RCV; For 1 turn, 2x ATK for all monsters; For 1 turn, 2x HP; For 1 turn, set damage cap of self to 50,000,000,000",
+    "role_tags": [
+      "damage",
+      "fixed_time",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13339.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13339"
+  },
+  {
+    "id": 13341,
+    "name": "Priscilla Barielle",
+    "name_jp": "プリシラ・バーリエル",
+    "attribute": "fire",
+    "sub_attribute": "fire",
+    "types": [
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "time_extend",
+      "awk_53",
+      "awk_111",
+      "awk_111",
+      "blind_resist",
+      "awk_128",
+      "awk_63"
+    ],
+    "active_skill_name": "Go ahead and entertain me.",
+    "active_skill_desc": "For 6 turns, 2x ATK for this monster; For 6 turns, set damage cap of self to 24,000,000,000; For 6 turns, reduce damage taken by 40%; Reduce an enemy's remaining HP by 25%",
+    "role_tags": [
+      "blind_resist",
+      "damage",
+      "shield",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13341.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13341"
+  },
+  {
+    "id": 13346,
+    "name": "Anastasia's Scarf",
+    "name_jp": "アナスタシアの襟巻き",
+    "attribute": "dark",
+    "sub_attribute": "light",
+    "types": [],
+    "awakenings": [
+      "time_extend",
+      "awk_87",
+      "time_extend",
+      "sdr",
+      "awk_104",
+      "awk_54",
+      "awk_55",
+      "awk_3"
+    ],
+    "active_skill_name": "White Fox Scarf",
+    "active_skill_desc": "For 1 turn, reduce damage taken by 75%; For 1 turn, 3x ATK for all monsters; For 1 turn, the board becomes 7x6; Charge all allies' skills by 1 turn",
+    "role_tags": [
+      "damage",
+      "haste",
+      "sdr",
+      "shield",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13346.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13346"
+  },
+  {
+    "id": 13347,
+    "name": "Julius Euclius",
+    "name_jp": "ユリウス・ユークリウス",
+    "attribute": "light",
+    "sub_attribute": "dark",
+    "types": [],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "awk_44",
+      "awk_114",
+      "awk_114",
+      "awk_51",
+      "time_extend",
+      "awk_63"
+    ],
+    "active_skill_name": "Al Clauzeria",
+    "active_skill_desc": "Unlock all orbs; Change all orbs to Fire, Water, Wood, Light, Dark, and Heal orbs; For 3 turns, bypass att. absorb and damage absorb shield effects; Remove 2 enemy's barriers",
+    "role_tags": [
+      "absorb_void",
+      "board_change",
+      "board_unlock",
+      "heal",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13347.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13347"
+  },
+  {
+    "id": 13349,
+    "name": "Felt",
+    "name_jp": "フェルト",
+    "attribute": "light",
+    "sub_attribute": "fire",
+    "types": [
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "sdr",
+      "awk_119",
+      "awk_119",
+      "awk_111",
+      "awk_111",
+      "awk_63"
+    ],
+    "active_skill_name": "An Attack That'd Make the Sword Saint Cry",
+    "active_skill_desc": "Reduce unable to match orbs effect by 9,999 turns; Remove all awoken skill binds; For 1 turn, set damage cap of self to 35,000,000,000; Unlock all orbs; Change the bottom row to Light orbs",
+    "role_tags": [
+      "board_unlock",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13349.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13349"
+  },
+  {
+    "id": 13350,
+    "name": "Dragon-Shaped Insignia",
+    "name_jp": "竜を象った徽章",
     "attribute": "light",
     "sub_attribute": "fire",
     "types": [
       "attacker",
+      "dragon"
+    ],
+    "awakenings": [
+      "time_extend",
+      "awk_83",
+      "awk_94",
+      "time_extend",
+      "sdr",
+      "skill_boost",
+      "skill_boost",
+      "sdr"
+    ],
+    "active_skill_name": "Qualifications as a Dragon Priestess",
+    "active_skill_desc": "For 3 turns, 3x RCV; For 3 turns, bypass att. absorb and damage absorb shield effects; For 3 turns, bypass void damage shield effects; Charge all allies' skills by 2 turns",
+    "role_tags": [
+      "absorb_void",
+      "haste",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13350.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13350"
+  },
+  {
+    "id": 13351,
+    "name": "Petelgeuse Romanée-Conti",
+    "name_jp": "ペテルギウス・ロマネコンティ",
+    "attribute": "dark",
+    "sub_attribute": "dark",
+    "types": [
+      "devil"
+    ],
+    "awakenings": [
+      "time_extend",
+      "time_extend",
+      "sdr",
+      "awk_106",
+      "blind_resist",
+      "blind_resist",
+      "blind_resist",
+      "blind_resist",
+      "awk_63"
+    ],
+    "active_skill_name": "Unseen Hands",
+    "active_skill_desc": "For 6 turns, increase combo count by 4; For 3 turns, bypass att. absorb shield effects",
+    "role_tags": [
+      "absorb_void",
+      "blind_resist",
+      "combo_orb",
+      "sdr",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13351.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13351"
+  },
+  {
+    "id": 13355,
+    "name": "Roy Alphard",
+    "name_jp": "ロイ・アルファルド",
+    "attribute": "wood",
+    "sub_attribute": "dark",
+    "types": [
+      "devil",
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "time_extend",
+      "awk_140",
+      "awk_109",
+      "awk_109",
+      "awk_109",
+      "awk_139",
+      "awk_63"
+    ],
+    "active_skill_name": "Authority of Gluttony that Consumes People's Memories",
+    "active_skill_desc": "For 4 turns, the board becomes 6x5; For 4 turns, 1.5x HP; For 4 turns, 2x ATK for Wood and Dark Att.; Unlock all orbs; Change all orbs to Wood, Dark, and Heal orbs",
+    "role_tags": [
+      "board_change",
+      "board_unlock",
+      "damage",
+      "heal",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13355.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13355"
+  },
+  {
+    "id": 13357,
+    "name": "Sirius Romanée-Conti",
+    "name_jp": "シリウス・ロマネコンティ",
+    "attribute": "fire",
+    "sub_attribute": "dark",
+    "types": [
+      "devil",
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "awk_111",
+      "awk_111",
+      "blind_resist",
+      "time_extend",
+      "awk_139",
+      "awk_63"
+    ],
+    "active_skill_name": "Authority of Wrath",
+    "active_skill_desc": "Reduce HP by 50%; For 1 turn, 2x ATK for rightside ally, leftside ally, and self; For 1 turn, set damage cap of rightside ally, leftside ally, and self to 20,000,000,000; Unlock all orbs; Create 8 Fire orbs over non Heal orbs, and create 4 Heal orbs over non Fire orbs",
+    "role_tags": [
+      "blind_resist",
+      "board_unlock",
+      "damage",
+      "heal",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13357.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13357"
+  },
+  {
+    "id": 13359,
+    "name": "Capella Emerada Lugnica",
+    "name_jp": "カペラ・エメラダ・ルグニカ",
+    "attribute": "dark",
+    "sub_attribute": "dark",
+    "types": [
+      "devil",
+      "dragon"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "time_extend",
+      "time_extend",
+      "awk_137",
+      "awk_111",
+      "awk_111",
+      "blind_resist",
+      "awk_63"
+    ],
+    "active_skill_name": "Authority of Lust",
+    "active_skill_desc": "Remove all awoken skill binds; For 5 turns, recover 40% of max HP; For 5 turns, 2x ATK for rightside ally, leftside ally, and self; For 5 turns, set damage cap of rightside ally, leftside ally, and self to 18,000,000,000",
+    "role_tags": [
+      "blind_resist",
+      "damage",
+      "heal",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13359.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13359"
+  },
+  {
+    "id": 13368,
+    "name": "Subaru Natsuki & Emilia (Reward)",
+    "name_jp": "ナツキ・スバル＆エミリア【報酬】",
+    "attribute": "dark",
+    "sub_attribute": "water",
+    "types": [
+      "devil"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "time_extend",
+      "time_extend",
+      "awk_61",
+      "awk_61",
+      "awk_61",
+      "awk_108",
+      "awk_63"
+    ],
+    "active_skill_name": "Come forth, Unseen Hand!!",
+    "active_skill_desc": "After each skill, evolve to the next looping around if the end is reached: 1) Reduce unable to match orbs effect by 9,999 turns; Remove all binds and awoken skill binds; Reduce HP by 50%;  2) Remove all awoken skill binds; For 1 turn, the board becomes 7x6; For 1 turn, set damage cap of self to 50,000,000,000; Unlock all orbs; Change all orbs to Water, Dark, and Heal orbs; ",
+    "role_tags": [
+      "board_change",
+      "board_unlock",
+      "heal",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13368.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13368"
+  },
+  {
+    "id": 13370,
+    "name": "Regulus Corneas",
+    "name_jp": "レグルス・コルニアス",
+    "attribute": "light",
+    "sub_attribute": "dark",
+    "types": [
+      "devil"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "awk_53",
+      "awk_111",
+      "awk_111",
+      "awk_119",
+      "awk_139",
+      "awk_63"
+    ],
+    "active_skill_name": "Authority of Greed",
+    "active_skill_desc": "For 1 turn, 2x ATK for this monster; For 1 turn, set damage cap of self to 60,000,000,000; [1 turn after activation] For 1 turn, reduce damage taken by 100%",
+    "role_tags": [
+      "damage",
+      "sdr",
+      "shield",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13370.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13370"
+  },
+  {
+    "id": 13405,
+    "name": "Himmel & Frieren",
+    "name_jp": "ヒンメル＆フリーレン",
+    "attribute": "water",
+    "sub_attribute": "light",
+    "types": [],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "sdr",
+      "awk_140",
+      "awk_111",
+      "awk_111",
+      "blind_resist",
+      "awk_63"
+    ],
+    "active_skill_name": "Eternal Love",
+    "active_skill_desc": "For 5 turns, 3x RCV; For 5 turns, set damage cap of self to 25,000,000,000; Reduce unable to match orbs effect by 9,999 turns; Remove all binds and awoken skill binds",
+    "role_tags": [
+      "blind_resist",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13405.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13405"
+  },
+  {
+    "id": 13407,
+    "name": "Frieren & Fern",
+    "name_jp": "フリーレン＆フェルン",
+    "attribute": "light",
+    "sub_attribute": "dark",
+    "types": [
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "time_extend",
+      "sdr",
+      "awk_106",
+      "awk_111",
+      "awk_111",
+      "awk_108",
+      "awk_63"
+    ],
+    "active_skill_name": "Incredible, Ms. Frieren.",
+    "active_skill_desc": "After each skill, evolve to the next: 1) Reduce HP by 50%; Delay enemies' next attack by 2 turns; Charge all allies' skills by 2 turns;  2) For 1 turn, the board becomes 7x6; For 2 turns, bypass damage absorb shield effects; For 2 turns, bypass void damage shield effects; Unlock all orbs; Change all orbs to Light, Dark, and Heal orbs; ",
+    "role_tags": [
+      "absorb_void",
+      "board_change",
+      "board_unlock",
+      "haste",
+      "heal",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13407.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13407"
+  },
+  {
+    "id": 13409,
+    "name": "Frieren",
+    "name_jp": "フリーレン",
+    "attribute": "light",
+    "sub_attribute": "water",
+    "types": [
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "sdr",
+      "sdr",
+      "awk_137",
+      "combo_orb",
+      "awk_63"
+    ],
+    "active_skill_name": "Huh. This is getting interesting.",
+    "active_skill_desc": "For 2 turns, bypass att. absorb and damage absorb shield effects; For 2 turns, bypass void damage shield effects; Charge all allies' skills by 2 turns; Change to [13410] for the duration of the dungeon",
+    "role_tags": [
+      "absorb_void",
+      "combo_orb",
+      "haste",
+      "sdr",
+      "skill_boost"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13409.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13409"
+  },
+  {
+    "id": 13412,
+    "name": "Himmel",
+    "name_jp": "ヒンメル",
+    "attribute": "water",
+    "sub_attribute": "light",
+    "types": [],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "time_extend",
+      "sdr",
+      "sdr",
+      "time_extend",
+      "awk_63"
+    ],
+    "active_skill_name": "I intend to enjoy it until the end.",
+    "active_skill_desc": "For 99 turns, enhanced orbs are more likely to appear by 15%; Charge all allies' skills by 3 turns; Change to [13413] for the duration of the dungeon",
+    "role_tags": [
+      "haste",
+      "orb_enhance",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13412.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13412"
+  },
+  {
+    "id": 13418,
+    "name": "Stark",
+    "name_jp": "シュタルク",
+    "attribute": "fire",
+    "sub_attribute": "light",
+    "types": [
+      "physical",
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "time_extend",
+      "time_extend",
+      "sdr",
+      "blind_resist",
+      "time_extend",
+      "time_extend",
+      "awk_63"
+    ],
+    "active_skill_name": "All I need is resolve...",
+    "active_skill_desc": "For 2 turns, set damage cap of self to 40,000,000,000; Charge all allies' skills by 2 turns; Change to [13419] for the duration of the dungeon",
+    "role_tags": [
+      "blind_resist",
+      "haste",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13418.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13418"
+  },
+  {
+    "id": 13421,
+    "name": "Denken",
+    "name_jp": "デンケン",
+    "attribute": "light",
+    "sub_attribute": "dark",
+    "types": [
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "time_extend",
+      "time_extend",
+      "blind_resist",
+      "awk_69",
+      "awk_63"
+    ],
+    "active_skill_name": "My apologies, but I'm going to settle this quickly.",
+    "active_skill_desc": "Charge all allies' skills by 3 turns; Enhance all orbs; Change to [13422] for the duration of the dungeon",
+    "role_tags": [
+      "blind_resist",
+      "haste",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13421.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13421"
+  },
+  {
+    "id": 13424,
+    "name": "Heiter",
+    "name_jp": "ハイター",
+    "attribute": "wood",
+    "sub_attribute": "light",
+    "types": [
+      "healer",
       "god"
     ],
     "awakenings": [
       "skill_boost",
       "time_extend",
-      "combo_orb",
+      "sdr",
       "blind_resist",
-      "sdr"
+      "awk_104",
+      "awk_104",
+      "awk_108",
+      "awk_108",
+      "awk_63"
     ],
-    "active_skill_name": "Sacred Light B",
-    "active_skill_desc": "Fixed move time + light board change",
+    "active_skill_name": "The Magic of the Goddess",
+    "active_skill_desc": "Reduce unable to match orbs effect by 9,999 turns; Remove all binds and awoken skill binds; For 5 turns, 1.5x HP; Create 1 spinner that changes every 1.0s for 5 turns",
     "role_tags": [
-      "leader",
-      "damage",
-      "fixed_time"
+      "blind_resist",
+      "sdr",
+      "skill_boost",
+      "time_extend"
     ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13305",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13305.png"
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13424.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13424"
   },
   {
-    "id": 4206,
-    "name_jp": "ラジャ",
-    "name_en": "Raja",
-    "attribute": "light",
-    "sub_attribute": "dark",
+    "id": 13425,
+    "name": "Heiter's Holy Book",
+    "name_jp": "ハイターの聖典",
+    "attribute": "wood",
+    "sub_attribute": "light",
     "types": [
-      "attacker",
+      "healer",
       "god"
     ],
     "awakenings": [
-      "skill_boost",
-      "sdr",
-      "sdr"
+      "time_extend",
+      "awk_90",
+      "awk_84",
+      "awk_110",
+      "awk_104",
+      "awk_55",
+      "awk_53",
+      "awk_3"
     ],
-    "active_skill_name": "Raja Beam",
-    "active_skill_desc": "Light damage boost",
+    "active_skill_name": "Expert of the Magic of the Goddess",
+    "active_skill_desc": "Reduce unable to match orbs effect by 9,999 turns; Remove all awoken skill binds; For 5 turns, 1.5x HP; Charge all allies' skills by 2 turns",
     "role_tags": [
-      "damage",
-      "flex"
+      "haste",
+      "time_extend"
     ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/4206",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/4206.png"
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13425.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13425"
   },
   {
-    "id": 9705,
-    "name_jp": "ベルゼブブ",
-    "name_en": "Beelzebub",
+    "id": 13426,
+    "name": "Eisen",
+    "name_jp": "アイゼン",
+    "attribute": "fire",
+    "sub_attribute": "light",
+    "types": [
+      "physical",
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "time_extend",
+      "time_extend",
+      "awk_111",
+      "awk_111",
+      "time_extend",
+      "time_extend",
+      "awk_63"
+    ],
+    "active_skill_name": "Everyone who works hard is a warrior.",
+    "active_skill_desc": "For 5 turns, 2x ATK for all monsters; For 5 turns, set damage cap of self to 25,000,000,000; For 1 turn, reduce damage taken by 75%; Remove 1 enemy's barrier",
+    "role_tags": [
+      "damage",
+      "shield",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13426.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13426"
+  },
+  {
+    "id": 13428,
+    "name": "Übel",
+    "name_jp": "ユーベル",
+    "attribute": "dark",
+    "sub_attribute": "wood",
+    "types": [
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "time_extend",
+      "sdr",
+      "sdr",
+      "awk_111",
+      "awk_111",
+      "awk_110",
+      "awk_63"
+    ],
+    "active_skill_name": "Spell That Slashes Almost Anything: Reelseiden",
+    "active_skill_desc": "For 2 turns, increase combo count by 2; For 2 turns, set damage cap of self to 24,000,000,000; Destroys all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison, and Bomb orbs; Remove 1 enemy's barrier",
+    "role_tags": [
+      "combo_orb",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13428.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13428"
+  },
+  {
+    "id": 13434,
+    "name": "Wirbel",
+    "name_jp": "ヴィアベル",
+    "attribute": "wood",
+    "sub_attribute": "light",
+    "types": [
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "sdr",
+      "awk_111",
+      "awk_111",
+      "awk_109",
+      "time_extend",
+      "awk_63"
+    ],
+    "active_skill_name": "Spell Used to Bind People: Sorganeil",
+    "active_skill_desc": "Delay enemies' next attack by 1 turn; For 2 turns, 2x ATK for this monster; For 2 turns, set damage cap of self to 40,000,000,000; For 2 turns, increase combo count by 3; Remove 1 enemy's barrier",
+    "role_tags": [
+      "combo_orb",
+      "damage",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13434.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13434"
+  },
+  {
+    "id": 13437,
+    "name": "Escape Golem",
+    "name_jp": "脱出用ゴーレム",
+    "attribute": "water",
+    "sub_attribute": "dark",
+    "types": [
+      "physical",
+      "healer"
+    ],
+    "awakenings": [
+      "time_extend",
+      "awk_89",
+      "awk_90",
+      "sdr",
+      "time_extend",
+      "time_extend"
+    ],
+    "active_skill_name": "Carries the Summoner Out of the Dungeon",
+    "active_skill_desc": "Charge all allies' skills by 2 turns; This assist is removed",
+    "role_tags": [
+      "haste",
+      "sdr",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13437.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13437"
+  },
+  {
+    "id": 13440,
+    "name": "Elder Sage of Corruption, Qual",
+    "name_jp": "腐敗の賢老・クヴァール",
+    "attribute": "dark",
+    "sub_attribute": "dark",
+    "types": [
+      "devil",
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "awk_110",
+      "awk_110",
+      "awk_110",
+      "awk_110",
+      "time_extend",
+      "awk_63"
+    ],
+    "active_skill_name": "Killing Magic: Zoltraak",
+    "active_skill_desc": "Disable team active skills for 80 turns; Reduce all enemies' remaining HP by 50%; For 1 turn, set damage cap of self to 50,000,000,000",
+    "role_tags": [
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13440.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13440"
+  },
+  {
+    "id": 13442,
+    "name": "Lügner",
+    "name_jp": "リュグナー",
     "attribute": "dark",
     "sub_attribute": "fire",
     "types": [
@@ -992,94 +2260,1112 @@
     ],
     "awakenings": [
       "skill_boost",
+      "time_extend",
       "sdr",
-      "sdr",
-      "combo_orb"
+      "awk_106",
+      "awk_110",
+      "awk_110",
+      "awk_110",
+      "time_extend",
+      "awk_63"
     ],
-    "active_skill_name": "Lord of Flies",
-    "active_skill_desc": "Dark board change + damage boost",
+    "active_skill_name": "Blood Manipulation: Bluterei",
+    "active_skill_desc": "Unlock all orbs; Create a cross of Dark orbs with its center at the 2nd row from the top and the 2nd column from the left; Enhance all Dark orbs; For 1 turn, bypass void damage shield effects; For 1 turn, bypass combo absorb shield effects",
     "role_tags": [
-      "looper",
-      "board_change",
-      "damage"
+      "absorb_void",
+      "board_unlock",
+      "sdr",
+      "skill_boost",
+      "time_extend"
     ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/9705",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/9705.png"
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13442.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13442"
   },
   {
-    "id": 12156,
-    "name_jp": "アスナ",
-    "name_en": "Asuna (SAO)",
-    "attribute": "fire",
-    "sub_attribute": "light",
+    "id": 13444,
+    "name": "Sein",
+    "name_jp": "ザイン",
+    "attribute": "light",
+    "sub_attribute": "wood",
     "types": [
-      "attacker",
+      "healer",
       "god"
     ],
     "awakenings": [
       "skill_boost",
+      "time_extend",
+      "time_extend",
       "sdr",
-      "sdr",
-      "combo_orb"
+      "awk_54",
+      "awk_108",
+      "awk_108",
+      "awk_108",
+      "awk_63"
     ],
-    "active_skill_name": "Flash",
-    "active_skill_desc": "Fire board change + speed boost",
+    "active_skill_name": "Awakening Spell",
+    "active_skill_desc": "Reduce unable to match orbs effect by 9,999 turns; Remove all awoken skill binds; For 5 turns, recover 45% of max HP",
     "role_tags": [
-      "looper",
-      "board_change",
-      "damage"
+      "heal",
+      "sdr",
+      "skill_boost",
+      "time_extend"
     ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/12156",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/12156.png"
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13444.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13444"
   },
   {
-    "id": 12446,
-    "name_jp": "レム（覚醒）",
-    "name_en": "Rem (Awakened)",
+    "id": 13446,
+    "name": "Kanne",
+    "name_jp": "カンネ",
+    "attribute": "water",
+    "sub_attribute": "water",
+    "types": [
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "awk_53",
+      "awk_55",
+      "awk_54",
+      "awk_111",
+      "awk_111",
+      "blind_resist",
+      "awk_63"
+    ],
+    "active_skill_name": "Water Manipulation: Reamstroha",
+    "active_skill_desc": "If 6 or more Water are on the board: For 4 turns, bypass att. absorb shield effects; For 4 turns, 1.5x HP; Remove 1 enemy's barrier",
+    "role_tags": [
+      "absorb_void",
+      "blind_resist",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13446.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13446"
+  },
+  {
+    "id": 13448,
+    "name": "Lawine",
+    "name_jp": "ラヴィーネ",
+    "attribute": "water",
+    "sub_attribute": "water",
+    "types": [
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "awk_106",
+      "awk_111",
+      "awk_111",
+      "awk_108",
+      "time_extend",
+      "awk_63"
+    ],
+    "active_skill_name": "Arrows of Ice: Nephtear",
+    "active_skill_desc": "For 2 turns, bypass void damage shield effects; For 2 turns, bypass damage absorb shield effects; Unlock all orbs; Change the top row to Water orbs and change the bottom row to Heal orbs",
+    "role_tags": [
+      "absorb_void",
+      "board_unlock",
+      "heal",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13448.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13448"
+  },
+  {
+    "id": 13450,
+    "name": "Ehre",
+    "name_jp": "エーレ",
+    "attribute": "wood",
+    "sub_attribute": "fire",
+    "types": [
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "awk_64",
+      "awk_64",
+      "awk_64",
+      "awk_64",
+      "time_extend",
+      "awk_63"
+    ],
+    "active_skill_name": "Spell That Changes Rocks Into Bullets: Doragate",
+    "active_skill_desc": "Deal 100,000,000 damage to an enemy 5 times; Reduce parts' remaining HP by 30%",
+    "role_tags": [
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13450.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13450"
+  },
+  {
+    "id": 13452,
+    "name": "Scharf",
+    "name_jp": "シャルフ",
+    "attribute": "wood",
+    "sub_attribute": "dark",
+    "types": [
+      "attacker"
+    ],
+    "awakenings": [
+      "time_extend",
+      "time_extend",
+      "sdr",
+      "awk_118",
+      "awk_120",
+      "awk_82",
+      "awk_82",
+      "time_extend",
+      "awk_63"
+    ],
+    "active_skill_name": "Spell That Transforms Flower Petals Into Steel: Jubelade",
+    "active_skill_desc": "Unlock all orbs; Change all orbs to Wood orbs; Change the top row and the 2nd row from the top to Dark orbs; 4 random orbs become nail orbs",
+    "role_tags": [
+      "board_change",
+      "board_unlock",
+      "sdr",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13452.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13452"
+  },
+  {
+    "id": 13454,
+    "name": "Richter",
+    "name_jp": "リヒター",
+    "attribute": "wood",
+    "sub_attribute": "light",
+    "types": [
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "blind_resist",
+      "awk_54",
+      "awk_55",
+      "awk_109",
+      "awk_109",
+      "awk_109",
+      "awk_63"
+    ],
+    "active_skill_name": "Earth Control: Bargland",
+    "active_skill_desc": "For 4 turns, change the attribute of self, rightside ally, and leftside ally to Wood; For 4 turns, set damage cap of rightside ally, leftside ally, and self to 18,000,000,000; For 4 turns, reduce damage taken by 35%",
+    "role_tags": [
+      "blind_resist",
+      "shield",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13454.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13454"
+  },
+  {
+    "id": 13456,
+    "name": "Laufen",
+    "name_jp": "ラオフェン",
+    "attribute": "light",
+    "sub_attribute": "light",
+    "types": [
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "awk_69",
+      "awk_107",
+      "awk_107",
+      "awk_107",
+      "awk_107",
+      "awk_63"
+    ],
+    "active_skill_name": "Spell That Lets You Move at High Speeds: Jilwer",
+    "active_skill_desc": "Charge all allies' skills by 1 turn; For 7 turns, reduce damage taken by 35%; Create 1 spinner that changes every 0.5s for 7 turns",
+    "role_tags": [
+      "haste",
+      "sdr",
+      "shield",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13456.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13456"
+  },
+  {
+    "id": 13458,
+    "name": "Linie",
+    "name_jp": "リーニエ",
+    "attribute": "dark",
+    "sub_attribute": "fire",
+    "types": [
+      "devil",
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "awk_53",
+      "awk_110",
+      "awk_110",
+      "awk_110",
+      "awk_110",
+      "awk_63"
+    ],
+    "active_skill_name": "Imitation Magic: Erfassen",
+    "active_skill_desc": "For 5 turns, 2x ATK for Devil type; For 5 turns, set damage cap of Devil allies to 14,000,000,000; For 5 turns, reduce damage taken by 35%",
+    "role_tags": [
+      "damage",
+      "sdr",
+      "shield",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13458.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13458"
+  },
+  {
+    "id": 13462,
+    "name": "Serie",
+    "name_jp": "ゼーリエ",
+    "attribute": "light",
+    "sub_attribute": "light",
+    "types": [],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "awk_140",
+      "awk_124",
+      "awk_111",
+      "awk_111",
+      "combo_orb",
+      "awk_63"
+    ],
+    "active_skill_name": "Magic should be special.",
+    "active_skill_desc": "For 5 turns, 1.5x HP; For 5 turns, change the attribute of rightside ally and leftside ally to Light; For 5 turns, 2x ATK for rightside ally, leftside ally, and self; For 5 turns, set damage cap of rightside ally, leftside ally, and self to 18,000,000,000",
+    "role_tags": [
+      "combo_orb",
+      "damage",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13462.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13462"
+  },
+  {
+    "id": 13466,
+    "name": "Aura the Guillotine",
+    "name_jp": "断頭台のアウラ",
+    "attribute": "dark",
+    "sub_attribute": "dark",
+    "types": [
+      "devil"
+    ],
+    "awakenings": [
+      "time_extend",
+      "time_extend",
+      "awk_53",
+      "awk_8",
+      "awk_111",
+      "awk_111",
+      "awk_110",
+      "awk_129",
+      "awk_63"
+    ],
+    "active_skill_name": "Spell That Forces Enemies Into Submission: Auserlese",
+    "active_skill_desc": "For 2 turns, change the attribute of all subs to Dark; For 2 turns, bypass att. absorb and damage absorb shield effects; For 2 turns, set damage cap of Devil allies to 20,000,000,000",
+    "role_tags": [
+      "absorb_void",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13466.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13466"
+  },
+  {
+    "id": 13488,
+    "name": "Blizzard Demon Beast, Snowtear",
+    "name_jp": "風雪魔獣・スノーティア",
+    "attribute": "water",
+    "sub_attribute": "water",
+    "types": [
+      "devil",
+      "healer"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "awk_104",
+      "awk_104",
+      "awk_106",
+      "awk_108",
+      "awk_108",
+      "awk_108",
+      "time_extend"
+    ],
+    "active_skill_name": "Snow Storm",
+    "active_skill_desc": "After each skill, evolve to the next: 1) For 99 turns, Water orbs are more likely to appear by 15%; Charge all allies' skills by 2 turns 2) For 5 turns, 3x RCV; For 5 turns, bypass att. absorb shield effects; For 1 turn, 3x HP; Remove 2 enemy's barriers",
+    "role_tags": [
+      "absorb_void",
+      "haste",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13488.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13488"
+  },
+  {
+    "id": 13505,
+    "name": "Egg of Vanity",
+    "name_jp": "虚栄の汰魔悟",
+    "attribute": "fire",
+    "sub_attribute": "dark",
+    "types": [
+      "dragon",
+      "devil"
+    ],
+    "awakenings": [
+      "time_extend",
+      "skill_boost",
+      "time_extend",
+      "awk_64",
+      "awk_2",
+      "awk_2",
+      "awk_2",
+      "awk_2"
+    ],
+    "active_skill_name": "Arising Vanity",
+    "active_skill_desc": "For 15 turns, no skyfall; For 15 turns, recover 30% of max HP; Charge all allies' skills by 3 turns",
+    "role_tags": [
+      "haste",
+      "heal",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13505.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13505"
+  },
+  {
+    "id": 13569,
+    "name": "Rin Shibuya",
+    "name_jp": "渋谷凛",
+    "attribute": "water",
+    "sub_attribute": "light",
+    "types": [
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "awk_55",
+      "blind_resist",
+      "awk_111",
+      "awk_111",
+      "blind_resist",
+      "combo_orb",
+      "awk_63"
+    ],
+    "active_skill_name": "私が、皆の切り札になる",
+    "active_skill_desc": "For 6 turns, reduce damage taken by 40%; For 6 turns, set damage cap of self to 24,000,000,000; Remove 2 enemy's barriers",
+    "role_tags": [
+      "blind_resist",
+      "combo_orb",
+      "shield",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13569.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13569"
+  },
+  {
+    "id": 13624,
+    "name": "Baseball Club's Pitcher and Catcher Brothers, Umisachi & Yamasachi",
+    "name_jp": "野球部の兄弟バッテリー・ウミサチヤマサチ",
+    "attribute": "water",
+    "sub_attribute": "wood",
+    "types": [
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "awk_104",
+      "awk_104",
+      "awk_134",
+      "awk_134",
+      "blind_resist",
+      "time_extend"
+    ],
+    "active_skill_name": "山海の球技",
+    "active_skill_desc": "For 1 turn, bypass void damage shield effects; Unlock all orbs; Change the far left column to Water orbs and change the far right column to Wood orbs",
+    "role_tags": [
+      "blind_resist",
+      "board_unlock",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13624.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13624"
+  },
+  {
+    "id": 13664,
+    "name": "Fairy of Natural Beauty, Harumea",
+    "name_jp": "花鳥風月の妖精・ハルメア",
+    "attribute": "none",
+    "sub_attribute": "wood",
+    "types": [],
+    "awakenings": [
+      "skill_boost",
+      "awk_36",
+      "awk_36",
+      "awk_36",
+      "awk_36",
+      "awk_36",
+      "awk_36",
+      "awk_36"
+    ],
+    "active_skill_name": "風光明媚な風韻",
+    "active_skill_desc": "For 1 turn, increase combo count by 15; Unlock all orbs; Change the far left column and the 2nd column from the left to Wood orbs and change the 2nd column from the right and the far right column to Light orbs",
+    "role_tags": [
+      "board_unlock",
+      "combo_orb",
+      "skill_boost"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13664.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13664"
+  },
+  {
+    "id": 13674,
+    "name": "Shinpachi Shimura in Purple REMDra (8 Pulls) Costume",
+    "name_jp": "志村新八＆8連ガチャドラ衣装",
+    "attribute": "dark",
+    "sub_attribute": "wood",
+    "types": [
+      "dragon",
+      "machine"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "awk_104",
+      "awk_104",
+      "awk_111",
+      "awk_111",
+      "awk_109",
+      "awk_63"
+    ],
+    "active_skill_name": "ツッコミきれっかァァ!!",
+    "active_skill_desc": "Activate a random skill from the list: 1) Reduce unable to match orbs effect by 9,999 turns; Remove all binds and awoken skill binds; Unlock all orbs; Change all orbs to Wood, Dark, and Heal orbs; Recover 10% of max HP; Reduce an enemy's remaining HP by 5%; Enhance all Wood orbs, 2) Reduce unable to match orbs effect by 9,999 turns; Remove all binds and awoken skill binds; Unlock all orbs; Change all orbs to Wood, Dark, and Heal orbs; Recover 20% of max HP; Reduce an enemy's remaining HP by 10%; Enhance all Dark orbs, 3) Reduce unable to match orbs effect by 9,999 turns; Remove all binds and awoken skill binds; Unlock all orbs; Change all orbs to Wood, Dark, and Heal orbs; Recover 30% of max HP; Reduce an enemy's remaining HP by 15%; Enhance all Heal orbs, and 4) Reduce unable to match orbs effect by 9,999 turns; Remove all binds and awoken skill binds; Unlock all orbs; Change all orbs to Wood, Dark, and Heal orbs; Recover 40% of max HP; Reduce an enemy's remaining HP by 20%; Enhance all orbs",
+    "role_tags": [
+      "board_change",
+      "board_unlock",
+      "heal",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13674.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13674"
+  },
+  {
+    "id": 13678,
+    "name": "Captain Katsuura in Teach Costume",
+    "name_jp": "キャプテンカツーラ＆ティーチ衣装",
     "attribute": "water",
     "sub_attribute": "dark",
     "types": [
       "attacker",
-      "god"
+      "dragon"
     ],
     "awakenings": [
       "skill_boost",
       "sdr",
-      "combo_orb"
+      "awk_59",
+      "sdr",
+      "awk_137",
+      "awk_111",
+      "awk_111",
+      "blind_resist",
+      "awk_63"
     ],
-    "active_skill_name": "Unknown",
-    "active_skill_desc": "TBD",
+    "active_skill_name": "ヅラじゃない、キャプテンカツーラだ",
+    "active_skill_desc": "For 2 turns, set damage cap of self to 30,000,000,000; For 2 turns, bypass damage absorb shield effects; Reduce unable to match orbs effect by 9,999 turns",
     "role_tags": [
-      "looper",
-      "board_change",
-      "damage"
+      "absorb_void",
+      "blind_resist",
+      "sdr",
+      "skill_boost"
     ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/12446",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/12446.png"
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13678.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13678"
   },
   {
-    "id": 12623,
-    "name_jp": "フェルン",
-    "name_en": "Fern (Frieren)",
-    "attribute": "wood",
+    "id": 13681,
+    "name": "Gintoki's Kimono",
+    "name_jp": "坂田銀時＆スオウ衣装",
+    "attribute": "water",
+    "sub_attribute": "fire",
+    "types": [
+      "attacker",
+      "devil",
+      "dragon"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "sdr",
+      "awk_133",
+      "awk_133",
+      "time_extend",
+      "time_extend",
+      "awk_63"
+    ],
+    "active_skill_name": "人生楽しく生きるコツは童心忘れねーことだよ",
+    "active_skill_desc": "For 1 turn, bypass void damage shield effects; For 1 turn, bypass damage absorb shield effects; Unlock all orbs; Change the far left column to Water orbs and change the far right column to Fire orbs",
+    "role_tags": [
+      "absorb_void",
+      "board_unlock",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13681.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13681"
+  },
+  {
+    "id": 13683,
+    "name": "Mad Prince, Kotarou Katsura",
+    "name_jp": "狂乱の貴公子・桂小太郎",
+    "attribute": "light",
     "sub_attribute": "water",
     "types": [
       "attacker",
-      "god"
+      "physical"
     ],
     "awakenings": [
       "skill_boost",
+      "time_extend",
       "sdr",
-      "sdr"
+      "awk_59",
+      "awk_111",
+      "awk_111",
+      "blind_resist",
+      "blind_resist",
+      "awk_63"
     ],
-    "active_skill_name": "Unknown",
-    "active_skill_desc": "TBD",
+    "active_skill_name": "桂じゃない……ヅラだァァァア!!",
+    "active_skill_desc": "For 2 turns, set damage cap of self to 30,000,000,000; For 2 turns, bypass att. absorb shield effects; Remove all awoken skill binds",
     "role_tags": [
-      "looper",
-      "board_change",
-      "damage"
+      "absorb_void",
+      "blind_resist",
+      "sdr",
+      "skill_boost",
+      "time_extend"
     ],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/12623",
-    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/12623.png"
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13683.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13683"
+  },
+  {
+    "id": 13692,
+    "name": "Odd Jobs Shop, Kagura",
+    "name_jp": "万事屋・神楽",
+    "attribute": "fire",
+    "sub_attribute": "water",
+    "types": [
+      "attacker",
+      "physical"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "blind_resist",
+      "awk_133",
+      "awk_133",
+      "awk_129",
+      "time_extend",
+      "awk_63"
+    ],
+    "active_skill_name": "もう負けない…そう信じているからアル",
+    "active_skill_desc": "For 6 turns, set damage cap of self to 25,000,000,000; For 6 turns, recover 45% of max HP; Remove 2 enemy's barriers",
+    "role_tags": [
+      "blind_resist",
+      "heal",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13692.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13692"
+  },
+  {
+    "id": 13694,
+    "name": "Cabaret Hostess and Guard, Tae Shimura",
+    "name_jp": "キャバ嬢兼用心棒・志村妙",
+    "attribute": "light",
+    "sub_attribute": "wood",
+    "types": [],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "awk_59",
+      "awk_53",
+      "awk_104",
+      "awk_104",
+      "awk_108",
+      "awk_108",
+      "awk_63"
+    ],
+    "active_skill_name": "私たちも最後まで一緒に戦う…",
+    "active_skill_desc": "For 2 turns, bypass void damage shield effects; For 2 turns, 2x orb move time; For 2 turns, 2x ATK for all monsters; Destroys all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison, and Bomb orbs",
+    "role_tags": [
+      "damage",
+      "fixed_time",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13694.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13694"
+  },
+  {
+    "id": 13696,
+    "name": "Shinsengumi, Isao Kondou",
+    "name_jp": "真選組・近藤勲",
+    "attribute": "light",
+    "sub_attribute": "dark",
+    "types": [
+      "attacker",
+      "physical"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "awk_53",
+      "awk_111",
+      "awk_111",
+      "blind_resist",
+      "combo_orb",
+      "awk_63"
+    ],
+    "active_skill_name": "俺たち真選組の剣を、とくと味わえ!!",
+    "active_skill_desc": "For 2 turns, 2x ATK for rightside ally and self; For 2 turns, set damage cap of rightside ally and self to 24,000,000,000; Unlock all orbs; Create 4 Light, Dark, and Heal orbs",
+    "role_tags": [
+      "blind_resist",
+      "board_unlock",
+      "combo_orb",
+      "damage",
+      "heal",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13696.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13696"
+  },
+  {
+    "id": 13700,
+    "name": "Shinsengumi, Sougo Okita",
+    "name_jp": "真選組・沖田総悟",
+    "attribute": "light",
+    "sub_attribute": "dark",
+    "types": [
+      "attacker",
+      "physical"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "awk_140",
+      "awk_111",
+      "awk_111",
+      "blind_resist",
+      "time_extend",
+      "awk_63"
+    ],
+    "active_skill_name": "地球のおまわり、なめんな",
+    "active_skill_desc": "For 5 turns, set damage cap of self to 24,000,000,000; For 5 turns, 1.5x HP; For 1 turn, the board becomes 7x6",
+    "role_tags": [
+      "blind_resist",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13700.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13700"
+  },
+  {
+    "id": 13708,
+    "name": "Courtesan of Death, Tsukuyo",
+    "name_jp": "死神太夫・月詠",
+    "attribute": "dark",
+    "sub_attribute": "light",
+    "types": [
+      "attacker",
+      "physical"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "awk_111",
+      "awk_111",
+      "awk_108",
+      "awk_108",
+      "time_extend",
+      "awk_63"
+    ],
+    "active_skill_name": "最後の月は夢を叶えんがため昇る",
+    "active_skill_desc": "Unlock all orbs; Create 7 Light, Dark, and Heal orbs over any orbs; For 3 turns, set damage cap of self to 25,000,000,000; Reduce parts' remaining HP by 25%",
+    "role_tags": [
+      "board_unlock",
+      "heal",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13708.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13708"
+  },
+  {
+    "id": 13710,
+    "name": "Successor to the Yagyuu Family Name, Kyuubei Yagyuu",
+    "name_jp": "柳生家次期当主・柳生九兵衛",
+    "attribute": "dark",
+    "sub_attribute": "water",
+    "types": [
+      "attacker",
+      "physical"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "sdr",
+      "awk_59",
+      "awk_111",
+      "awk_111",
+      "awk_109",
+      "awk_63"
+    ],
+    "active_skill_name": "僕の大切な人に触るな！",
+    "active_skill_desc": "For 4 turns, bypass att. absorb shield effects; For 4 turns, set damage cap of self to 24,000,000,000; For 2 turns, reduce damage taken by 40%",
+    "role_tags": [
+      "absorb_void",
+      "sdr",
+      "shield",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13710.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13710"
+  },
+  {
+    "id": 13712,
+    "name": "Ayame Sarutobi",
+    "name_jp": "猿飛あやめ",
+    "attribute": "wood",
+    "sub_attribute": "dark",
+    "types": [],
+    "awakenings": [
+      "skill_boost",
+      "sdr",
+      "awk_104",
+      "awk_104",
+      "awk_111",
+      "awk_111",
+      "awk_109",
+      "awk_129",
+      "awk_63"
+    ],
+    "active_skill_name": "忍の力、見せてあげるわ！",
+    "active_skill_desc": "For 4 turns, 2x orb move time; For 4 turns, create 1 spinner restricted to Wood, Dark, and Heal orbs; For 4 turns, reduce damage taken by 35%; Unlock all orbs; Change all orbs to Wood, Dark, and Heal orbs",
+    "role_tags": [
+      "board_change",
+      "board_unlock",
+      "fixed_time",
+      "heal",
+      "sdr",
+      "shield",
+      "skill_boost"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13712.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13712"
+  },
+  {
+    "id": 13714,
+    "name": "Zenzou Hattori",
+    "name_jp": "服部全蔵",
+    "attribute": "dark",
+    "sub_attribute": "dark",
+    "types": [
+      "attacker",
+      "physical"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "awk_111",
+      "awk_111",
+      "awk_109",
+      "time_extend",
+      "awk_129",
+      "awk_63"
+    ],
+    "active_skill_name": "御庭番衆、参る",
+    "active_skill_desc": "For 1 turn, 3x HP; For 1 turn, 3x RCV; For 1 turn, 3x ATK for Dark Att.; For 1 turn, 3x ATK for all monsters; For 5 turns, set damage cap of all subs to 16,000,000,000",
+    "role_tags": [
+      "damage",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13714.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13714"
+  },
+  {
+    "id": 13716,
+    "name": "Tama",
+    "name_jp": "たま",
+    "attribute": "light",
+    "sub_attribute": "light",
+    "types": [
+      "attacker",
+      "machine"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "awk_53",
+      "awk_59",
+      "awk_69",
+      "awk_111",
+      "awk_111",
+      "blind_resist",
+      "awk_63"
+    ],
+    "active_skill_name": "おそうじの時間です",
+    "active_skill_desc": "For 4 turns, bypass damage absorb shield effects; For 1 turn, the board becomes 7x6; For 1 turn, 3x RCV; Destroys all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison, and Bomb orbs",
+    "role_tags": [
+      "absorb_void",
+      "blind_resist",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13716.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13716"
+  },
+  {
+    "id": 13718,
+    "name": "Former Director General of the Immigration Department, Taizou Hasegawa",
+    "name_jp": "元入国管理局局長・長谷川泰三",
+    "attribute": "wood",
+    "sub_attribute": "wood",
+    "types": [],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "awk_109",
+      "awk_111",
+      "awk_111",
+      "awk_108",
+      "awk_108",
+      "combo_orb",
+      "awk_63"
+    ],
+    "active_skill_name": "ようこそ侍の国へ",
+    "active_skill_desc": "For 1 turn, 3x RCV; For 1 turn, 3x HP; For 1 turn, 3x ATK for all monsters; Unlock all orbs; Change all orbs to Wood, Dark, and Heal orbs; Enhance all orbs",
+    "role_tags": [
+      "board_change",
+      "board_unlock",
+      "combo_orb",
+      "damage",
+      "heal",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13718.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13718"
+  },
+  {
+    "id": 13722,
+    "name": "Harusame 7th Division, Kamui",
+    "name_jp": "春雨第七師団・神威",
+    "attribute": "fire",
+    "sub_attribute": "dark",
+    "types": [
+      "attacker",
+      "physical"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "awk_111",
+      "awk_111",
+      "awk_108",
+      "awk_108",
+      "awk_129",
+      "awk_63"
+    ],
+    "active_skill_name": "弱い奴に用はない",
+    "active_skill_desc": "For 2 turns, bypass att. absorb shield effects; For 2 turns, 2x ATK for this monster; For 2 turns, set damage cap of self to 30,000,000,000; For 2 turns, set damage cap of self to 75,000,000,000",
+    "role_tags": [
+      "absorb_void",
+      "damage",
+      "sdr",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13722.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13722"
+  },
+  {
+    "id": 13724,
+    "name": "Oboro",
+    "name_jp": "朧",
+    "attribute": "dark",
+    "sub_attribute": "dark",
+    "types": [
+      "attacker",
+      "physical"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "sdr",
+      "blind_resist",
+      "awk_111",
+      "awk_111",
+      "awk_109",
+      "awk_139",
+      "awk_63"
+    ],
+    "active_skill_name": "魂（こころ）のままに闘え",
+    "active_skill_desc": "For 6 turns, 2x ATK for rightside ally, leftside ally, and self; For 6 turns, set damage cap of rightside ally, leftside ally, and self to 20,000,000,000; For 6 turns, reduce damage taken by 40%",
+    "role_tags": [
+      "blind_resist",
+      "damage",
+      "sdr",
+      "shield",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13724.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13724"
+  },
+  {
+    "id": 13726,
+    "name": "Protector God, Sadaharu",
+    "name_jp": "狛神・定春",
+    "attribute": "light",
+    "sub_attribute": "water",
+    "types": [
+      "physical",
+      "god"
+    ],
+    "awakenings": [
+      "time_extend",
+      "sdr",
+      "sdr",
+      "awk_54",
+      "awk_55",
+      "blind_resist",
+      "awk_111",
+      "awk_111",
+      "awk_63"
+    ],
+    "active_skill_name": "みんなの想い",
+    "active_skill_desc": "Reduce unable to match orbs effect by 9,999 turns; Remove all awoken skill binds; For 1 turn, reduce damage taken by 75%; Binds self for 2 turns",
+    "role_tags": [
+      "blind_resist",
+      "sdr",
+      "shield",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13726.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13726"
+  },
+  {
+    "id": 13728,
+    "name": "Gintoki Sakata & Shinsuke Takasugi (Reward)",
+    "name_jp": "坂田銀時＆高杉晋助【報酬】",
+    "attribute": "water",
+    "sub_attribute": "dark",
+    "types": [
+      "attacker",
+      "physical"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "time_extend",
+      "time_extend",
+      "awk_59",
+      "awk_61",
+      "awk_61",
+      "blind_resist",
+      "awk_63"
+    ],
+    "active_skill_name": "……未来（アンタ）は奴等に託すぜ",
+    "active_skill_desc": "After each skill, evolve to the next: 1) For 35 turns, set damage cap of self to 24,000,000,000; For 35 turns, set damage cap of self to 48,000,000,000;  2) For 2 turns, bypass void damage shield effects; For 2 turns, bypass att. absorb shield effects; For 2 turns, 1.6x HP; Unlock all orbs; Change all orbs to Water, Dark, and Heal orbs; ",
+    "role_tags": [
+      "absorb_void",
+      "blind_resist",
+      "board_change",
+      "board_unlock",
+      "heal",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13728.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13728"
+  },
+  {
+    "id": 13729,
+    "name": "Tendoushuu, Utsuro",
+    "name_jp": "天導衆・虚",
+    "attribute": "dark",
+    "sub_attribute": "dark",
+    "types": [
+      "attacker",
+      "devil"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "time_extend",
+      "awk_53",
+      "awk_109",
+      "awk_109",
+      "awk_109",
+      "time_extend",
+      "awk_63"
+    ],
+    "active_skill_name": "お前にその『虚』を生き続ける覚悟はあるかァ!!",
+    "active_skill_desc": "For 1 turn, create 1 spinner restricted to Dark, Heal, Jammer, and Mortal Poison orbs",
+    "role_tags": [
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13729.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13729"
   }
 ]

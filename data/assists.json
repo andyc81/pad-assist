@@ -1,102 +1,233 @@
 [
   {
-    "id": 13306,
-    "name_jp": "フリーレン装備",
-    "name_en": "Frieren Equip",
-    "attribute": "wood",
-    "awakenings": ["team_hp", "blind_resist", "sdr", "sdr"],
-    "active_skill_desc": "Unlock + board change to water/wood",
-    "assist_tags": ["sdr", "team_hp", "blind_resist", "board_unlock", "board_change"],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13306"
-  },
-  {
-    "id": 13425,
-    "name_jp": "ハイター装備",
-    "name_en": "Heiter Equip",
-    "attribute": "water",
-    "awakenings": ["team_rcv", "team_rcv", "bind_clear"],
-    "active_skill_desc": "HP recovery + bind clear",
-    "assist_tags": ["team_rcv", "bind_clear", "shield"],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13425"
-  },
-  {
-    "id": 13427,
-    "name_jp": "アイゼン装備",
-    "name_en": "Eisen Equip",
-    "attribute": "wood",
-    "awakenings": ["team_hp", "killer", "limit_break"],
-    "active_skill_desc": "Shield + damage boost",
-    "assist_tags": ["team_hp", "killer", "limit_break", "shield"],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13427"
-  },
-  {
-    "id": 9807,
-    "name_jp": "ヒンメル装備",
-    "name_en": "Himmel Equip",
-    "attribute": "light",
-    "awakenings": ["shield", "team_hp", "sdr"],
-    "active_skill_desc": "Shield + absorb void",
-    "assist_tags": ["shield", "absorb_void", "team_hp", "sdr"],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/9807"
-  },
-  {
-    "id": 13350,
-    "name_jp": "フリーレン（コラボ）装備",
-    "name_en": "Frieren Collab Equip",
-    "attribute": "wood",
-    "awakenings": ["sdr", "sdr", "team_hp"],
-    "active_skill_desc": "Leader swap protection",
-    "assist_tags": ["sdr", "team_hp", "leader_swap"],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13350"
-  },
-  {
-    "id": 13346,
-    "name_jp": "フリーレン（コラボ）装備B",
-    "name_en": "Frieren Collab Equip B",
-    "attribute": "wood",
-    "awakenings": ["sdr", "blind_resist", "team_hp"],
-    "active_skill_desc": "Board unlock + wood orb change",
-    "assist_tags": ["sdr", "blind_resist", "team_hp", "board_unlock"],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13346"
-  },
-  {
-    "id": 13437,
-    "name_jp": "キルア装備",
-    "name_en": "Killua Equip",
-    "attribute": "dark",
-    "awakenings": ["sdr", "sdr", "killer"],
-    "active_skill_desc": "Dark orb change + killer boost",
-    "assist_tags": ["sdr", "killer", "board_change"],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13437"
-  },
-  {
-    "id": 13334,
-    "name_jp": "万事屋銀時装備",
-    "name_en": "Yorozuya Gintoki Equip",
-    "attribute": "dark",
-    "awakenings": ["sdr", "sdr", "combo_orb"],
-    "active_skill_desc": "Dark board change + combo boost",
-    "assist_tags": ["sdr", "board_change", "haste"],
-    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13334"
-  },
-  {
     "id": 6419,
-    "name_jp": "装備カードA",
-    "name_en": "Equip A",
-    "attribute": "fire",
-    "awakenings": ["sdr", "team_hp"],
-    "active_skill_desc": "Fire orb change",
-    "assist_tags": ["sdr", "team_hp", "board_change"],
+    "name": "Egg of Pride",
+    "name_jp": "傲慢の汰魔悟",
+    "attribute": "light",
+    "sub_attribute": "none",
+    "types": [
+      "devil"
+    ],
+    "awakenings": [
+      "time_extend",
+      "awk_62",
+      "awk_54",
+      "awk_124",
+      "awk_104",
+      "awk_1",
+      "awk_1"
+    ],
+    "active_skill_name": "Qualia Ego",
+    "active_skill_desc": "Unlock all orbs; Create 15 Light and Heal orbs over any orbs",
+    "assist_tags": [
+      "board_unlock",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/06419.png",
     "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/6419"
   },
   {
     "id": 10207,
-    "name_jp": "装備カードB",
-    "name_en": "Absorption Pierce Equip",
+    "name": "Flordia's Flower Rod",
+    "name_jp": "フローディアのフラワーロッド",
     "attribute": "light",
-    "awakenings": ["absorb_void", "sdr"],
-    "active_skill_desc": "Damage absorb void + attribute absorb void",
-    "assist_tags": ["absorb_void", "sdr", "shield"],
+    "sub_attribute": "none",
+    "types": [],
+    "awakenings": [
+      "time_extend",
+      "awk_94",
+      "time_extend",
+      "skill_boost",
+      "skill_boost",
+      "skill_boost",
+      "awk_79",
+      "awk_44"
+    ],
+    "active_skill_name": "Blooming Garden",
+    "active_skill_desc": "For 1 turn, reduce damage taken by 100%; For 2 turns, bypass att. absorb and damage absorb shield effects; For 2 turns, increase combo count by 3",
+    "assist_tags": [
+      "absorb_void",
+      "shield",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/10207.png",
     "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/10207"
+  },
+  {
+    "id": 13306,
+    "name": "Puck",
+    "name_jp": "パック",
+    "attribute": "fire",
+    "sub_attribute": "water",
+    "types": [
+      "devil"
+    ],
+    "awakenings": [
+      "time_extend",
+      "time_extend",
+      "awk_61",
+      "awk_104",
+      "skill_boost",
+      "awk_54",
+      "time_extend",
+      "awk_1"
+    ],
+    "active_skill_name": "The Fire-Presiding Great Spirit",
+    "active_skill_desc": "For 99 turns, enhanced orbs are more likely to appear by 10%; For 99 turns, Fire and Water orbs are more likely to appear by 10%; Remove all awoken skill binds; Charge all allies' skills by 2 turns",
+    "assist_tags": [
+      "haste",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13306.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13306"
+  },
+  {
+    "id": 13334,
+    "name": "Zodda Bug",
+    "name_jp": "ゾッダ虫",
+    "attribute": "wood",
+    "sub_attribute": "water",
+    "types": [],
+    "awakenings": [
+      "time_extend",
+      "awk_87",
+      "time_extend",
+      "awk_106",
+      "skill_boost",
+      "skill_boost",
+      "sdr",
+      "awk_101"
+    ],
+    "active_skill_name": "Mutual Understanding with Living Creatures",
+    "active_skill_desc": "Charge all allies' skills by 2 turns; For 4 turns, bypass void damage shield effects; For 4 turns, 2x ATK for all monsters",
+    "assist_tags": [
+      "haste",
+      "sdr",
+      "shield",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13334.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13334"
+  },
+  {
+    "id": 13346,
+    "name": "Anastasia's Scarf",
+    "name_jp": "アナスタシアの襟巻き",
+    "attribute": "dark",
+    "sub_attribute": "light",
+    "types": [],
+    "awakenings": [
+      "time_extend",
+      "awk_87",
+      "time_extend",
+      "sdr",
+      "awk_104",
+      "awk_54",
+      "awk_55",
+      "awk_3"
+    ],
+    "active_skill_name": "White Fox Scarf",
+    "active_skill_desc": "For 1 turn, reduce damage taken by 75%; For 1 turn, 3x ATK for all monsters; For 1 turn, the board becomes 7x6; Charge all allies' skills by 1 turn",
+    "assist_tags": [
+      "haste",
+      "sdr",
+      "shield",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13346.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13346"
+  },
+  {
+    "id": 13350,
+    "name": "Dragon-Shaped Insignia",
+    "name_jp": "竜を象った徽章",
+    "attribute": "light",
+    "sub_attribute": "fire",
+    "types": [
+      "attacker",
+      "dragon"
+    ],
+    "awakenings": [
+      "time_extend",
+      "awk_83",
+      "awk_94",
+      "time_extend",
+      "sdr",
+      "skill_boost",
+      "skill_boost",
+      "sdr"
+    ],
+    "active_skill_name": "Qualifications as a Dragon Priestess",
+    "active_skill_desc": "For 3 turns, 3x RCV; For 3 turns, bypass att. absorb and damage absorb shield effects; For 3 turns, bypass void damage shield effects; Charge all allies' skills by 2 turns",
+    "assist_tags": [
+      "absorb_void",
+      "haste",
+      "sdr",
+      "shield",
+      "skill_boost",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13350.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13350"
+  },
+  {
+    "id": 13425,
+    "name": "Heiter's Holy Book",
+    "name_jp": "ハイターの聖典",
+    "attribute": "wood",
+    "sub_attribute": "light",
+    "types": [
+      "healer",
+      "god"
+    ],
+    "awakenings": [
+      "time_extend",
+      "awk_90",
+      "awk_84",
+      "awk_110",
+      "awk_104",
+      "awk_55",
+      "awk_53",
+      "awk_3"
+    ],
+    "active_skill_name": "Expert of the Magic of the Goddess",
+    "active_skill_desc": "Reduce unable to match orbs effect by 9,999 turns; Remove all awoken skill binds; For 5 turns, 1.5x HP; Charge all allies' skills by 2 turns",
+    "assist_tags": [
+      "haste",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13425.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13425"
+  },
+  {
+    "id": 13437,
+    "name": "Escape Golem",
+    "name_jp": "脱出用ゴーレム",
+    "attribute": "water",
+    "sub_attribute": "dark",
+    "types": [
+      "physical",
+      "healer"
+    ],
+    "awakenings": [
+      "time_extend",
+      "awk_89",
+      "awk_90",
+      "sdr",
+      "time_extend",
+      "time_extend"
+    ],
+    "active_skill_name": "Carries the Summoner Out of the Dungeon",
+    "active_skill_desc": "Charge all allies' skills by 2 turns; This assist is removed",
+    "assist_tags": [
+      "haste",
+      "sdr",
+      "time_extend"
+    ],
+    "image_url": "https://d30r6ivozz8w2a.cloudfront.net/media/icons/13437.png",
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13437"
   }
 ]

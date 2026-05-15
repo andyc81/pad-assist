@@ -1,5 +1,3 @@
 {
-  "rewrites": [
-    { "source": "/", "destination": "/pad-assistant.html" }
-  ]
+  "outputDirectory": "."
 }
