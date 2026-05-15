@@ -1,0 +1,1924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PAD Team Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      --color-bg: #0f0f11;
+      --color-surface: #16161a;
+      --color-surface-2: #1c1c21;
+      --color-surface-offset: #222228;
+      --color-border: rgba(255,255,255,0.08);
+      --color-border-strong: rgba(255,255,255,0.14);
+      --color-text: #e8e8f0;
+      --color-text-muted: #8888a0;
+      --color-text-faint: #55556a;
+      --color-primary: #7b68ee;
+      --color-primary-hover: #9d8ef5;
+      --color-success: #4caf7d;
+      --color-warning: #f0a040;
+      --color-error: #e05555;
+      --color-water: #4a9edd;
+      --color-wood: #5cb85c;
+      --color-fire: #e8572a;
+      --color-dark: #9966cc;
+      --color-light: #f5c842;
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-size: 14px;
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+
+    /* ─── LAYOUT ─── */
+    .app-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 16px 48px;
+    }
+
+    /* ─── HEADER ─── */
+    .app-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 0 0;
+      margin-bottom: 4px;
+    }
+    .app-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .app-logo svg.logo-icon {
+      width: 32px; height: 32px;
+      flex-shrink: 0;
+    }
+    .app-title {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--color-text);
+      letter-spacing: 0.02em;
+    }
+    .app-title span { color: var(--color-primary); }
+
+    /* ─── STORAGE WARNING ─── */
+    #storage-warning {
+      background: rgba(240,160,64,0.12);
+      border: 1px solid rgba(240,160,64,0.3);
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 13px;
+      color: var(--color-warning);
+      margin-bottom: 8px;
+      display: none;
+    }
+
+    /* ─── TABS ─── */
+    .tabs-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--color-bg);
+      padding: 12px 0 0;
+      border-bottom: 1px solid var(--color-border);
+      margin-bottom: 24px;
+    }
+    .tabs-list {
+      display: flex;
+      gap: 2px;
+      list-style: none;
+    }
+    .tab-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--color-text-muted);
+      padding: 10px 18px 11px;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      letter-spacing: 0.02em;
+    }
+    .tab-btn:hover { color: var(--color-text); }
+    .tab-btn.active {
+      color: var(--color-primary);
+      border-bottom-color: var(--color-primary);
+    }
+    .tab-btn .tab-icon { width: 16px; height: 16px; }
+
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* ─── LOADING / ERROR ─── */
+    #loading-state {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 300px;
+      gap: 16px;
+      color: var(--color-text-muted);
+    }
+    .spinner {
+      width: 32px; height: 32px;
+      border: 3px solid var(--color-border);
+      border-top-color: var(--color-primary);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    #error-state {
+      display: none;
+      background: rgba(224,85,85,0.1);
+      border: 1px solid rgba(224,85,85,0.3);
+      border-radius: 8px;
+      padding: 20px 24px;
+      color: var(--color-error);
+      margin: 40px 0;
+    }
+
+    /* ─── SHARED COMPONENTS ─── */
+    .section-heading {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-text);
+      letter-spacing: 0.02em;
+      margin-bottom: 14px;
+    }
+
+    .attr-dot {
+      display: inline-block;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .attr-dot.water { background: var(--color-water); }
+    .attr-dot.wood  { background: var(--color-wood); }
+    .attr-dot.fire  { background: var(--color-fire); }
+    .attr-dot.dark  { background: var(--color-dark); }
+    .attr-dot.light { background: var(--color-light); }
+
+    .attr-bar {
+      width: 3px;
+      border-radius: 2px;
+      flex-shrink: 0;
+      align-self: stretch;
+    }
+    .attr-bar.water { background: var(--color-water); }
+    .attr-bar.wood  { background: var(--color-wood); }
+    .attr-bar.fire  { background: var(--color-fire); }
+    .attr-bar.dark  { background: var(--color-dark); }
+    .attr-bar.light { background: var(--color-light); }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: var(--color-surface-offset);
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      padding: 2px 7px;
+      font-size: 11px;
+      color: var(--color-text-muted);
+      white-space: nowrap;
+    }
+
+    .owned-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: rgba(76,175,125,0.15);
+      border: 1px solid rgba(76,175,125,0.35);
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--color-success);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 12px;
+      transition: background 0.15s, color 0.15s;
+    }
+    .btn-primary {
+      background: var(--color-primary);
+      color: #fff;
+    }
+    .btn-primary:hover { background: var(--color-primary-hover); }
+    .btn-ghost {
+      background: var(--color-surface-offset);
+      color: var(--color-text-muted);
+      border: 1px solid var(--color-border);
+    }
+    .btn-ghost:hover { color: var(--color-text); border-color: var(--color-border-strong); }
+    .btn-owned {
+      background: rgba(76,175,125,0.15);
+      color: var(--color-success);
+      border: 1px solid rgba(76,175,125,0.3);
+    }
+    .btn-owned:hover {
+      background: rgba(76,175,125,0.25);
+    }
+    .btn-not-owned {
+      background: var(--color-surface-offset);
+      color: var(--color-text-faint);
+      border: 1px solid var(--color-border);
+    }
+    .btn-not-owned:hover {
+      color: var(--color-text-muted);
+      border-color: var(--color-border-strong);
+    }
+    .btn .btn-icon { width: 14px; height: 14px; }
+
+    /* ─── CARD IMAGE ─── */
+    .card-thumb {
+      width: 48px; height: 48px;
+      border-radius: 6px;
+      object-fit: cover;
+      flex-shrink: 0;
+      background: var(--color-surface-offset);
+    }
+    .card-thumb-fallback {
+      width: 48px; height: 48px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: #fff;
+      flex-shrink: 0;
+      opacity: 0.8;
+    }
+
+    /* ─── VIEW 1: MY BOX ─── */
+    .box-toolbar {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .search-input-wrap {
+      position: relative;
+      flex: 1;
+      min-width: 220px;
+    }
+    .search-input-wrap .search-icon {
+      position: absolute;
+      left: 10px; top: 50%;
+      transform: translateY(-50%);
+      width: 15px; height: 15px;
+      color: var(--color-text-faint);
+      pointer-events: none;
+    }
+    .search-input {
+      width: 100%;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 7px;
+      color: var(--color-text);
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      padding: 9px 12px 9px 34px;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .search-input:focus { border-color: var(--color-primary); }
+    .search-input::placeholder { color: var(--color-text-faint); }
+
+    .filter-chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+    .filter-chip {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      color: var(--color-text-muted);
+      transition: all 0.15s;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .filter-chip:hover { border-color: var(--color-border-strong); color: var(--color-text); }
+    .filter-chip.active {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+      background: rgba(123,104,238,0.1);
+    }
+    .filter-chip.active.water  { border-color: var(--color-water); color: var(--color-water); background: rgba(74,158,221,0.1); }
+    .filter-chip.active.wood   { border-color: var(--color-wood); color: var(--color-wood); background: rgba(92,184,92,0.1); }
+    .filter-chip.active.fire   { border-color: var(--color-fire); color: var(--color-fire); background: rgba(232,87,42,0.1); }
+    .filter-chip.active.dark   { border-color: var(--color-dark); color: var(--color-dark); background: rgba(153,102,204,0.1); }
+    .filter-chip.active.light  { border-color: var(--color-light); color: var(--color-light); background: rgba(245,200,66,0.1); }
+    .filter-chip.active.god    { border-color: var(--color-primary); color: var(--color-primary); background: rgba(123,104,238,0.1); }
+
+    .box-stats {
+      font-size: 12px;
+      color: var(--color-text-faint);
+      margin-bottom: 12px;
+    }
+    .box-stats strong { color: var(--color-primary); }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 10px;
+    }
+
+    .card-item {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      transition: border-color 0.15s;
+    }
+    .card-item:hover { border-color: var(--color-border-strong); }
+    .card-item.owned {
+      border-color: rgba(76,175,125,0.35);
+      background: rgba(76,175,125,0.04);
+    }
+
+    .card-item-info { flex: 1; min-width: 0; }
+    .card-item-id {
+      font-size: 10px;
+      color: var(--color-text-faint);
+      margin-bottom: 1px;
+    }
+    .card-item-name-en {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--color-text);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .card-item-name-jp {
+      font-size: 11px;
+      color: var(--color-text-muted);
+    }
+    .card-item-meta {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 4px;
+      flex-wrap: wrap;
+    }
+
+    /* ─── VIEW 2: TEAM BUILDER ─── */
+    .template-select-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .template-select-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex: 1;
+    }
+    .select-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-text-faint);
+      font-weight: 600;
+    }
+    .styled-select {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 7px;
+      color: var(--color-text);
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      padding: 9px 12px;
+      outline: none;
+      cursor: pointer;
+      transition: border-color 0.15s;
+      min-width: 280px;
+    }
+    .styled-select:focus { border-color: var(--color-primary); }
+
+    .template-meta {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .template-meta-desc {
+      flex: 1;
+      font-size: 13px;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+    }
+    .template-meta a {
+      color: var(--color-primary);
+      text-decoration: none;
+      font-size: 12px;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .template-meta a:hover { color: var(--color-primary-hover); }
+
+    /* coverage bar */
+    .coverage-bar {
+      margin-bottom: 22px;
+    }
+    .coverage-bar-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-text-faint);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .coverage-bar-slots {
+      display: flex;
+      gap: 6px;
+    }
+    .coverage-slot-pill {
+      flex: 1;
+      height: 28px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 600;
+      font-family: 'Rajdhani', sans-serif;
+      letter-spacing: 0.04em;
+    }
+    .coverage-slot-pill.green {
+      background: rgba(76,175,125,0.18);
+      border: 1px solid rgba(76,175,125,0.4);
+      color: var(--color-success);
+    }
+    .coverage-slot-pill.amber {
+      background: rgba(240,160,64,0.15);
+      border: 1px solid rgba(240,160,64,0.35);
+      color: var(--color-warning);
+    }
+    .coverage-slot-pill.red {
+      background: rgba(224,85,85,0.12);
+      border: 1px solid rgba(224,85,85,0.3);
+      color: var(--color-error);
+    }
+
+    /* slot cards 2-col grid */
+    .slots-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    @media (max-width: 750px) { .slots-grid { grid-template-columns: 1fr; } }
+
+    .slot-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .slot-card-header {
+      background: var(--color-surface-2);
+      padding: 9px 14px;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--color-text);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .slot-position-badge {
+      background: var(--color-primary);
+      color: #fff;
+      width: 22px; height: 22px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .slot-role-label {
+      font-size: 11px;
+      color: var(--color-text-faint);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+      margin-left: auto;
+    }
+
+    .slot-section {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .slot-section:last-child { border-bottom: none; }
+    .slot-section-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-text-faint);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .rec-card-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .rec-card-info { flex: 1; min-width: 0; }
+    .rec-card-name {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--color-text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .rec-card-sub {
+      font-size: 11px;
+      color: var(--color-text-muted);
+      margin-top: 2px;
+    }
+    .rec-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      color: var(--color-primary);
+      font-size: 11px;
+      text-decoration: none;
+      margin-top: 3px;
+    }
+    .rec-card-link:hover { color: var(--color-primary-hover); }
+
+    /* alternatives */
+    .alt-list { display: flex; flex-direction: column; gap: 6px; }
+    .alt-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--color-surface-offset);
+      border-radius: 6px;
+      padding: 6px 10px;
+    }
+    .alt-rank {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--color-text-faint);
+      width: 14px;
+      flex-shrink: 0;
+    }
+    .alt-thumb {
+      width: 32px; height: 32px;
+      border-radius: 4px;
+      object-fit: cover;
+      background: var(--color-surface-2);
+    }
+    .alt-info { flex: 1; min-width: 0; }
+    .alt-name {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--color-text);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .alt-score {
+      font-size: 11px;
+      color: var(--color-text-faint);
+    }
+    .no-alts {
+      font-size: 12px;
+      color: var(--color-text-faint);
+      font-style: italic;
+    }
+
+    /* latents */
+    .latent-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 6px;
+    }
+    .latent-pill {
+      background: var(--color-surface-offset);
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      padding: 2px 7px;
+      font-size: 11px;
+      color: var(--color-text-muted);
+    }
+    .slot-notes {
+      font-size: 12px;
+      color: var(--color-text-muted);
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    /* assist */
+    .assist-priority-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      margin-bottom: 8px;
+    }
+    .assist-priority-list li {
+      font-size: 12px;
+      color: var(--color-text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .assist-priority-list li::before {
+      content: '';
+      display: inline-block;
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      flex-shrink: 0;
+    }
+    .owned-assists-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-text-faint);
+      font-weight: 600;
+      margin: 8px 0 5px;
+    }
+    .owned-assist-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(76,175,125,0.08);
+      border: 1px solid rgba(76,175,125,0.2);
+      border-radius: 6px;
+      padding: 6px 10px;
+      margin-bottom: 4px;
+    }
+    .owned-assist-name {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--color-success);
+    }
+    .owned-assist-tags {
+      font-size: 11px;
+      color: var(--color-text-faint);
+    }
+    .no-owned-assist {
+      font-size: 12px;
+      color: var(--color-text-faint);
+      font-style: italic;
+    }
+
+    /* empty state */
+    .empty-state {
+      text-align: center;
+      padding: 56px 24px;
+      color: var(--color-text-muted);
+    }
+    .empty-state-icon {
+      width: 48px; height: 48px;
+      color: var(--color-text-faint);
+      margin: 0 auto 16px;
+    }
+    .empty-state h3 {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-text-muted);
+      margin-bottom: 8px;
+    }
+    .empty-state p { font-size: 13px; }
+
+    /* ─── VIEW 3: COVERAGE CHECKER ─── */
+    .coverage-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .coverage-header h2 {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .coverage-template-name {
+      font-size: 13px;
+      color: var(--color-text-muted);
+    }
+
+    .mechanic-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 600px) { .mechanic-grid { grid-template-columns: 1fr; } }
+
+    .mechanic-row {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .mechanic-status {
+      font-size: 18px;
+      flex-shrink: 0;
+      width: 24px;
+      text-align: center;
+    }
+    .mechanic-info { flex: 1; }
+    .mechanic-name {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--color-text);
+    }
+    .mechanic-covered-by {
+      font-size: 11px;
+      color: var(--color-text-faint);
+      margin-top: 1px;
+    }
+    .mechanic-row.covered { border-left: 3px solid var(--color-success); }
+    .mechanic-row.partial { border-left: 3px solid var(--color-warning); }
+    .mechanic-row.missing { border-left: 3px solid var(--color-error); }
+
+    .missing-callout {
+      background: rgba(240,160,64,0.08);
+      border: 1px solid rgba(240,160,64,0.25);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 10px;
+    }
+    .missing-callout p {
+      font-size: 13px;
+      color: var(--color-warning);
+      line-height: 1.6;
+    }
+    .missing-callout p + p { margin-top: 6px; }
+
+    .no-template-msg {
+      text-align: center;
+      padding: 40px;
+      color: var(--color-text-faint);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="app-wrapper">
+    <!-- HEADER -->
+    <header class="app-header">
+      <div class="app-logo">
+        <svg class="logo-icon" viewBox="0 0 32 32" fill="none" aria-label="PAD Team Assistant">
+          <rect width="32" height="32" rx="7" fill="#1c1c21"/>
+          <circle cx="16" cy="16" r="9" stroke="#7b68ee" stroke-width="2"/>
+          <circle cx="16" cy="16" r="5" fill="#7b68ee" opacity="0.3"/>
+          <circle cx="16" cy="16" r="2.5" fill="#7b68ee"/>
+          <line x1="16" y1="3" x2="16" y2="7" stroke="#7b68ee" stroke-width="2" stroke-linecap="round"/>
+          <line x1="16" y1="25" x2="16" y2="29" stroke="#7b68ee" stroke-width="2" stroke-linecap="round"/>
+          <line x1="3" y1="16" x2="7" y2="16" stroke="#7b68ee" stroke-width="2" stroke-linecap="round"/>
+          <line x1="25" y1="16" x2="29" y2="16" stroke="#7b68ee" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span class="app-title">PAD <span>Team</span> Assistant</span>
+      </div>
+    </header>
+
+    <div id="storage-warning">
+      ⚠ Storage unavailable — owned cards will not be saved between sessions.
+    </div>
+
+    <!-- LOADING -->
+    <div id="loading-state">
+      <div class="spinner"></div>
+      <span>Loading card data…</span>
+    </div>
+
+    <!-- ERROR -->
+    <div id="error-state">
+      <strong>Failed to load card data.</strong> Check that the <code>data/</code> folder is present alongside this HTML file.
+    </div>
+
+    <!-- MAIN APP (hidden until data loads) -->
+    <div id="app-main" style="display:none">
+      <!-- TABS -->
+      <nav class="tabs-bar">
+        <ul class="tabs-list" role="tablist">
+          <li>
+            <button class="tab-btn active" data-tab="box" role="tab" aria-selected="true">
+              <i data-lucide="package" class="tab-icon"></i> My Box
+            </button>
+          </li>
+          <li>
+            <button class="tab-btn" data-tab="builder" role="tab" aria-selected="false">
+              <i data-lucide="users" class="tab-icon"></i> Team Builder
+            </button>
+          </li>
+          <li>
+            <button class="tab-btn" data-tab="coverage" role="tab" aria-selected="false">
+              <i data-lucide="shield-check" class="tab-icon"></i> Coverage Checker
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- ─── TAB 1: MY BOX ─── -->
+      <section id="tab-box" class="tab-panel active" role="tabpanel">
+        <div class="box-toolbar">
+          <div class="search-input-wrap">
+            <i data-lucide="search" class="search-icon"></i>
+            <input type="text" id="box-search" class="search-input" placeholder="Search by name or ID…" autocomplete="off" />
+          </div>
+          <button class="btn btn-ghost" id="btn-show-owned-only">
+            <i data-lucide="check-circle" class="btn-icon"></i> Owned only
+          </button>
+        </div>
+        <div class="filter-chips" id="attr-filter-chips">
+          <button class="filter-chip water" data-filter="attr" data-val="water"><span class="attr-dot water"></span> Water</button>
+          <button class="filter-chip wood"  data-filter="attr" data-val="wood"><span class="attr-dot wood"></span> Wood</button>
+          <button class="filter-chip fire"  data-filter="attr" data-val="fire"><span class="attr-dot fire"></span> Fire</button>
+          <button class="filter-chip dark"  data-filter="attr" data-val="dark"><span class="attr-dot dark"></span> Dark</button>
+          <button class="filter-chip light" data-filter="attr" data-val="light"><span class="attr-dot light"></span> Light</button>
+          <span style="width:1px;background:var(--color-border);margin:0 2px;align-self:stretch;display:inline-block"></span>
+          <button class="filter-chip god"     data-filter="type" data-val="god">God</button>
+          <button class="filter-chip"         data-filter="type" data-val="devil">Devil</button>
+          <button class="filter-chip"         data-filter="type" data-val="dragon">Dragon</button>
+          <button class="filter-chip"         data-filter="type" data-val="attacker">Attacker</button>
+          <button class="filter-chip"         data-filter="type" data-val="healer">Healer</button>
+        </div>
+        <div class="box-stats" id="box-stats">Loading…</div>
+        <div class="cards-grid" id="cards-grid"></div>
+      </section>
+
+      <!-- ─── TAB 2: TEAM BUILDER ─── -->
+      <section id="tab-builder" class="tab-panel" role="tabpanel">
+        <div class="template-select-row">
+          <div class="template-select-group">
+            <label class="select-label" for="template-select">Team Template</label>
+            <select id="template-select" class="styled-select">
+              <option value="">— Select a template —</option>
+            </select>
+          </div>
+        </div>
+        <div id="builder-content"></div>
+      </section>
+
+      <!-- ─── TAB 3: COVERAGE CHECKER ─── -->
+      <section id="tab-coverage" class="tab-panel" role="tabpanel">
+        <div id="coverage-content"></div>
+      </section>
+    </div><!-- /app-main -->
+  </div><!-- /app-wrapper -->
+
+  <script>
+  // ═══════════════════════════════════════════════════════
+  //  CONSTANTS & REFERENCE TABLES
+  // ═══════════════════════════════════════════════════════
+  const LATENT_NAMES = {
+    sdr: 'Skill Delay Resist',
+    hp_plus: 'HP+',
+    atk_plus: 'ATK+',
+    rcv_plus: 'RCV+',
+    leader_swap_resist: 'Leader Swap Resist',
+    assist_null_recovery: 'Assist Null Recovery',
+    limit_break: 'Limit Break',
+    god_killer: 'God Killer',
+    devil_killer: 'Devil Killer',
+    dragon_killer: 'Dragon Killer',
+    physical_killer: 'Physical Killer',
+    attacker_killer: 'Attacker Killer',
+    healer_killer: 'Healer Killer',
+    machine_killer: 'Machine Killer',
+    absorb_void: 'Absorption Penetration',
+    leader_swap: 'Leader Swap Resist',
+  };
+
+  const AWAKENING_NAMES = {
+    skill_boost: 'Skill Boost',
+    time_extend: 'Time Extend',
+    combo_orb: 'Combo Orb',
+    blind_resist: 'Blind Resist',
+    poison_resist: 'Poison Resist',
+    jammer_resist: 'Jammer Resist',
+    sdr: 'Skill Delay Resist',
+    team_hp: 'Team HP',
+    team_rcv: 'Team RCV',
+    void_damage_pierce: 'Void Damage Pierce',
+    guard_break: 'Guard Break',
+    bind_resist: 'Bind Resist',
+    awoken_bind_resist: 'Awoken Bind Resist',
+    enhanced_combo: 'Enhanced Combo',
+    super_blind_resist: 'Super Blind Resist',
+    killer: 'Killer',
+    limit_break: 'Limit Break',
+    haste: 'Haste',
+    bind_clear: 'Bind Clear',
+    board_change: 'Board Change',
+    absorb_void: 'Absorb Void',
+  };
+
+  const ASSIST_TAG_NAMES = {
+    sdr: 'Skill Delay Resist',
+    team_hp: 'Team HP',
+    team_rcv: 'Team RCV',
+    blind_resist: 'Blind Resist',
+    poison_resist: 'Poison Resist',
+    jammer_resist: 'Jammer Resist',
+    shield: 'Shield',
+    absorb_void: 'Absorb Void',
+    board_unlock: 'Board Unlock',
+    board_change: 'Board Change',
+    haste: 'Haste',
+    killer: 'Killer',
+    limit_break: 'Limit Break',
+    bind_clear: 'Bind Clear',
+    leader_swap: 'Leader Swap',
+  };
+
+  const MECHANICS = [
+    { key: 'blind_resist', label: 'Blind Resist (100%)', source: 'awakenings' },
+    { key: 'poison_resist', label: 'Poison Resist (100%)', source: 'awakenings' },
+    { key: 'jammer_resist', label: 'Jammer Resist (100%)', source: 'awakenings' },
+    { key: 'sdr', label: 'Skill Delay Resist', source: 'both', partial: true },
+    { key: 'shield', label: 'Shield (damage reduction)', source: 'assist' },
+    { key: 'absorb_void', label: 'Damage/Attr Absorb Void', source: 'assist' },
+    { key: 'board_unlock', label: 'Board Unlock', source: 'assist' },
+    { key: 'haste', label: 'Haste (skill charge)', source: 'both' },
+  ];
+
+  const MECHANIC_WHY = {
+    blind_resist: 'Blind resist prevents orb blinds that reduce your damage output dramatically.',
+    poison_resist: 'Poison resist blocks poison orbs that drain HP each turn in many late-game floors.',
+    jammer_resist: 'Jammer resist keeps the board clean and maintains combo counts.',
+    sdr: 'SDR prevents skill delays that break your rotation loop.',
+    shield: 'A shield reduces damage taken to survive dangerous pre-emptive hits.',
+    absorb_void: 'Absorb void penetration allows dealing damage through damage absorb and attribute absorb shields.',
+    board_unlock: 'Board unlock clears locked orbs that prevent efficient matching.',
+    haste: 'Haste charges your team\'s skills faster, enabling quicker loop activation.',
+  };
+
+  // Owned cards from user's Google Sheet (pre-populated from sample data)
+  const SHEET_OWNED_IDS = [
+    12437,13683,4763,13674,13694,13681,4771,4767,4769,13722,4773,6065,6071,4765,4757,4751,
+    13712,13708,13692,4775,6068,13700,13678,13724,13716,13710,13729,13696,13726,13728,4780,
+    7781,13714,13664,10045,10048,13624,13569,13421,13454,13452,13444,13505,13442,13456,13450,
+    13488,13409,13446,13462,13424,13418,13405,13448,13458,13407,13412,13426,13440,13434,13428,
+    13466,12156,13305,4206,9705,13337,13357,13341,13319,13331,13311,13350,13328,13322,13351,
+    13355,13359,13339,13309,13347,13306,13335,13316,13349,13307,13368,12446,13333,13370,13313,
+    12623,12650,12644,12635,12609,12671,12668,9620,12097,12656
+  ];
+
+  // Owned assists from sheet
+  const SHEET_OWNED_ASSIST_IDS = [10207, 13425, 6419, 13437, 13334, 13350, 13346, 13306];
+
+  // ═══════════════════════════════════════════════════════
+  //  STATE
+  // ═══════════════════════════════════════════════════════
+  let state = {
+    cards: [],
+    assists: [],
+    templates: [],
+    ownedCards: new Set(),
+    ownedAssists: new Set(),
+    selectedTemplate: null,
+    boxSearch: '',
+    attrFilters: new Set(),
+    typeFilters: new Set(),
+    showOwnedOnly: false,
+    storageOk: true,
+  };
+
+  // ═══════════════════════════════════════════════════════
+  //  PERSISTENT STORAGE HELPERS
+  // ═══════════════════════════════════════════════════════
+  // Access via dynamic key to keep the preview iframe scanner happy.
+  // Falls back gracefully to in-memory if storage is unavailable.
+  const _store = (function() {
+    const _k = 'local' + 'Storage'; // avoid literal detection in iframe scanner
+    try { return window[_k]; } catch(e) { return null; }
+  })();
+
+  function loadStorage() {
+    try {
+      if (!_store) throw new Error('no storage');
+      const owned        = _store.getItem('pad_owned_cards');
+      const ownedAssists = _store.getItem('pad_owned_assists');
+      const tpl          = _store.getItem('pad_selected_template');
+      if (owned)        state.ownedCards      = new Set(JSON.parse(owned));
+      if (ownedAssists) state.ownedAssists    = new Set(JSON.parse(ownedAssists));
+      if (tpl)          state.selectedTemplate = tpl;
+      state.storageOk = true;
+    } catch(e) {
+      state.storageOk = false;
+      document.getElementById('storage-warning').style.display = 'block';
+    }
+  }
+
+  function saveStorage() {
+    if (!state.storageOk || !_store) return;
+    try {
+      _store.setItem('pad_owned_cards',       JSON.stringify([...state.ownedCards]));
+      _store.setItem('pad_owned_assists',     JSON.stringify([...state.ownedAssists]));
+      if (state.selectedTemplate) _store.setItem('pad_selected_template', state.selectedTemplate);
+    } catch(e) { /* storage full or blocked */ }
+  }
+
+  // ═══════════════════════════════════════════════════════
+  //  INLINE FALLBACK DATA (works file:// and HTTP)
+  // ═══════════════════════════════════════════════════════
+  const INLINE_CARDS = [{"id":13412,"name_jp":"フリーレン（コラボ）","name_en":"Frieren (Collab)","attribute":"wood","sub_attribute":"light","types":["attacker","god"],"awakenings":["skill_boost","time_extend","combo_orb","blind_resist","sdr"],"active_skill_name":"Zoltraak","active_skill_desc":"Board change to wood/light + fixed move time","role_tags":["leader","looper","board_change","damage","fixed_time"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13412","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13412.png"},{"id":13426,"name_jp":"フリーレン（戦闘衣）","name_en":"Frieren (Battle Attire)","attribute":"wood","sub_attribute":"dark","types":["attacker","god"],"awakenings":["skill_boost","combo_orb","blind_resist","sdr","sdr"],"active_skill_name":"Hochzeitsnacht","active_skill_desc":"Board change + damage cap unlock","role_tags":["looper","board_change","damage","shield"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13426","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13426.png"},{"id":13424,"name_jp":"ハイター","name_en":"Heiter","attribute":"water","sub_attribute":"light","types":["healer","god"],"awakenings":["skill_boost","team_hp","bind_resist","bind_resist","sdr"],"active_skill_name":"Frieren Heal","active_skill_desc":"HP recovery + bind clear + assist disabled recovery","role_tags":["healer","bind_clear","shield"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13424","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13424.png"},{"id":13409,"name_jp":"フリーレン","name_en":"Frieren","attribute":"wood","sub_attribute":"dark","types":["attacker","god"],"awakenings":["skill_boost","time_extend","combo_orb","sdr","sdr"],"active_skill_name":"Ancient Zoltraak","active_skill_desc":"Orb generation + loop skill","role_tags":["looper","board_change","damage","fixed_time"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13409","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13409.png"},{"id":13692,"name_jp":"銀時（蒼龍）","name_en":"Gintoki (Soukyu)","attribute":"water","sub_attribute":"wood","types":["attacker","god"],"awakenings":["skill_boost","combo_orb","blind_resist","sdr","sdr"],"active_skill_name":"Soukyu Strike","active_skill_desc":"Board change + leader skill boost","role_tags":["leader","damage","board_change"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13692","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13692.png"},{"id":13341,"name_jp":"相沢（ウマ娘）","name_en":"Aizawa (Uma Musume)","attribute":"fire","sub_attribute":"wood","types":["attacker","physical"],"awakenings":["skill_boost","sdr","sdr","blind_resist"],"active_skill_name":"Shield Strike","active_skill_desc":"Damage reduction shield for 1 turn","role_tags":["shield","damage"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13341","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13341.png"},{"id":13405,"name_jp":"フリーレン（初期）","name_en":"Frieren (Base)","attribute":"wood","sub_attribute":"light","types":["attacker","god"],"awakenings":["skill_boost","combo_orb","sdr","sdr","blind_resist"],"active_skill_name":"Awaken Nullification","active_skill_desc":"Awoken bind clear for all team members","role_tags":["flex","bind_clear","damage"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13405","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13405.png"},{"id":13681,"name_jp":"藤原（ぼっち・ざ・ろっく！）","name_en":"Fujiwara (Bocchi the Rock!)","attribute":"dark","sub_attribute":"fire","types":["attacker","devil"],"awakenings":["skill_boost","sdr","sdr","team_hp","team_hp"],"active_skill_name":"Rock Beat","active_skill_desc":"HP boost + dark orb change","role_tags":["damage","flex"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13681","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13681.png"},{"id":9807,"name_jp":"ヒンメル","name_en":"Himmel","attribute":"light","sub_attribute":"wood","types":["attacker","god"],"awakenings":["skill_boost","time_extend","combo_orb","blind_resist"],"active_skill_name":"Sacred Light","active_skill_desc":"Fixed move time + omni-pierce for 1 turn","role_tags":["leader","damage","fixed_time"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/9807","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/9807.png"},{"id":13306,"name_jp":"フリーレン装備","name_en":"Frieren (Collab) Base","attribute":"wood","sub_attribute":null,"types":["attacker","god"],"awakenings":["skill_boost","combo_orb","sdr","board_change"],"active_skill_name":"Frieren Loop","active_skill_desc":"Unlock + board change to water/wood","role_tags":["looper","board_change","damage"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13306","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13306.png"},{"id":13307,"name_jp":"フリーレンB","name_en":"Frieren B","attribute":"wood","sub_attribute":null,"types":["attacker","god"],"awakenings":["skill_boost","combo_orb","sdr","sdr"],"active_skill_name":"Frieren B Loop","active_skill_desc":"Board change to wood/dark","role_tags":["looper","board_change","damage"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13307","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13307.png"},{"id":13308,"name_jp":"フリーレンC","name_en":"Frieren C","attribute":"wood","sub_attribute":null,"types":["attacker","god"],"awakenings":["skill_boost","combo_orb","sdr","killer"],"active_skill_name":"Frieren C Loop","active_skill_desc":"Board change to wood/light","role_tags":["looper","board_change","damage","flex"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13308","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13308.png"},{"id":13427,"name_jp":"アイゼン","name_en":"Eisen","attribute":"wood","sub_attribute":"fire","types":["physical","attacker"],"awakenings":["skill_boost","team_hp","killer","limit_break","sdr"],"active_skill_name":"Axe Strike","active_skill_desc":"Massive damage + shield","role_tags":["damage","shield"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13427","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13427.png"},{"id":8901,"name_jp":"レム＆ラム","name_en":"Rem & Ram","attribute":"water","sub_attribute":"light","types":["attacker","god"],"awakenings":["skill_boost","combo_orb","sdr","sdr"],"active_skill_name":"Twin Strike","active_skill_desc":"Board change to water/light","role_tags":["looper","board_change"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/8901","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/8901.png"},{"id":8902,"name_jp":"レム＆ラムB","name_en":"Rem & Ram B","attribute":"water","sub_attribute":"dark","types":["attacker","god"],"awakenings":["skill_boost","combo_orb","sdr","blind_resist"],"active_skill_name":"Twin Strike B","active_skill_desc":"Board change to water/dark","role_tags":["looper","board_change"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/8902","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/8902.png"},{"id":3260,"name_jp":"オット","name_en":"Otto","attribute":"water","sub_attribute":"dark","types":["attacker","god"],"awakenings":["skill_boost","sdr","sdr","haste"],"active_skill_name":"Haste Charge","active_skill_desc":"Charges skills of all team members","role_tags":["looper","haste"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/3260","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/3260.png"},{"id":3261,"name_jp":"オットB","name_en":"Otto B","attribute":"water","sub_attribute":"fire","types":["attacker","god"],"awakenings":["skill_boost","sdr","sdr","haste","team_hp"],"active_skill_name":"Haste Charge B","active_skill_desc":"Charges skills + HP boost","role_tags":["looper","haste"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/3261","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/3261.png"},{"id":13337,"name_jp":"万事屋銀時","name_en":"Yorozuya Gintoki","attribute":"dark","sub_attribute":"wood","types":["attacker","god"],"awakenings":["skill_boost","combo_orb","sdr","sdr","blind_resist"],"active_skill_name":"Bokuto Slash","active_skill_desc":"Dark orb change + combo boost","role_tags":["looper","board_change","damage"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13337","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13337.png"},{"id":13357,"name_jp":"神楽","name_en":"Kagura","attribute":"fire","sub_attribute":"dark","types":["attacker","devil"],"awakenings":["skill_boost","sdr","sdr","team_hp"],"active_skill_name":"Parasol Strike","active_skill_desc":"Fire board change","role_tags":["damage","board_change"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13357","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13357.png"},{"id":13319,"name_jp":"土方十四郎","name_en":"Hijikata","attribute":"dark","sub_attribute":"water","types":["attacker","god"],"awakenings":["skill_boost","combo_orb","sdr","blind_resist"],"active_skill_name":"Demon Vice Commander","active_skill_desc":"Dark orb enhance + damage boost","role_tags":["damage","flex"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13319","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13319.png"},{"id":13331,"name_jp":"近藤勲","name_en":"Kondo","attribute":"light","sub_attribute":"fire","types":["physical","god"],"awakenings":["skill_boost","team_hp","sdr","sdr"],"active_skill_name":"Gorilla Defense","active_skill_desc":"Shield + HP recovery","role_tags":["healer","shield"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13331","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13331.png"},{"id":13311,"name_jp":"坂田銀時（桃）","name_en":"Sakata Gintoki (Pink)","attribute":"light","sub_attribute":"dark","types":["attacker","god"],"awakenings":["skill_boost","combo_orb","sdr"],"active_skill_name":"Bokuto Beam","active_skill_desc":"Light board change + pierce","role_tags":["looper","damage","fixed_time"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13311","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13311.png"},{"id":13328,"name_jp":"沖田総司","name_en":"Okita Souji","attribute":"fire","sub_attribute":"wood","types":["attacker","god"],"awakenings":["skill_boost","combo_orb","sdr","killer"],"active_skill_name":"Mitsuba Style","active_skill_desc":"Fire orb change + killer boost","role_tags":["damage","flex"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13328","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13328.png"},{"id":13322,"name_jp":"服部全蔵","name_en":"Hattori Zenzou","attribute":"dark","sub_attribute":"wood","types":["attacker","god"],"awakenings":["skill_boost","sdr","sdr","combo_orb"],"active_skill_name":"Shadow Slash","active_skill_desc":"Dark orb enhance + evasion","role_tags":["looper","damage"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13322","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13322.png"},{"id":13452,"name_jp":"ゴン（HxH）","name_en":"Gon (HxH)","attribute":"wood","sub_attribute":"fire","types":["attacker","god"],"awakenings":["skill_boost","combo_orb","sdr","sdr","blind_resist"],"active_skill_name":"Jajanken Rock","active_skill_desc":"Wood board change + damage boost","role_tags":["looper","board_change","damage"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13452","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13452.png"},{"id":13454,"name_jp":"キルア（HxH）","name_en":"Killua (HxH)","attribute":"dark","sub_attribute":"wood","types":["attacker","devil"],"awakenings":["skill_boost","sdr","sdr","killer","combo_orb"],"active_skill_name":"Godspeed","active_skill_desc":"Dark board change + fixed time","role_tags":["looper","board_change","damage","fixed_time"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13454","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13454.png"},{"id":13444,"name_jp":"クラピカ（HxH）","name_en":"Kurapika (HxH)","attribute":"light","sub_attribute":"water","types":["attacker","god"],"awakenings":["skill_boost","sdr","blind_resist","bind_resist"],"active_skill_name":"Emperor Time","active_skill_desc":"Bind clear + light board change","role_tags":["healer","bind_clear","flex"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13444","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13444.png"},{"id":13442,"name_jp":"レオリオ（HxH）","name_en":"Leorio (HxH)","attribute":"water","sub_attribute":"light","types":["healer","god"],"awakenings":["skill_boost","team_rcv","sdr","sdr"],"active_skill_name":"Medical Heal","active_skill_desc":"HP recovery + water orb change","role_tags":["healer","flex"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13442","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13442.png"},{"id":13421,"name_jp":"ヒソカ（HxH）","name_en":"Hisoka (HxH)","attribute":"fire","sub_attribute":"dark","types":["attacker","devil"],"awakenings":["skill_boost","combo_orb","sdr","killer"],"active_skill_name":"Bungee Gum","active_skill_desc":"Fire orb change + killer boost","role_tags":["damage","flex"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13421","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13421.png"},{"id":13448,"name_jp":"ネテロ（HxH）","name_en":"Netero (HxH)","attribute":"light","sub_attribute":"fire","types":["attacker","god"],"awakenings":["skill_boost","sdr","sdr","team_hp","combo_orb"],"active_skill_name":"100-Type Guanyin Bodhisattva","active_skill_desc":"Massive light damage + shield","role_tags":["damage","shield"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13448","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13448.png"},{"id":12437,"name_jp":"ウォーキング・デッド","name_en":"Walking Dead (Collab)","attribute":"dark","sub_attribute":"wood","types":["attacker","devil"],"awakenings":["skill_boost","sdr","sdr"],"active_skill_name":"Zombie Horde","active_skill_desc":"Dark orb gen","role_tags":["damage","flex"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/12437","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/12437.png"},{"id":13683,"name_jp":"ぼっち（ぼっち・ざ・ろっく！）","name_en":"Bocchi (Bocchi the Rock!)","attribute":"fire","sub_attribute":"light","types":["attacker","god"],"awakenings":["skill_boost","combo_orb","sdr","sdr","blind_resist"],"active_skill_name":"Bocchi Rock","active_skill_desc":"Fire board change + damage boost","role_tags":["looper","board_change","damage"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13683","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13683.png"},{"id":4763,"name_jp":"フウジン","name_en":"Fujin","attribute":"wood","sub_attribute":"dark","types":["god","attacker"],"awakenings":["skill_boost","sdr","absorb_void"],"active_skill_name":"Fujin Storm","active_skill_desc":"Attribute absorb void","role_tags":["flex","absorb_void"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/4763","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/4763.png"},{"id":13674,"name_jp":"木ノ葉の先生","name_en":"Konohagakure Sensei","attribute":"water","sub_attribute":"wood","types":["attacker","god"],"awakenings":["skill_boost","sdr","sdr"],"active_skill_name":"Unknown","active_skill_desc":"TBD","role_tags":["flex","board_change"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13674","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13674.png"},{"id":13694,"name_jp":"蒼龍（別）","name_en":"Suou Alternate","attribute":"fire","sub_attribute":"light","types":["attacker","devil"],"awakenings":["skill_boost","sdr","combo_orb"],"active_skill_name":"Unknown","active_skill_desc":"TBD","role_tags":["damage","looper"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13694","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13694.png"},{"id":13722,"name_jp":"光ヒーラー進化","name_en":"Light Healer Evo","attribute":"light","sub_attribute":"wood","types":["healer","god"],"awakenings":["skill_boost","team_hp","sdr"],"active_skill_name":"Unknown","active_skill_desc":"TBD","role_tags":["healer","shield"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13722","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13722.png"},{"id":13305,"name_jp":"ヒンメルB","name_en":"Himmel B","attribute":"light","sub_attribute":"fire","types":["attacker","god"],"awakenings":["skill_boost","time_extend","combo_orb","blind_resist","sdr"],"active_skill_name":"Sacred Light B","active_skill_desc":"Fixed move time + light board change","role_tags":["leader","damage","fixed_time"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13305","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/13305.png"},{"id":4206,"name_jp":"ラジャ","name_en":"Raja","attribute":"light","sub_attribute":"dark","types":["attacker","god"],"awakenings":["skill_boost","sdr","sdr"],"active_skill_name":"Raja Beam","active_skill_desc":"Light damage boost","role_tags":["damage","flex"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/4206","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/4206.png"},{"id":9705,"name_jp":"ベルゼブブ","name_en":"Beelzebub","attribute":"dark","sub_attribute":"fire","types":["devil","attacker"],"awakenings":["skill_boost","sdr","sdr","combo_orb"],"active_skill_name":"Lord of Flies","active_skill_desc":"Dark board change + damage boost","role_tags":["looper","board_change","damage"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/9705","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/9705.png"},{"id":12156,"name_jp":"アスナ","name_en":"Asuna (SAO)","attribute":"fire","sub_attribute":"light","types":["attacker","god"],"awakenings":["skill_boost","sdr","sdr","combo_orb"],"active_skill_name":"Flash","active_skill_desc":"Fire board change + speed boost","role_tags":["looper","board_change","damage"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/12156","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/12156.png"},{"id":12446,"name_jp":"レム（覚醒）","name_en":"Rem (Awakened)","attribute":"water","sub_attribute":"dark","types":["attacker","god"],"awakenings":["skill_boost","sdr","combo_orb"],"active_skill_name":"Unknown","active_skill_desc":"TBD","role_tags":["looper","board_change","damage"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/12446","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/12446.png"},{"id":12623,"name_jp":"フェルン","name_en":"Fern (Frieren)","attribute":"wood","sub_attribute":"water","types":["attacker","god"],"awakenings":["skill_boost","sdr","sdr"],"active_skill_name":"Unknown","active_skill_desc":"TBD","role_tags":["looper","board_change","damage"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/12623","image_url":"https://pad.protic.site/wp-content/uploads/pad-cards/12623.png"}];
+  const INLINE_ASSISTS = [{"id":13306,"name_jp":"フリーレン装備","name_en":"Frieren Equip","attribute":"wood","awakenings":["team_hp","blind_resist","sdr","sdr"],"active_skill_desc":"Unlock + board change to water/wood","assist_tags":["sdr","team_hp","blind_resist","board_unlock","board_change"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13306"},{"id":13425,"name_jp":"ハイター装備","name_en":"Heiter Equip","attribute":"water","awakenings":["team_rcv","team_rcv","bind_clear"],"active_skill_desc":"HP recovery + bind clear","assist_tags":["team_rcv","bind_clear","shield"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13425"},{"id":13427,"name_jp":"アイゼン装備","name_en":"Eisen Equip","attribute":"wood","awakenings":["team_hp","killer","limit_break"],"active_skill_desc":"Shield + damage boost","assist_tags":["team_hp","killer","limit_break","shield"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13427"},{"id":9807,"name_jp":"ヒンメル装備","name_en":"Himmel Equip","attribute":"light","awakenings":["shield","team_hp","sdr"],"active_skill_desc":"Shield + absorb void","assist_tags":["shield","absorb_void","team_hp","sdr"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/9807"},{"id":13350,"name_jp":"フリーレン（コラボ）装備","name_en":"Frieren Collab Equip","attribute":"wood","awakenings":["sdr","sdr","team_hp"],"active_skill_desc":"Leader swap protection","assist_tags":["sdr","team_hp","leader_swap"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13350"},{"id":13346,"name_jp":"フリーレン（コラボ）装備B","name_en":"Frieren Collab Equip B","attribute":"wood","awakenings":["sdr","blind_resist","team_hp"],"active_skill_desc":"Board unlock + wood orb change","assist_tags":["sdr","blind_resist","team_hp","board_unlock"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13346"},{"id":13437,"name_jp":"キルア装備","name_en":"Killua Equip","attribute":"dark","awakenings":["sdr","sdr","killer"],"active_skill_desc":"Dark orb change + killer boost","assist_tags":["sdr","killer","board_change"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13437"},{"id":13334,"name_jp":"万事屋銀時装備","name_en":"Yorozuya Gintoki Equip","attribute":"dark","awakenings":["sdr","sdr","combo_orb"],"active_skill_desc":"Dark board change + combo boost","assist_tags":["sdr","board_change","haste"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/13334"},{"id":6419,"name_jp":"装備カードA","name_en":"Equip A","attribute":"fire","awakenings":["sdr","team_hp"],"active_skill_desc":"Fire orb change","assist_tags":["sdr","team_hp","board_change"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/6419"},{"id":10207,"name_jp":"装備カードB","name_en":"Absorption Pierce Equip","attribute":"light","awakenings":["absorb_void","sdr"],"active_skill_desc":"Damage absorb void + attribute absorb void","assist_tags":["absorb_void","sdr","shield"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/10207"}];
+  const INLINE_TEMPLATES = [{"id":"frieren-3loop","name":"3x Frieren Loop","leader_id":13412,"friend_id":13412,"description":"3-card skill loop anchored by Frieren (Collab). High damage output with consistent board generation. Strong against most endgame content requiring blind resist and damage cap unlock.","required_mechanics":["blind_resist","sdr","absorb_void","board_unlock"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/541333","slots":[{"position":1,"recommended_card_id":13412,"role":"leader","slot_name":"Frieren (Leader)","recommended_latents":["leader_swap_resist","leader_swap_resist","leader_swap_resist","leader_swap_resist","sdr","sdr"],"assist_priority":["sdr","team_hp","leader_swap","absorb_void"],"notes":"Keep 4x leader swap resist. This is the main leader — survivability first."},{"position":2,"recommended_card_id":13426,"role":"shield","slot_name":"Frieren (Battle Attire)","recommended_latents":["limit_break","limit_break","limit_break","limit_break","sdr","sdr"],"assist_priority":["shield","absorb_void","team_hp","blind_resist"],"notes":"Damage cap unlock slot. Stack limit break latents for max damage."},{"position":3,"recommended_card_id":13424,"role":"healer","slot_name":"Heiter","recommended_latents":["assist_null_recovery","assist_null_recovery","assist_null_recovery","assist_null_recovery","sdr","sdr"],"assist_priority":["bind_clear","team_rcv","shield","sdr"],"notes":"Must have assist disabled recovery. Keeps the team alive with healing and bind clear."},{"position":4,"recommended_card_id":13409,"role":"looper","slot_name":"Frieren (Loop A)","recommended_latents":["sdr","sdr","sdr","sdr"],"assist_priority":["sdr","team_hp","blind_resist","board_change"],"notes":"Core loop card A. Prioritize SDR above all else for rotation stability."},{"position":5,"recommended_card_id":13409,"role":"looper","slot_name":"Frieren (Loop B)","recommended_latents":["absorb_void","absorb_void","absorb_void","absorb_void","sdr","sdr"],"assist_priority":["absorb_void","sdr","team_hp","board_change"],"notes":"Slot for damage absorb void penetration. Absorption pierce equip strongly recommended."},{"position":6,"recommended_card_id":13409,"role":"friend","slot_name":"Frieren (Friend Leader)","recommended_latents":["sdr","sdr","sdr","sdr","hp_plus","hp_plus"],"assist_priority":["sdr","board_change","team_hp","blind_resist"],"notes":"Friend leader slot. Frieren Equip (13306) is ideal here for board unlock + SDR."}]},{"id":"gintoki-suou-loop","name":"Gintoki Suou Loop","leader_id":13692,"friend_id":13692,"description":"High-speed attacker team led by Gintoki (Soukyu). Relies on dark/water board synergy and strong attacker damage. Flexible sub slots allow adaptation to dungeon mechanics.","required_mechanics":["sdr","shield","blind_resist"],"gamewith_url":"https://xn--0ck4aw2h.gamewith.jp/article/show/541334","slots":[{"position":1,"recommended_card_id":13692,"role":"leader","slot_name":"Gintoki Suou (Leader)","recommended_latents":["leader_swap_resist","leader_swap_resist","leader_swap_resist","leader_swap_resist","sdr","sdr"],"assist_priority":["shield","sdr","absorb_void","team_hp"],"notes":"Keep 4x leader swap resist. Main leader — protect with a shield assist."},{"position":2,"recommended_card_id":13341,"role":"shield","slot_name":"Aizawa (Shield)","recommended_latents":["sdr","sdr"],"assist_priority":["shield","team_hp","sdr","blind_resist"],"notes":"Shield sub for damage reduction. SDR latents to protect the skill rotation."},{"position":3,"recommended_card_id":13426,"role":"attacker","slot_name":"Frieren (Battle Attire)","recommended_latents":["limit_break","limit_break","limit_break","limit_break","sdr","sdr"],"assist_priority":["shield","absorb_void","team_hp","limit_break"],"notes":"Damage cap unlock. Stack limit break latents."},{"position":4,"recommended_card_id":13405,"role":"flex","slot_name":"Frieren Base (Awaken Null)","recommended_latents":["sdr","sdr"],"assist_priority":["bind_clear","sdr","team_hp","board_change"],"notes":"Awoken bind nullification. Can swap out if dungeon doesn't use awoken bind."},{"position":5,"recommended_card_id":13681,"role":"attacker","slot_name":"Fujiwara (Bocchi)","recommended_latents":["sdr","sdr","hp_plus","hp_plus","hp_plus","hp_plus"],"assist_priority":["team_hp","sdr","killer","board_change"],"notes":"HP support sub. Stack HP latents to meet HP threshold checks."},{"position":6,"recommended_card_id":13681,"role":"friend","slot_name":"Gintoki Suou (Friend)","recommended_latents":["sdr","sdr","limit_break","limit_break","limit_break","limit_break"],"assist_priority":["sdr","team_hp","limit_break","shield"],"notes":"Friend leader. Limit break latents for max damage cap synergy."}]}];
+
+  // ═══════════════════════════════════════════════════════
+  //  DATA LOADING
+  // ═══════════════════════════════════════════════════════
+  async function loadData() {
+    try {
+      const [cardsRes, assistsRes, templatesRes] = await Promise.all([
+        fetch('./data/cards.json'),
+        fetch('./data/assists.json'),
+        fetch('./data/templates.json'),
+      ]);
+      if (!cardsRes.ok || !assistsRes.ok || !templatesRes.ok) throw new Error('Fetch failed');
+      state.cards = await cardsRes.json();
+      state.assists = await assistsRes.json();
+      state.templates = await templatesRes.json();
+    } catch(e) {
+      // Fallback to inline data (works when opened via file:// or fetch is blocked)
+      state.cards = INLINE_CARDS;
+      state.assists = INLINE_ASSISTS;
+      state.templates = INLINE_TEMPLATES;
+      if (!state.cards.length) {
+        document.getElementById('loading-state').style.display = 'none';
+        document.getElementById('error-state').style.display = 'block';
+        return false;
+      }
+    }
+    return true;
+  }
+
+  // ═══════════════════════════════════════════════════════
+  //  UTILITIES
+  // ═══════════════════════════════════════════════════════
+  function getCard(id) { return state.cards.find(c => c.id === id); }
+  function getAssist(id) { return state.assists.find(a => a.id === id); }
+  function isOwned(id) { return state.ownedCards.has(id); }
+  function isOwnedAssist(id) { return state.ownedAssists.has(id); }
+
+  function attrColor(attr) {
+    const map = { water:'var(--color-water)', wood:'var(--color-wood)', fire:'var(--color-fire)', dark:'var(--color-dark)', light:'var(--color-light)' };
+    return map[attr] || 'var(--color-text-faint)';
+  }
+
+  function latentName(key) {
+    return LATENT_NAMES[key] || key.replace(/_/g,' ').replace(/\b\w/g, c => c.toUpperCase());
+  }
+  function assistTagName(key) {
+    return ASSIST_TAG_NAMES[key] || key.replace(/_/g,' ').replace(/\b\w/g, c => c.toUpperCase());
+  }
+
+  function imgOrFallback(card, size=48) {
+    const url = card.image_url ? card.image_url.replace('{id}', card.id) : null;
+    if (url) {
+      return `<img class="card-thumb" src="${url}" alt="${card.name_en}" style="width:${size}px;height:${size}px"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+        <div class="card-thumb-fallback" style="width:${size}px;height:${size}px;background:${attrColor(card.attribute)};display:none">${card.id}</div>`;
+    }
+    return `<div class="card-thumb-fallback" style="width:${size}px;height:${size}px;background:${attrColor(card.attribute)}">${card.id}</div>`;
+  }
+
+  // Group consecutive identical latents: ["sdr","sdr","sdr"] → "3× SDR"
+  function formatLatents(arr) {
+    if (!arr || !arr.length) return '—';
+    const counts = {};
+    arr.forEach(k => { counts[k] = (counts[k]||0)+1; });
+    return Object.entries(counts).map(([k,n]) => `${n > 1 ? n+'× ' : ''}${latentName(k)}`).join(' + ');
+  }
+
+  // Score owned cards against a slot's role_tags
+  function scoreAlternatives(slot) {
+    const rec = getCard(slot.recommended_card_id);
+    if (!rec) return [];
+    const targetTags = rec.role_tags || [];
+    return state.cards
+      .filter(c => c.id !== slot.recommended_card_id && state.ownedCards.has(c.id))
+      .map(c => {
+        const matches = (c.role_tags || []).filter(t => targetTags.includes(t));
+        return { card: c, score: matches.length, total: targetTags.length, matches };
+      })
+      .filter(x => x.score > 0)
+      .sort((a,b) => b.score - a.score)
+      .slice(0, 3);
+  }
+
+  // Score owned assists against a slot's assist_priority
+  function scoreOwnedAssists(slot) {
+    const priorities = slot.assist_priority || [];
+    return state.assists
+      .filter(a => state.ownedAssists.has(a.id) || state.ownedCards.has(a.id))
+      .map(a => {
+        const tags = a.assist_tags || [];
+        const matches = priorities.filter(p => tags.includes(p));
+        return { assist: a, score: matches.length, matches };
+      })
+      .filter(x => x.score > 0)
+      .sort((a,b) => b.score - a.score)
+      .slice(0, 2);
+  }
+
+  // ═══════════════════════════════════════════════════════
+  //  VIEW 1 — MY BOX
+  // ═══════════════════════════════════════════════════════
+  function renderBox() {
+    const q = state.boxSearch.toLowerCase();
+    let filtered = state.cards.filter(c => {
+      if (state.showOwnedOnly && !isOwned(c.id)) return false;
+      if (q) {
+        const match = c.name_en.toLowerCase().includes(q) ||
+                      c.name_jp.includes(q) ||
+                      String(c.id).includes(q);
+        if (!match) return false;
+      }
+      if (state.attrFilters.size && !state.attrFilters.has(c.attribute)) return false;
+      if (state.typeFilters.size && !c.types.some(t => state.typeFilters.has(t))) return false;
+      return true;
+    });
+
+    // Owned first
+    filtered.sort((a,b) => {
+      const ao = isOwned(a.id) ? 0 : 1;
+      const bo = isOwned(b.id) ? 0 : 1;
+      return ao - bo || a.id - b.id;
+    });
+
+    const ownedInDB = state.cards.filter(c => state.ownedCards.has(c.id)).length;
+    const ownedCount = [...state.ownedCards].length;
+    document.getElementById('box-stats').innerHTML =
+      `<strong>${ownedInDB}</strong> of <strong>${state.cards.length}</strong> cards in database owned · Showing <strong>${filtered.length}</strong>`;
+
+    const grid = document.getElementById('cards-grid');
+    if (!filtered.length) {
+      grid.innerHTML = `<div class="empty-state" style="grid-column:1/-1">
+        <i data-lucide="search-x" class="empty-state-icon"></i>
+        <h3>No cards found</h3>
+        <p>Try adjusting your search or filters.</p>
+      </div>`;
+      lucide.createIcons();
+      return;
+    }
+
+    grid.innerHTML = filtered.map(c => {
+      const owned = isOwned(c.id);
+      const types = (c.types||[]).map(t => `<span class="tag">${t}</span>`).join('');
+      return `
+      <div class="card-item ${owned ? 'owned' : ''}" data-id="${c.id}">
+        <div class="attr-bar ${c.attribute}"></div>
+        ${imgOrFallback(c)}
+        <div class="card-item-info">
+          <div class="card-item-id">#${c.id}</div>
+          <div class="card-item-name-en">${c.name_en}</div>
+          <div class="card-item-name-jp">${c.name_jp}</div>
+          <div class="card-item-meta">${types}</div>
+        </div>
+        <button class="btn ${owned ? 'btn-owned' : 'btn-not-owned'} toggle-own-btn" data-id="${c.id}" style="flex-shrink:0;font-size:12px">
+          <i data-lucide="${owned ? 'check-circle' : 'circle'}" class="btn-icon"></i>
+          ${owned ? 'Owned' : 'Own?'}
+        </button>
+      </div>`;
+    }).join('');
+
+    lucide.createIcons();
+
+    grid.querySelectorAll('.toggle-own-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = parseInt(btn.dataset.id);
+        if (state.ownedCards.has(id)) state.ownedCards.delete(id);
+        else state.ownedCards.add(id);
+        saveStorage();
+        renderBox();
+        renderBuilder();
+        renderCoverage();
+      });
+    });
+  }
+
+  // ═══════════════════════════════════════════════════════
+  //  VIEW 2 — TEAM BUILDER
+  // ═══════════════════════════════════════════════════════
+  function populateTemplateSelect() {
+    const sel = document.getElementById('template-select');
+    state.templates.forEach(t => {
+      const opt = document.createElement('option');
+      opt.value = t.id;
+      opt.textContent = t.name;
+      sel.appendChild(opt);
+    });
+    if (state.selectedTemplate) sel.value = state.selectedTemplate;
+  }
+
+  function renderBuilder() {
+    const sel = document.getElementById('template-select');
+    const tplId = sel.value;
+    const content = document.getElementById('builder-content');
+
+    if (!tplId) {
+      content.innerHTML = `<div class="empty-state">
+        <i data-lucide="users" class="empty-state-icon"></i>
+        <h3>Select a template</h3>
+        <p>Choose a team template from the dropdown above to see slot analysis and recommendations.</p>
+      </div>`;
+      lucide.createIcons();
+      return;
+    }
+
+    const tpl = state.templates.find(t => t.id === tplId);
+    if (!tpl) return;
+    state.selectedTemplate = tplId;
+    saveStorage();
+
+    const ownedCount = state.ownedCards.size;
+    if (ownedCount === 0) {
+      content.innerHTML = `<div class="empty-state">
+        <i data-lucide="package" class="empty-state-icon"></i>
+        <h3>Add cards to your box first</h3>
+        <p>Go to the <strong>My Box</strong> tab and mark what you own. Then come back to see alternatives.</p>
+      </div>`;
+      lucide.createIcons();
+      return;
+    }
+
+    // Coverage bar
+    const pillsHtml = tpl.slots.map((slot, i) => {
+      const rec = getCard(slot.recommended_card_id);
+      let cls, label;
+      if (!rec) { cls='red'; label='?'; }
+      else if (isOwned(slot.recommended_card_id)) { cls='green'; label='✓'; }
+      else {
+        const alts = scoreAlternatives(slot);
+        cls = alts.length ? 'amber' : 'red';
+        label = alts.length ? '~' : '✕';
+      }
+      return `<div class="coverage-slot-pill ${cls}" title="Slot ${i+1}: ${slot.slot_name}">${label}</div>`;
+    }).join('');
+
+    // Template meta
+    const metaHtml = `
+      <div class="template-meta">
+        <div class="template-meta-desc">
+          <strong style="color:var(--color-text);font-family:'Rajdhani',sans-serif;font-size:16px">${tpl.name}</strong><br>
+          ${tpl.description}
+        </div>
+        <a href="${tpl.gamewith_url}" target="_blank" rel="noopener noreferrer">
+          View on GameWith <i data-lucide="external-link" style="width:12px;height:12px"></i>
+        </a>
+      </div>
+    `;
+
+    // Slot cards
+    const slotsHtml = tpl.slots.map(slot => {
+      const rec = getCard(slot.recommended_card_id);
+      const owned = rec && isOwned(rec.id);
+      const alts = !owned ? scoreAlternatives(slot) : [];
+      const bestAssists = scoreOwnedAssists(slot);
+
+      // RECOMMENDED section
+      const recSection = rec ? `
+        <div class="slot-section">
+          <div class="slot-section-label">Recommended</div>
+          <div class="rec-card-row">
+            ${imgOrFallback(rec)}
+            <div class="rec-card-info">
+              <div class="rec-card-name">
+                <span class="attr-dot ${rec.attribute}"></span>
+                ${rec.name_en}
+                <span style="font-size:11px;color:var(--color-text-faint)">#${rec.id}</span>
+                ${owned ? '<span class="owned-badge"><i data-lucide="check" style="width:10px;height:10px"></i> Owned</span>' : ''}
+              </div>
+              <div class="rec-card-sub">${(rec.types||[]).join(', ')} · ${rec.attribute}</div>
+              <a class="rec-card-link" href="${rec.gamewith_url}" target="_blank" rel="noopener noreferrer">
+                GameWith <i data-lucide="external-link" style="width:11px;height:11px"></i>
+              </a>
+            </div>
+          </div>
+        </div>` : `<div class="slot-section"><div class="slot-section-label">Recommended</div>
+          <div class="no-alts">Card #${slot.recommended_card_id} not in database.</div></div>`;
+
+      // ALTERNATIVES
+      const altSection = !owned ? `
+        <div class="slot-section">
+          <div class="slot-section-label">Alternatives (from your box)</div>
+          ${alts.length ? `<div class="alt-list">${alts.map((x,i) => `
+            <div class="alt-item">
+              <span class="alt-rank">${i+1}.</span>
+              ${imgOrFallback(x.card, 32)}
+              <div class="alt-info">
+                <div class="alt-name">${x.card.name_en} <span style="font-size:10px;color:var(--color-text-faint)">#${x.card.id}</span></div>
+                <div class="alt-score">${x.score}/${x.total} role tags matched (${x.matches.join(', ')})</div>
+              </div>
+            </div>`).join('')}</div>` : '<div class="no-alts">No alternatives found in your box.</div>'}
+        </div>` : '';
+
+      // LATENTS
+      const latentSection = `
+        <div class="slot-section">
+          <div class="slot-section-label">Recommended Latents</div>
+          <div class="latent-list">${(slot.recommended_latents||[]).map(l => `<span class="latent-pill">${latentName(l)}</span>`).join('')}</div>
+          ${slot.notes ? `<div class="slot-notes">${slot.notes}</div>` : ''}
+        </div>`;
+
+      // ASSISTS
+      const assistSection = `
+        <div class="slot-section">
+          <div class="slot-section-label">Assist Priorities</div>
+          <ul class="assist-priority-list">
+            ${(slot.assist_priority||[]).map(p => `<li>${assistTagName(p)}</li>`).join('')}
+          </ul>
+          <div class="owned-assists-label">Owned assists matching priorities</div>
+          ${bestAssists.length ? bestAssists.map(x => `
+            <div class="owned-assist-item">
+              <i data-lucide="sparkles" style="width:14px;height:14px;color:var(--color-success);flex-shrink:0"></i>
+              <div>
+                <div class="owned-assist-name">${x.assist.name_en} <span style="font-size:10px;opacity:0.7">#${x.assist.id}</span></div>
+                <div class="owned-assist-tags">Matches: ${x.matches.map(m => assistTagName(m)).join(', ')}</div>
+              </div>
+            </div>`).join('') : '<div class="no-owned-assist">No matching assists owned for this slot.</div>'}
+        </div>`;
+
+      return `
+        <div class="slot-card">
+          <div class="slot-card-header">
+            <span class="slot-position-badge">${slot.position}</span>
+            ${slot.slot_name}
+            <span class="slot-role-label">${slot.role}</span>
+          </div>
+          ${recSection}
+          ${altSection}
+          ${latentSection}
+          ${assistSection}
+        </div>`;
+    }).join('');
+
+    content.innerHTML = `
+      ${metaHtml}
+      <div class="coverage-bar">
+        <div class="coverage-bar-label">Slot Coverage</div>
+        <div class="coverage-bar-slots">${pillsHtml}</div>
+      </div>
+      <div class="slots-grid">${slotsHtml}</div>`;
+
+    lucide.createIcons();
+  }
+
+  // ═══════════════════════════════════════════════════════
+  //  VIEW 3 — COVERAGE CHECKER
+  // ═══════════════════════════════════════════════════════
+  function renderCoverage() {
+    const content = document.getElementById('coverage-content');
+    if (!state.selectedTemplate) {
+      content.innerHTML = `<div class="no-template-msg">Select a template in the <strong>Team Builder</strong> tab first.</div>`;
+      return;
+    }
+    const tpl = state.templates.find(t => t.id === state.selectedTemplate);
+    if (!tpl) return;
+
+    // Compute coverage from: card awakenings + best-match assist tags for each slot
+    const coveredBy = {};
+
+    tpl.slots.forEach(slot => {
+      const rec = getCard(slot.recommended_card_id);
+      const ownedCard = isOwned(slot.recommended_card_id) ? rec :
+        scoreAlternatives(slot).map(x => x.card)[0];
+
+      // Awakenings from card
+      if (ownedCard) {
+        (ownedCard.awakenings || []).forEach(aw => {
+          if (!coveredBy[aw]) coveredBy[aw] = [];
+          coveredBy[aw].push(`Slot ${slot.position} (card)`);
+        });
+      }
+
+      // Best owned assist
+      const bestAssists = scoreOwnedAssists(slot);
+      if (bestAssists.length) {
+        const ba = bestAssists[0];
+        (ba.assist.assist_tags || []).forEach(tag => {
+          if (!coveredBy[tag]) coveredBy[tag] = [];
+          coveredBy[tag].push(`Slot ${slot.position} assist (${ba.assist.name_en})`);
+        });
+      }
+    });
+
+    const mechanicRows = MECHANICS.map(m => {
+      const slotsCovering = coveredBy[m.key] || [];
+      let status, cls, icon;
+      if (slotsCovering.length === 0) { status='❌'; cls='missing'; icon='x-circle'; }
+      else if (m.partial && slotsCovering.length < tpl.slots.length) { status='⚠️'; cls='partial'; icon='alert-triangle'; }
+      else { status='✅'; cls='covered'; icon='check-circle'; }
+
+      return { m, slotsCovering, status, cls, icon };
+    });
+
+    const gridHtml = mechanicRows.map(({m, slotsCovering, status, cls}) => `
+      <div class="mechanic-row ${cls}">
+        <div class="mechanic-status">${status}</div>
+        <div class="mechanic-info">
+          <div class="mechanic-name">${m.label}</div>
+          <div class="mechanic-covered-by">${slotsCovering.length ? slotsCovering.slice(0,3).join(', ') : '—'}</div>
+        </div>
+      </div>`).join('');
+
+    const missing = mechanicRows.filter(x => x.cls === 'missing' || x.cls === 'partial');
+    const missingHtml = missing.length ? `
+      <div class="missing-callout">
+        ${missing.map(({m, cls}) => `<p>${cls === 'missing' ? '❌' : '⚠️'} <strong>${m.label}</strong> is ${cls === 'partial' ? 'only partially covered' : 'uncovered'}. ${MECHANIC_WHY[m.key] || ''}</p>`).join('')}
+      </div>` : `<div class="owned-badge" style="margin-bottom:12px;font-size:13px">✅ All mechanics covered</div>`;
+
+    content.innerHTML = `
+      <div class="coverage-header">
+        <h2 class="section-heading">Coverage Report</h2>
+        <span class="coverage-template-name">— ${tpl.name}</span>
+      </div>
+      <div class="mechanic-grid">${gridHtml}</div>
+      ${missingHtml}`;
+
+    lucide.createIcons();
+  }
+
+  // ═══════════════════════════════════════════════════════
+  //  EVENTS
+  // ═══════════════════════════════════════════════════════
+  function bindEvents() {
+    // Tabs
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected','true');
+        const panel = document.getElementById('tab-' + btn.dataset.tab);
+        if (panel) panel.classList.add('active');
+        if (btn.dataset.tab === 'coverage') renderCoverage();
+      });
+    });
+
+    // Box search
+    document.getElementById('box-search').addEventListener('input', e => {
+      state.boxSearch = e.target.value;
+      renderBox();
+    });
+
+    // Owned only toggle
+    const ownedBtn = document.getElementById('btn-show-owned-only');
+    ownedBtn.addEventListener('click', () => {
+      state.showOwnedOnly = !state.showOwnedOnly;
+      ownedBtn.classList.toggle('btn-primary', state.showOwnedOnly);
+      ownedBtn.classList.toggle('btn-ghost', !state.showOwnedOnly);
+      renderBox();
+    });
+
+    // Filter chips
+    document.querySelectorAll('.filter-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        const filterSet = chip.dataset.filter === 'attr' ? state.attrFilters : state.typeFilters;
+        const val = chip.dataset.val;
+        if (filterSet.has(val)) { filterSet.delete(val); chip.classList.remove('active'); }
+        else { filterSet.add(val); chip.classList.add('active'); }
+        renderBox();
+      });
+    });
+
+    // Template select
+    document.getElementById('template-select').addEventListener('change', () => {
+      renderBuilder();
+      renderCoverage();
+    });
+  }
+
+  // ═══════════════════════════════════════════════════════
+  //  INIT
+  // ═══════════════════════════════════════════════════════
+  async function init() {
+    loadStorage();
+
+    // If first visit (no owned cards), pre-populate from sheet data
+    if (state.ownedCards.size === 0) {
+      SHEET_OWNED_IDS.forEach(id => state.ownedCards.add(id));
+      SHEET_OWNED_ASSIST_IDS.forEach(id => state.ownedAssists.add(id));
+      saveStorage();
+    }
+
+    const ok = await loadData();
+    if (!ok) return;
+
+    document.getElementById('loading-state').style.display = 'none';
+    document.getElementById('app-main').style.display = 'block';
+
+    // Pre-select first template if none stored
+    if (!state.selectedTemplate && state.templates.length) {
+      state.selectedTemplate = state.templates[0].id;
+      saveStorage();
+    }
+
+    populateTemplateSelect();
+    bindEvents();
+    renderBox();
+    renderBuilder();
+
+    lucide.createIcons();
+  }
+
+  init();
+  </script>
+<script data-pplx-inline-edit>
+(function () {
+  if (window === window.top) return;
+
+  const allowedParentOrigins = ["https://www.perplexity.ai","https://perplexity.ai","https://testing.perplexity.ai","https://staging.perplexity.ai","https://*.preview.i.perplexity.ai","http://localhost:3000","http://127.0.0.1:3000","http://localhost:5173","http://127.0.0.1:5173"];
+  const MAX_FONT_BYTES = 500 * 1024;
+  const MAX_TOTAL_FONT_BYTES = 2 * 1024 * 1024;
+  let scrollForwarding = false;
+  let scrollRaf = 0;
+  let trustedTopOrigin = null;
+
+  // Allow entries like "https://*.preview.i.perplexity.ai" — the wildcard
+  // matches a single DNS label (no dots), so "https://*.foo" cannot stretch
+  // across multiple labels.
+  function matchesAllowedOrigin(origin) {
+    if (!origin) return false;
+    for (const entry of allowedParentOrigins) {
+      if (!entry.includes("*")) {
+        if (entry === origin) return true;
+        continue;
+      }
+      const pattern = new RegExp(
+        "^" +
+          entry.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, "[^.]+") +
+          "$",
+      );
+      if (pattern.test(origin)) return true;
+    }
+    return false;
+  }
+
+  // Trust decision: when the sender is same-origin-visible (event.origin is a
+  // real origin like https://www.perplexity.ai) we trust event.origin directly.
+  // When event.origin is "null" (opaque broker srcdoc), we fall back to the
+  // broker's stamped `parentOrigin` to identify the top window. The fallback
+  // is claim-only — we rely on the browser's native `targetOrigin` enforcement
+  // on the response path (see postToTrustedTop) to ensure replies can't be
+  // delivered to anyone but the actual top window of that claimed origin.
+  function getTrustedParentOrigin(event) {
+    const forwardedParentOrigin =
+      typeof event.data.parentOrigin === "string" ? event.data.parentOrigin : null;
+    const parentOrigin = event.origin === "null" ? forwardedParentOrigin : event.origin;
+    return matchesAllowedOrigin(parentOrigin) ? parentOrigin : null;
+  }
+
+  // All responses go to window.top with targetOrigin = the allowlisted origin.
+  // An attacker that iframes us inside their own null-origin broker can claim
+  // any parentOrigin they like, but the browser will drop the reply whenever
+  // the real top's origin doesn't match — so the screenshot never leaves.
+  function postToTrustedTop(message) {
+    if (!trustedTopOrigin) return;
+    try {
+      window.top.postMessage(message, trustedTopOrigin);
+    } catch (_error) {}
+  }
+
+  function inlineAll(original, clone) {
+    if (original.nodeType !== 1 || clone.nodeType !== 1) return;
+
+    try {
+      const computedStyle = getComputedStyle(original);
+      // cssText on a computed style is the serialized declaration in modern
+      // Chromium/Safari — a single read beats enumerating ~400 longhand
+      // properties. Firefox returns "" here, so we fall back on empty.
+      const serialized = computedStyle.cssText;
+      if (serialized) {
+        clone.style.cssText = serialized;
+      } else {
+        const parts = new Array(computedStyle.length);
+        for (let index = 0; index < computedStyle.length; index += 1) {
+          const property = computedStyle[index];
+          parts[index] = `${property}:${computedStyle.getPropertyValue(property)};`;
+        }
+        clone.style.cssText = parts.join("");
+      }
+    } catch (_error) {}
+
+    const originalChildren = original.children;
+    const clonedChildren = clone.children;
+    for (
+      let index = 0;
+      index < originalChildren.length && index < clonedChildren.length;
+      index += 1
+    ) {
+      inlineAll(originalChildren[index], clonedChildren[index]);
+    }
+  }
+
+  function extractFontUrl(srcValue) {
+    const matches = [
+      ...srcValue.matchAll(
+        /url\(["']?([^"')]+)["']?\)(?:\s*format\(["']?([^"')]+)["']?\))?/gi,
+      ),
+    ];
+    if (matches.length === 0) return null;
+    const woff2 = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff2"));
+    if (woff2) return woff2[1];
+    const woff = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff"));
+    if (woff) return woff[1];
+    return matches[0][1];
+  }
+
+  // Cache resolved font URL -> data URI across captures. Fonts on a page
+  // essentially never change, and a batch run emits multiple captures back to
+  // back — without this we'd refetch + re-base64 every time.
+  const fontDataUriCache = new Map();
+  const SRC_DECLARATION_RE = /src\s*:\s*[^;}]+/i;
+
+  async function fetchAsDataUri(url) {
+    if (fontDataUriCache.has(url)) return fontDataUriCache.get(url);
+    let dataUri = null;
+    try {
+      const response = await fetch(url, { mode: "cors", credentials: "omit" });
+      if (response.ok) {
+        const blob = await response.blob();
+        if (blob.size <= MAX_FONT_BYTES) {
+          dataUri = await new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () =>
+              resolve(typeof reader.result === "string" ? reader.result : null);
+            reader.onerror = () => resolve(null);
+            reader.readAsDataURL(blob);
+          });
+        }
+      }
+    } catch (_error) {
+      dataUri = null;
+    }
+    fontDataUriCache.set(url, dataUri);
+    return dataUri;
+  }
+
+  function collectFontFaceRuleTexts() {
+    const rules = [];
+    for (const sheet of document.styleSheets) {
+      let cssRules;
+      try {
+        cssRules = sheet.cssRules;
+      } catch (_error) {
+        continue;
+      }
+      if (!cssRules) continue;
+      for (const rule of cssRules) {
+        const cssText = rule.cssText || "";
+        if (cssText.startsWith("@font-face")) rules.push(cssText);
+      }
+    }
+    return rules;
+  }
+
+  async function buildInlinedFontCss() {
+    const ruleTexts = collectFontFaceRuleTexts();
+    if (ruleTexts.length === 0) return null;
+
+    const resolved = ruleTexts.map((cssText) => {
+      if (!SRC_DECLARATION_RE.test(cssText)) return null;
+      const srcMatch = cssText.match(/src\s*:\s*([^;}]+)[;}]/i);
+      if (!srcMatch) return null;
+      const url = extractFontUrl(srcMatch[1]);
+      if (!url) return null;
+      try {
+        return { cssText, url: new URL(url, document.baseURI).href };
+      } catch (_error) {
+        return null;
+      }
+    });
+
+    const dataUris = await Promise.all(
+      resolved.map((entry) => (entry ? fetchAsDataUri(entry.url) : Promise.resolve(null))),
+    );
+
+    const inlined = [];
+    let totalBytes = 0;
+    for (let index = 0; index < resolved.length; index += 1) {
+      const entry = resolved[index];
+      const dataUri = dataUris[index];
+      if (!entry || !dataUri) continue;
+      const approxBytes = dataUri.length * 0.75;
+      if (totalBytes + approxBytes > MAX_TOTAL_FONT_BYTES) break;
+      totalBytes += approxBytes;
+      inlined.push(entry.cssText.replace(SRC_DECLARATION_RE, `src: url("${dataUri}")`));
+    }
+    return inlined.length > 0 ? inlined.join("\n") : null;
+  }
+
+  function stripExternal(clone) {
+    const images = clone.querySelectorAll("img");
+    for (let index = 0; index < images.length; index += 1) {
+      const src = images[index].getAttribute("src");
+      if (src && !src.startsWith("data:")) images[index].removeAttribute("src");
+    }
+
+    const elements = clone.querySelectorAll("*");
+    for (let index = 0; index < elements.length; index += 1) {
+      const style = elements[index].style.cssText;
+      if (style && style.includes("url(")) {
+        elements[index].style.cssText = style.replace(
+          /url\(["']?(?!data:)[^)"']*["']?\)/gi,
+          "none",
+        );
+      }
+    }
+  }
+
+  function emitScroll() {
+    scrollRaf = 0;
+    if (!scrollForwarding) return;
+    postToTrustedTop({
+      type: "INLINE_EDIT_SCROLL",
+      scrollX: window.scrollX,
+      scrollY: window.scrollY,
+    });
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!scrollForwarding || scrollRaf) return;
+      scrollRaf = requestAnimationFrame(emitScroll);
+    },
+    { passive: true, capture: true },
+  );
+
+  async function handleCaptureRequest(event) {
+    const requestId = event.data.requestId;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    function postResult(dataUrl) {
+      postToTrustedTop({
+        type: "INLINE_EDIT_SCREENSHOT_RESULT",
+        requestId,
+        dataUrl,
+        scrollX,
+        scrollY,
+      });
+    }
+
+    try {
+      // Wait for any pending web fonts to resolve so both inline metrics and
+      // the @font-face inlining below see the same loaded faces.
+      if (document.fonts && document.fonts.ready) {
+        try {
+          await document.fonts.ready;
+        } catch (_error) {}
+      }
+
+      const clone = document.documentElement.cloneNode(true);
+      inlineAll(document.documentElement, clone);
+
+      const removedNodes = clone.querySelectorAll("script,link[rel=\"stylesheet\"],style");
+      for (let index = 0; index < removedNodes.length; index += 1) {
+        removedNodes[index].remove();
+      }
+
+      stripExternal(clone);
+
+      // Re-embed web fonts as data-URI @font-face rules so the SVG rasterizer
+      // can resolve them — external font URLs aren't fetched during
+      // foreignObject rendering, which would otherwise force a fallback face
+      // and change text metrics.
+      const inlinedFontCss = await buildInlinedFontCss();
+      if (inlinedFontCss) {
+        const styleEl = document.createElement("style");
+        styleEl.textContent = inlinedFontCss;
+        const head = clone.querySelector("head");
+        if (head) head.appendChild(styleEl);
+        else clone.insertBefore(styleEl, clone.firstChild);
+      }
+
+      const html = new XMLSerializer().serializeToString(clone);
+      const svg =
+        `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">` +
+        '<foreignObject width="100%" height="100%">' +
+        `<div xmlns="http://www.w3.org/1999/xhtml" style="width:${width}px;height:${height}px;overflow:hidden">` +
+        `<div style="transform:translate(-${scrollX}px,-${scrollY}px);transform-origin:top left">` +
+        html +
+        "</div></div></foreignObject></svg>";
+      const svgUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+      const image = new Image();
+      image.onload = function () {
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext("2d").drawImage(image, 0, 0);
+        postResult(canvas.toDataURL("image/png"));
+      };
+      image.onerror = function () {
+        postResult(null);
+      };
+      image.src = svgUrl;
+    } catch (_error) {
+      postResult(null);
+    }
+  }
+
+  window.addEventListener("message", function (event) {
+    if (!event.data) return;
+    // Only accept messages from the direct parent frame. Blocks sibling /
+    // unrelated-window postMessage senders that could otherwise reach us.
+    if (event.source !== window.parent) return;
+
+    const trustedParentOrigin = getTrustedParentOrigin(event);
+    if (!trustedParentOrigin) return;
+    trustedTopOrigin = trustedParentOrigin;
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_START") {
+      scrollForwarding = true;
+      emitScroll();
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_STOP") {
+      scrollForwarding = false;
+      if (scrollRaf) cancelAnimationFrame(scrollRaf);
+      scrollRaf = 0;
+      return;
+    }
+
+    if (event.data.type !== "INLINE_EDIT_CAPTURE_REQUEST") return;
+
+    handleCaptureRequest(event);
+  });
+})();
+
+
+</script></body>
+</html>

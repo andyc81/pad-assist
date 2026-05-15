@@ -1,0 +1,102 @@
+[
+  {
+    "id": 13306,
+    "name_jp": "フリーレン装備",
+    "name_en": "Frieren Equip",
+    "attribute": "wood",
+    "awakenings": ["team_hp", "blind_resist", "sdr", "sdr"],
+    "active_skill_desc": "Unlock + board change to water/wood",
+    "assist_tags": ["sdr", "team_hp", "blind_resist", "board_unlock", "board_change"],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13306"
+  },
+  {
+    "id": 13425,
+    "name_jp": "ハイター装備",
+    "name_en": "Heiter Equip",
+    "attribute": "water",
+    "awakenings": ["team_rcv", "team_rcv", "bind_clear"],
+    "active_skill_desc": "HP recovery + bind clear",
+    "assist_tags": ["team_rcv", "bind_clear", "shield"],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13425"
+  },
+  {
+    "id": 13427,
+    "name_jp": "アイゼン装備",
+    "name_en": "Eisen Equip",
+    "attribute": "wood",
+    "awakenings": ["team_hp", "killer", "limit_break"],
+    "active_skill_desc": "Shield + damage boost",
+    "assist_tags": ["team_hp", "killer", "limit_break", "shield"],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13427"
+  },
+  {
+    "id": 9807,
+    "name_jp": "ヒンメル装備",
+    "name_en": "Himmel Equip",
+    "attribute": "light",
+    "awakenings": ["shield", "team_hp", "sdr"],
+    "active_skill_desc": "Shield + absorb void",
+    "assist_tags": ["shield", "absorb_void", "team_hp", "sdr"],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/9807"
+  },
+  {
+    "id": 13350,
+    "name_jp": "フリーレン（コラボ）装備",
+    "name_en": "Frieren Collab Equip",
+    "attribute": "wood",
+    "awakenings": ["sdr", "sdr", "team_hp"],
+    "active_skill_desc": "Leader swap protection",
+    "assist_tags": ["sdr", "team_hp", "leader_swap"],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13350"
+  },
+  {
+    "id": 13346,
+    "name_jp": "フリーレン（コラボ）装備B",
+    "name_en": "Frieren Collab Equip B",
+    "attribute": "wood",
+    "awakenings": ["sdr", "blind_resist", "team_hp"],
+    "active_skill_desc": "Board unlock + wood orb change",
+    "assist_tags": ["sdr", "blind_resist", "team_hp", "board_unlock"],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13346"
+  },
+  {
+    "id": 13437,
+    "name_jp": "キルア装備",
+    "name_en": "Killua Equip",
+    "attribute": "dark",
+    "awakenings": ["sdr", "sdr", "killer"],
+    "active_skill_desc": "Dark orb change + killer boost",
+    "assist_tags": ["sdr", "killer", "board_change"],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13437"
+  },
+  {
+    "id": 13334,
+    "name_jp": "万事屋銀時装備",
+    "name_en": "Yorozuya Gintoki Equip",
+    "attribute": "dark",
+    "awakenings": ["sdr", "sdr", "combo_orb"],
+    "active_skill_desc": "Dark board change + combo boost",
+    "assist_tags": ["sdr", "board_change", "haste"],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13334"
+  },
+  {
+    "id": 6419,
+    "name_jp": "装備カードA",
+    "name_en": "Equip A",
+    "attribute": "fire",
+    "awakenings": ["sdr", "team_hp"],
+    "active_skill_desc": "Fire orb change",
+    "assist_tags": ["sdr", "team_hp", "board_change"],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/6419"
+  },
+  {
+    "id": 10207,
+    "name_jp": "装備カードB",
+    "name_en": "Absorption Pierce Equip",
+    "attribute": "light",
+    "awakenings": ["absorb_void", "sdr"],
+    "active_skill_desc": "Damage absorb void + attribute absorb void",
+    "assist_tags": ["absorb_void", "sdr", "shield"],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/10207"
+  }
+]

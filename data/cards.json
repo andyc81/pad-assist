@@ -1,0 +1,1085 @@
+[
+  {
+    "id": 13412,
+    "name_jp": "フリーレン（コラボ）",
+    "name_en": "Frieren (Collab)",
+    "attribute": "wood",
+    "sub_attribute": "light",
+    "types": [
+      "attacker",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "combo_orb",
+      "blind_resist",
+      "sdr"
+    ],
+    "active_skill_name": "Zoltraak",
+    "active_skill_desc": "Board change to wood/light + fixed move time",
+    "role_tags": [
+      "leader",
+      "looper",
+      "board_change",
+      "damage",
+      "fixed_time"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13412",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13412.png"
+  },
+  {
+    "id": 13426,
+    "name_jp": "フリーレン（戦闘衣）",
+    "name_en": "Frieren (Battle Attire)",
+    "attribute": "wood",
+    "sub_attribute": "dark",
+    "types": [
+      "attacker",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "combo_orb",
+      "blind_resist",
+      "sdr",
+      "sdr"
+    ],
+    "active_skill_name": "Hochzeitsnacht",
+    "active_skill_desc": "Board change + damage cap unlock",
+    "role_tags": [
+      "looper",
+      "board_change",
+      "damage",
+      "shield"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13426",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13426.png"
+  },
+  {
+    "id": 13424,
+    "name_jp": "ハイター",
+    "name_en": "Heiter",
+    "attribute": "water",
+    "sub_attribute": "light",
+    "types": [
+      "healer",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "team_hp",
+      "bind_resist",
+      "bind_resist",
+      "sdr"
+    ],
+    "active_skill_name": "Frieren Heal",
+    "active_skill_desc": "HP recovery + bind clear + assist disabled recovery",
+    "role_tags": [
+      "healer",
+      "bind_clear",
+      "shield"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13424",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13424.png"
+  },
+  {
+    "id": 13409,
+    "name_jp": "フリーレン",
+    "name_en": "Frieren",
+    "attribute": "wood",
+    "sub_attribute": "dark",
+    "types": [
+      "attacker",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "combo_orb",
+      "sdr",
+      "sdr"
+    ],
+    "active_skill_name": "Ancient Zoltraak",
+    "active_skill_desc": "Orb generation + loop skill",
+    "role_tags": [
+      "looper",
+      "board_change",
+      "damage",
+      "fixed_time"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13409",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13409.png"
+  },
+  {
+    "id": 13692,
+    "name_jp": "銀時（蒼龍）",
+    "name_en": "Gintoki (Soukyu)",
+    "attribute": "water",
+    "sub_attribute": "wood",
+    "types": [
+      "attacker",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "combo_orb",
+      "blind_resist",
+      "sdr",
+      "sdr"
+    ],
+    "active_skill_name": "Soukyu Strike",
+    "active_skill_desc": "Board change + leader skill boost",
+    "role_tags": [
+      "leader",
+      "damage",
+      "board_change"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13692",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13692.png"
+  },
+  {
+    "id": 13341,
+    "name_jp": "相沢（ウマ娘）",
+    "name_en": "Aizawa (Uma Musume)",
+    "attribute": "fire",
+    "sub_attribute": "wood",
+    "types": [
+      "attacker",
+      "physical"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "sdr",
+      "sdr",
+      "blind_resist"
+    ],
+    "active_skill_name": "Shield Strike",
+    "active_skill_desc": "Damage reduction shield for 1 turn",
+    "role_tags": [
+      "shield",
+      "damage"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13341",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13341.png"
+  },
+  {
+    "id": 13405,
+    "name_jp": "フリーレン（初期）",
+    "name_en": "Frieren (Base)",
+    "attribute": "wood",
+    "sub_attribute": "light",
+    "types": [
+      "attacker",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "combo_orb",
+      "sdr",
+      "sdr",
+      "blind_resist"
+    ],
+    "active_skill_name": "Awaken Nullification",
+    "active_skill_desc": "Awoken bind clear for all team members",
+    "role_tags": [
+      "flex",
+      "bind_clear",
+      "damage"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13405",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13405.png"
+  },
+  {
+    "id": 13681,
+    "name_jp": "藤原（ぼっち・ざ・ろっく！）",
+    "name_en": "Fujiwara (Bocchi the Rock!)",
+    "attribute": "dark",
+    "sub_attribute": "fire",
+    "types": [
+      "attacker",
+      "devil"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "sdr",
+      "sdr",
+      "team_hp",
+      "team_hp"
+    ],
+    "active_skill_name": "Rock Beat",
+    "active_skill_desc": "HP boost + dark orb change",
+    "role_tags": [
+      "damage",
+      "flex"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13681",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13681.png"
+  },
+  {
+    "id": 9807,
+    "name_jp": "ヒンメル",
+    "name_en": "Himmel",
+    "attribute": "light",
+    "sub_attribute": "wood",
+    "types": [
+      "attacker",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "combo_orb",
+      "blind_resist"
+    ],
+    "active_skill_name": "Sacred Light",
+    "active_skill_desc": "Fixed move time + omni-pierce for 1 turn",
+    "role_tags": [
+      "leader",
+      "damage",
+      "fixed_time"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/9807",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/9807.png"
+  },
+  {
+    "id": 13306,
+    "name_jp": "フリーレン装備",
+    "name_en": "Frieren (Collab) Base",
+    "attribute": "wood",
+    "sub_attribute": null,
+    "types": [
+      "attacker",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "combo_orb",
+      "sdr",
+      "board_change"
+    ],
+    "active_skill_name": "Frieren Loop",
+    "active_skill_desc": "Unlock + board change to water/wood",
+    "role_tags": [
+      "looper",
+      "board_change",
+      "damage"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13306",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13306.png"
+  },
+  {
+    "id": 13307,
+    "name_jp": "フリーレンB",
+    "name_en": "Frieren B",
+    "attribute": "wood",
+    "sub_attribute": null,
+    "types": [
+      "attacker",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "combo_orb",
+      "sdr",
+      "sdr"
+    ],
+    "active_skill_name": "Frieren B Loop",
+    "active_skill_desc": "Board change to wood/dark",
+    "role_tags": [
+      "looper",
+      "board_change",
+      "damage"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13307",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13307.png"
+  },
+  {
+    "id": 13308,
+    "name_jp": "フリーレンC",
+    "name_en": "Frieren C",
+    "attribute": "wood",
+    "sub_attribute": null,
+    "types": [
+      "attacker",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "combo_orb",
+      "sdr",
+      "killer"
+    ],
+    "active_skill_name": "Frieren C Loop",
+    "active_skill_desc": "Board change to wood/light",
+    "role_tags": [
+      "looper",
+      "board_change",
+      "damage",
+      "flex"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13308",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13308.png"
+  },
+  {
+    "id": 13427,
+    "name_jp": "アイゼン",
+    "name_en": "Eisen",
+    "attribute": "wood",
+    "sub_attribute": "fire",
+    "types": [
+      "physical",
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "team_hp",
+      "killer",
+      "limit_break",
+      "sdr"
+    ],
+    "active_skill_name": "Axe Strike",
+    "active_skill_desc": "Massive damage + shield",
+    "role_tags": [
+      "damage",
+      "shield"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13427",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13427.png"
+  },
+  {
+    "id": 8901,
+    "name_jp": "レム＆ラム",
+    "name_en": "Rem & Ram",
+    "attribute": "water",
+    "sub_attribute": "light",
+    "types": [
+      "attacker",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "combo_orb",
+      "sdr",
+      "sdr"
+    ],
+    "active_skill_name": "Twin Strike",
+    "active_skill_desc": "Board change to water/light",
+    "role_tags": [
+      "looper",
+      "board_change"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/8901",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/8901.png"
+  },
+  {
+    "id": 8902,
+    "name_jp": "レム＆ラムB",
+    "name_en": "Rem & Ram B",
+    "attribute": "water",
+    "sub_attribute": "dark",
+    "types": [
+      "attacker",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "combo_orb",
+      "sdr",
+      "blind_resist"
+    ],
+    "active_skill_name": "Twin Strike B",
+    "active_skill_desc": "Board change to water/dark",
+    "role_tags": [
+      "looper",
+      "board_change"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/8902",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/8902.png"
+  },
+  {
+    "id": 3260,
+    "name_jp": "オット",
+    "name_en": "Otto",
+    "attribute": "water",
+    "sub_attribute": "dark",
+    "types": [
+      "attacker",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "sdr",
+      "sdr",
+      "haste"
+    ],
+    "active_skill_name": "Haste Charge",
+    "active_skill_desc": "Charges skills of all team members",
+    "role_tags": [
+      "looper",
+      "haste"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/3260",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/3260.png"
+  },
+  {
+    "id": 3261,
+    "name_jp": "オットB",
+    "name_en": "Otto B",
+    "attribute": "water",
+    "sub_attribute": "fire",
+    "types": [
+      "attacker",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "sdr",
+      "sdr",
+      "haste",
+      "team_hp"
+    ],
+    "active_skill_name": "Haste Charge B",
+    "active_skill_desc": "Charges skills + HP boost",
+    "role_tags": [
+      "looper",
+      "haste"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/3261",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/3261.png"
+  },
+  {
+    "id": 13337,
+    "name_jp": "万事屋銀時",
+    "name_en": "Yorozuya Gintoki",
+    "attribute": "dark",
+    "sub_attribute": "wood",
+    "types": [
+      "attacker",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "combo_orb",
+      "sdr",
+      "sdr",
+      "blind_resist"
+    ],
+    "active_skill_name": "Bokuto Slash",
+    "active_skill_desc": "Dark orb change + combo boost",
+    "role_tags": [
+      "looper",
+      "board_change",
+      "damage"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13337",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13337.png"
+  },
+  {
+    "id": 13357,
+    "name_jp": "神楽",
+    "name_en": "Kagura",
+    "attribute": "fire",
+    "sub_attribute": "dark",
+    "types": [
+      "attacker",
+      "devil"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "sdr",
+      "sdr",
+      "team_hp"
+    ],
+    "active_skill_name": "Parasol Strike",
+    "active_skill_desc": "Fire board change",
+    "role_tags": [
+      "damage",
+      "board_change"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13357",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13357.png"
+  },
+  {
+    "id": 13319,
+    "name_jp": "土方十四郎",
+    "name_en": "Hijikata",
+    "attribute": "dark",
+    "sub_attribute": "water",
+    "types": [
+      "attacker",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "combo_orb",
+      "sdr",
+      "blind_resist"
+    ],
+    "active_skill_name": "Demon Vice Commander",
+    "active_skill_desc": "Dark orb enhance + damage boost",
+    "role_tags": [
+      "damage",
+      "flex"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13319",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13319.png"
+  },
+  {
+    "id": 13331,
+    "name_jp": "近藤勲",
+    "name_en": "Kondo",
+    "attribute": "light",
+    "sub_attribute": "fire",
+    "types": [
+      "physical",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "team_hp",
+      "sdr",
+      "sdr"
+    ],
+    "active_skill_name": "Gorilla Defense",
+    "active_skill_desc": "Shield + HP recovery",
+    "role_tags": [
+      "healer",
+      "shield"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13331",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13331.png"
+  },
+  {
+    "id": 13311,
+    "name_jp": "坂田銀時（桃）",
+    "name_en": "Sakata Gintoki (Pink)",
+    "attribute": "light",
+    "sub_attribute": "dark",
+    "types": [
+      "attacker",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "combo_orb",
+      "sdr"
+    ],
+    "active_skill_name": "Bokuto Beam",
+    "active_skill_desc": "Light board change + pierce",
+    "role_tags": [
+      "looper",
+      "damage",
+      "fixed_time"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13311",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13311.png"
+  },
+  {
+    "id": 13328,
+    "name_jp": "沖田総司",
+    "name_en": "Okita Souji",
+    "attribute": "fire",
+    "sub_attribute": "wood",
+    "types": [
+      "attacker",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "combo_orb",
+      "sdr",
+      "killer"
+    ],
+    "active_skill_name": "Mitsuba Style",
+    "active_skill_desc": "Fire orb change + killer boost",
+    "role_tags": [
+      "damage",
+      "flex"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13328",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13328.png"
+  },
+  {
+    "id": 13322,
+    "name_jp": "服部全蔵",
+    "name_en": "Hattori Zenzou",
+    "attribute": "dark",
+    "sub_attribute": "wood",
+    "types": [
+      "attacker",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "sdr",
+      "sdr",
+      "combo_orb"
+    ],
+    "active_skill_name": "Shadow Slash",
+    "active_skill_desc": "Dark orb enhance + evasion",
+    "role_tags": [
+      "looper",
+      "damage"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13322",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13322.png"
+  },
+  {
+    "id": 13452,
+    "name_jp": "ゴン（HxH）",
+    "name_en": "Gon (HxH)",
+    "attribute": "wood",
+    "sub_attribute": "fire",
+    "types": [
+      "attacker",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "combo_orb",
+      "sdr",
+      "sdr",
+      "blind_resist"
+    ],
+    "active_skill_name": "Jajanken Rock",
+    "active_skill_desc": "Wood board change + damage boost",
+    "role_tags": [
+      "looper",
+      "board_change",
+      "damage"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13452",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13452.png"
+  },
+  {
+    "id": 13454,
+    "name_jp": "キルア（HxH）",
+    "name_en": "Killua (HxH)",
+    "attribute": "dark",
+    "sub_attribute": "wood",
+    "types": [
+      "attacker",
+      "devil"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "sdr",
+      "sdr",
+      "killer",
+      "combo_orb"
+    ],
+    "active_skill_name": "Godspeed",
+    "active_skill_desc": "Dark board change + fixed time",
+    "role_tags": [
+      "looper",
+      "board_change",
+      "damage",
+      "fixed_time"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13454",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13454.png"
+  },
+  {
+    "id": 13444,
+    "name_jp": "クラピカ（HxH）",
+    "name_en": "Kurapika (HxH)",
+    "attribute": "light",
+    "sub_attribute": "water",
+    "types": [
+      "attacker",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "sdr",
+      "blind_resist",
+      "bind_resist"
+    ],
+    "active_skill_name": "Emperor Time",
+    "active_skill_desc": "Bind clear + light board change",
+    "role_tags": [
+      "healer",
+      "bind_clear",
+      "flex"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13444",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13444.png"
+  },
+  {
+    "id": 13442,
+    "name_jp": "レオリオ（HxH）",
+    "name_en": "Leorio (HxH)",
+    "attribute": "water",
+    "sub_attribute": "light",
+    "types": [
+      "healer",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "team_rcv",
+      "sdr",
+      "sdr"
+    ],
+    "active_skill_name": "Medical Heal",
+    "active_skill_desc": "HP recovery + water orb change",
+    "role_tags": [
+      "healer",
+      "flex"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13442",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13442.png"
+  },
+  {
+    "id": 13421,
+    "name_jp": "ヒソカ（HxH）",
+    "name_en": "Hisoka (HxH)",
+    "attribute": "fire",
+    "sub_attribute": "dark",
+    "types": [
+      "attacker",
+      "devil"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "combo_orb",
+      "sdr",
+      "killer"
+    ],
+    "active_skill_name": "Bungee Gum",
+    "active_skill_desc": "Fire orb change + killer boost",
+    "role_tags": [
+      "damage",
+      "flex"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13421",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13421.png"
+  },
+  {
+    "id": 13448,
+    "name_jp": "ネテロ（HxH）",
+    "name_en": "Netero (HxH)",
+    "attribute": "light",
+    "sub_attribute": "fire",
+    "types": [
+      "attacker",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "sdr",
+      "sdr",
+      "team_hp",
+      "combo_orb"
+    ],
+    "active_skill_name": "100-Type Guanyin Bodhisattva",
+    "active_skill_desc": "Massive light damage + shield",
+    "role_tags": [
+      "damage",
+      "shield"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13448",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13448.png"
+  },
+  {
+    "id": 12437,
+    "name_jp": "ウォーキング・デッド",
+    "name_en": "Walking Dead (Collab)",
+    "attribute": "dark",
+    "sub_attribute": "wood",
+    "types": [
+      "attacker",
+      "devil"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "sdr",
+      "sdr"
+    ],
+    "active_skill_name": "Zombie Horde",
+    "active_skill_desc": "Dark orb gen",
+    "role_tags": [
+      "damage",
+      "flex"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/12437",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/12437.png"
+  },
+  {
+    "id": 13683,
+    "name_jp": "ぼっち（ぼっち・ざ・ろっく！）",
+    "name_en": "Bocchi (Bocchi the Rock!)",
+    "attribute": "fire",
+    "sub_attribute": "light",
+    "types": [
+      "attacker",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "combo_orb",
+      "sdr",
+      "sdr",
+      "blind_resist"
+    ],
+    "active_skill_name": "Bocchi Rock",
+    "active_skill_desc": "Fire board change + damage boost",
+    "role_tags": [
+      "looper",
+      "board_change",
+      "damage"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13683",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13683.png"
+  },
+  {
+    "id": 4763,
+    "name_jp": "フウジン",
+    "name_en": "Fujin",
+    "attribute": "wood",
+    "sub_attribute": "dark",
+    "types": [
+      "god",
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "sdr",
+      "absorb_void"
+    ],
+    "active_skill_name": "Fujin Storm",
+    "active_skill_desc": "Attribute absorb void",
+    "role_tags": [
+      "flex",
+      "absorb_void"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/4763",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/4763.png"
+  },
+  {
+    "id": 13674,
+    "name_jp": "木ノ葉の先生",
+    "name_en": "Konohagakure Sensei",
+    "attribute": "water",
+    "sub_attribute": "wood",
+    "types": [
+      "attacker",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "sdr",
+      "sdr"
+    ],
+    "active_skill_name": "Unknown",
+    "active_skill_desc": "TBD",
+    "role_tags": [
+      "flex",
+      "board_change"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13674",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13674.png"
+  },
+  {
+    "id": 13694,
+    "name_jp": "蒼龍（別）",
+    "name_en": "Suou Alternate",
+    "attribute": "fire",
+    "sub_attribute": "light",
+    "types": [
+      "attacker",
+      "devil"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "sdr",
+      "combo_orb"
+    ],
+    "active_skill_name": "Unknown",
+    "active_skill_desc": "TBD",
+    "role_tags": [
+      "damage",
+      "looper"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13694",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13694.png"
+  },
+  {
+    "id": 13722,
+    "name_jp": "光ヒーラー進化",
+    "name_en": "Light Healer Evo",
+    "attribute": "light",
+    "sub_attribute": "wood",
+    "types": [
+      "healer",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "team_hp",
+      "sdr"
+    ],
+    "active_skill_name": "Unknown",
+    "active_skill_desc": "TBD",
+    "role_tags": [
+      "healer",
+      "shield"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13722",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13722.png"
+  },
+  {
+    "id": 13305,
+    "name_jp": "ヒンメルB",
+    "name_en": "Himmel B",
+    "attribute": "light",
+    "sub_attribute": "fire",
+    "types": [
+      "attacker",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "time_extend",
+      "combo_orb",
+      "blind_resist",
+      "sdr"
+    ],
+    "active_skill_name": "Sacred Light B",
+    "active_skill_desc": "Fixed move time + light board change",
+    "role_tags": [
+      "leader",
+      "damage",
+      "fixed_time"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/13305",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/13305.png"
+  },
+  {
+    "id": 4206,
+    "name_jp": "ラジャ",
+    "name_en": "Raja",
+    "attribute": "light",
+    "sub_attribute": "dark",
+    "types": [
+      "attacker",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "sdr",
+      "sdr"
+    ],
+    "active_skill_name": "Raja Beam",
+    "active_skill_desc": "Light damage boost",
+    "role_tags": [
+      "damage",
+      "flex"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/4206",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/4206.png"
+  },
+  {
+    "id": 9705,
+    "name_jp": "ベルゼブブ",
+    "name_en": "Beelzebub",
+    "attribute": "dark",
+    "sub_attribute": "fire",
+    "types": [
+      "devil",
+      "attacker"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "sdr",
+      "sdr",
+      "combo_orb"
+    ],
+    "active_skill_name": "Lord of Flies",
+    "active_skill_desc": "Dark board change + damage boost",
+    "role_tags": [
+      "looper",
+      "board_change",
+      "damage"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/9705",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/9705.png"
+  },
+  {
+    "id": 12156,
+    "name_jp": "アスナ",
+    "name_en": "Asuna (SAO)",
+    "attribute": "fire",
+    "sub_attribute": "light",
+    "types": [
+      "attacker",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "sdr",
+      "sdr",
+      "combo_orb"
+    ],
+    "active_skill_name": "Flash",
+    "active_skill_desc": "Fire board change + speed boost",
+    "role_tags": [
+      "looper",
+      "board_change",
+      "damage"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/12156",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/12156.png"
+  },
+  {
+    "id": 12446,
+    "name_jp": "レム（覚醒）",
+    "name_en": "Rem (Awakened)",
+    "attribute": "water",
+    "sub_attribute": "dark",
+    "types": [
+      "attacker",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "sdr",
+      "combo_orb"
+    ],
+    "active_skill_name": "Unknown",
+    "active_skill_desc": "TBD",
+    "role_tags": [
+      "looper",
+      "board_change",
+      "damage"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/12446",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/12446.png"
+  },
+  {
+    "id": 12623,
+    "name_jp": "フェルン",
+    "name_en": "Fern (Frieren)",
+    "attribute": "wood",
+    "sub_attribute": "water",
+    "types": [
+      "attacker",
+      "god"
+    ],
+    "awakenings": [
+      "skill_boost",
+      "sdr",
+      "sdr"
+    ],
+    "active_skill_name": "Unknown",
+    "active_skill_desc": "TBD",
+    "role_tags": [
+      "looper",
+      "board_change",
+      "damage"
+    ],
+    "gamewith_url": "https://xn--0ck4aw2h.gamewith.jp/article/show/12623",
+    "image_url": "https://pad.protic.site/wp-content/uploads/pad-cards/12623.png"
+  }
+]
